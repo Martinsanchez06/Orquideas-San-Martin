@@ -1,0 +1,89 @@
+.upper {
+    height: 25px;
+    display: flex;
+    background: #001f0a
+}
+
+.upper-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style-type: none;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: "brygada 1918", serif;
+    color: #ffffff;
+    padding: 6px;
+    margin: 0px 0px 0px 7px;
+
+}
+.navbar-main-container {
+    border: solid 2px red
+}
+
+.navbar-main{
+    display: flex;
+}
+.img-header {
+    height: 150px;
+    width: 150px;
+  }
+
+  .search{
+    height: 30px;
+    width: fit-content;
+    display: flex;
+    outline: none;
+    border: 1px solid #EAEAEA;
+    border-radius: 30px;
+    color: #6D6D6D;
+  }
+  
+  #search-header  {height: 36px;
+    width: 100%;
+    padding-left: 20px;
+    border: 1px solid #ff2600be;
+    border-radius: 15px;    
+  }
+  
+  
+
+.slider {
+    height: 100vh;
+    margin-bottom: 40px;
+    margin-left: auto;
+    background-image: url(/images/IMG-20220513-WA0003.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin-right: auto;
+    box-shadow: 3px 3px 10px #A8A8A8;
+}
+
+.home {
+    margin: 50px 48%;
+    color: #ffffff;
+  }
+
+
+.text-slider {
+    font-family: 'Radio Canada', sans-serif;
+    color: #ffffff;
+    font-size: 45px;
+    padding-top: 160px;
+    text-align: center;
+  }
+  
+.intro {
+    background-color: rgba(0, 0, 0, 0.237);
+    margin: 40px;
+    margin-top: 110px;
+    padding: 10px;
+    border-radius: 30px;
+  
+  }
+  
+  .intro-text {
+    color: #ffffff;
+  }
+
