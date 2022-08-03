@@ -15,4 +15,4 @@ sitios de inspiracion
 -------------------------------------------
 
 
-https://anunciografico.com/ (me gusta el portafolio)
+https://anunciografico.com/
