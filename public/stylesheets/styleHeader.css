@@ -1,89 +1,146 @@
+/* ----- CUADRO SUPERIOR A TODO DE LA PAGINA */
 .upper {
-    height: 25px;
-    display: flex;
-    background: #001f0a
+  height: 25px;
+  display: flex;
+  background: #001f0a
 }
 
 .upper-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    list-style-type: none;
-    text-decoration: none;
-    font-size: 17px;
-    font-family: "brygada 1918", serif;
-    color: #ffffff;
-    padding: 6px;
-    margin: 0px 0px 0px 7px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style-type: none;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: "brygada 1918", serif;
+  color: #ffffff;
+  padding: 6px;
+  margin: 0px 0px 0px 7px;
 
 }
+
+.upper-icon {
+  color: #ffffff;
+  text-decoration: none;
+}
+/* ------ NAVBAR-MAIN ------ */
 .navbar-main-container {
-    border: solid 2px red
+  /* border: solid 2px red */
 }
 
-.navbar-main{
-    display: flex;
+.navbar-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
 .img-header {
-    height: 150px;
-    width: 150px;
-  }
+  height: 150px;
+  width: 150px;
+}
+/* ------NAV PRINCIPAL------ */
+.nav-tabs {
+  display: flex;
+  justify-content:center;
+  display: none;
+}
 
-  .search{
-    height: 30px;
-    width: fit-content;
-    display: flex;
-    outline: none;
-    border: 1px solid #EAEAEA;
-    border-radius: 30px;
-    color: #6D6D6D;
-  }
-  
-  #search-header  {height: 36px;
-    width: 100%;
-    padding-left: 20px;
-    border: 1px solid #ff2600be;
-    border-radius: 15px;    
-  }
-  
-  
+.nav-tabs li {
+  list-style: none;
+}
+
+.nav-icons {
+  padding:15px;
+  justify-content:center;
+  color: #ffffff;
+  text-decoration: none;
+}
+/* ------NAV DE ICONOS------ */
+.nav-tabs2{
+  display: flex;
+}
+
+.nav-tabs2 li {
+  list-style: none;
+}
+
+.nav2-link{
+  padding:10px;
+  color:#ffffff;
+  text-decoration: none;
+}
+/* ------ BARRA DE BUSQUEDA ------ */
+.search {
+  height: 30px;
+  width: 500px;
+  display: flex;
+  outline: none;
+  display: none;
+  border-radius: 30px;
+}
+
+#search-header {
+  height: 36px;
+  width: 100%;
+  padding-left: 20px;
+  border: 1px solid #e6e6e6;
+  border-radius: 15px;
+}
+
+/* ------ IMAGEN DE FONDO PRINCIPAL ------ */
 
 .slider {
-    height: 100vh;
-    margin-bottom: 40px;
-    margin-left: auto;
-    background-image: url(/images/IMG-20220513-WA0003.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    margin-right: auto;
-    box-shadow: 3px 3px 10px #A8A8A8;
+  height: 100vh;
+  margin-bottom: 40px;
+  margin-left: auto;
+  background-image: url(/images/IMG-20220513-WA0003.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  margin-right: auto;
+  box-shadow: 3px 3px 10px #A8A8A8;
+}
+/* ------ H-REF DE HOME ------ */
+.home {
+  margin: 50px 48%;
+  color: #ffffff;
 }
 
-.home {
-    margin: 50px 48%;
-    color: #ffffff;
-  }
-
+/* ------ TEXTO PRINCIPAL EN SLIDER ------ */
 
 .text-slider {
-    font-family: 'Radio Canada', sans-serif;
-    color: #ffffff;
-    font-size: 45px;
-    padding-top: 160px;
-    text-align: center;
-  }
-  
-.intro {
-    background-color: rgba(0, 0, 0, 0.237);
-    margin: 40px;
-    margin-top: 110px;
-    padding: 10px;
-    border-radius: 30px;
-  
-  }
-  
-  .intro-text {
-    color: #ffffff;
-  }
+  font-family: 'Radio Canada', sans-serif;
+  color: #ffffff;
+  font-size: 45px;
+  padding-top: 160px;
+  text-align: center;
+}
 
+.intro {
+  background-color: rgba(0, 0, 0, 0.237);
+  margin: 40px;
+  margin-top: 110px;
+  padding: 10px;
+  border-radius: 30px;
+
+}
+
+.intro-text {
+  color: #ffffff;
+}
+/* ------SMALLER PHONE------ */
+@media only screen and (min-width: 0px) and (max-width: 492px) {
+
+}
+/* ------TABLETS & lARGER SMARTPHONES------ */
+@media only screen and (min-width: 493px) and (max-width: 768px){
+
+}
+/* ------LAPTOPS, LARGER TABLETS IN LANDSCAPE, AND SMALL DESKTOPS  */
+@media only screen and (min-width: 7689px) and (max-width: 1279px){
+
+}
+/* ------LARGER DESKTOPS AND MONITORS */
+@media only screen and (min-width: 1280px) {
+
+}
