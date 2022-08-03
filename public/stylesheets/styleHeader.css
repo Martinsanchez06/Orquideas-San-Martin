@@ -24,9 +24,6 @@
   text-decoration: none;
 }
 /* ------ NAVBAR-MAIN ------ */
-.navbar-main-container {
-  /* border: solid 2px red */
-}
 
 .navbar-main {
   display: flex;
