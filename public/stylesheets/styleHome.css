@@ -8,3 +8,107 @@ body {
   margin: 0px;
   padding: 0px;
 }
+
+.container {
+  height: 1900px;
+}
+
+/* ------ CUADRO SUPERIOR DE LA TIENDA ------ */
+
+.container-top {
+  border: 1px solid #b1b1b1;
+  height: 40px;
+  width: 90%;
+  border-radius: 15px;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  padding: 10px;
+}
+
+.fa-th,
+.fa-list {
+  margin-left: 15px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buscar-por-categoria {
+  border: 1px solid #cccccc;
+  width: 180px;
+  height: 30px;
+  border-radius: 10px;
+}
+
+.pagina-texto {
+  font-size: 12px;
+}
+
+/* ------ SECCIÓN LOS MÁS VENDIDOS ------ */
+
+.los-mas-vendidos {
+  margin-top: 20px;
+  border: 1px solid red;
+}
+
+.header-vendidos {
+  display: inline-block;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  border: 1px solid red;
+}
+
+/* ------ CONTENEDOR PARA GRID DE PLANTAS (UNO POR CADA SECCIÓN) ------ */
+
+.planta-container{
+  display: grid ;
+  grid-template-columns: 400px;
+  border: 3px solid blue;
+}
+
+/* ------ CONTENEDOR DE CADA PLANATA ------ */
+
+.planta {
+  display: inline-block;
+  border: 1px solid red;
+  width: 100%;
+  display: inline-block;
+}
+
+.imagen-p{
+  width: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------SMALLER PHONE------ */
+@media only screen and (min-width: 0px) and (max-width: 492px) {
+  .estilos-de-pagina {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 493px) and (max-width: 768px) {}
+
+/* ------LAPTOPS, LARGER TABLETS IN LANDSCAPE, AND SMALL DESKTOPS  */
+@media only screen and (min-width: 769px) and (max-width: 1279px) {}
+
+/* ------LARGER DESKTOPS AND MONITORS */
+@media only screen and (min-width: 1280px) {}

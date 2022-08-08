@@ -1,107 +1,72 @@
-<!DOCTYPE html>
-<html>
+<%- include("partials/head.ejs") %>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Orquídeas San Martín</title>
-  <link rel="icon" type="image/x-icon" href="images/Logo Orquideas San Martin.png">
-  <link rel="stylesheet" href="stylesheets/styleHome.css">
-  <link rel="stylesheet" href="stylesheets/styleHeader.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Brygada+1918:ital,wght@1,500&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Tangerine&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Radio+Canada:wght@500&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/9496c94e32.js" crossorigin="anonymous"></script>
-</head>
+  <body>
+    <div class="container">
 
-<body>
-  <div class="container">
+      <%- include("partials/header.ejs") %>
 
-    <%- include("partials/header.ejs") %>
+        <div class="container-top">
+          <div class="estilos-de-pagina">
+            <i class="fas fa-th"></i>
+            <i class="fas fa-list"></i>
+          </div>
+          <label class="buscar-por-categoria" for="categoria">categorias </label>
+          <div class="pagina">
+            <p class="pagina-texto">Mostrando 1-10 de 30 plantas</p>
+          </div>
+        </div>
 
-    <main>
-      <div class="subtitle-1">Orquídeas disponibles</div>
-      <div class="grid-container">
-        <div class="grid-item">
-          <img class="grid-img" src="images/IMG-20211013-WA0066.jpg" alt="" />
-        </div>
-        <div class="grid-item">
-          <p>omcidium baby charry</p>
-          <h2>65.000</h2>
-          <p>clima frio </p>
-          <button>agregar al carrito </button>
-        </div>
-        <div class="grid-item"> <img class="grid-img" src="images/IMG-20211013-WA0059.jpg " alt="" /></div>
-        <div class="grid-item">
-          <p>omcidium baby charry</p>
-          <h2>65.000</h2>
-          <p>clima frio</p>
-          <button>agregar al carrito </button>
-        </div>
-        <div class="grid-item"><img class="grid-img" src="images/IMG-20211013-WA0048.jpg " alt="" /></div>
-        <div class="grid-item">
-          <p>omcidium baby charry</p>
-          <h2>65.000</h2>
-          <p>clima frio </p>
-          <button>agregar al carrito </button>
-        </div>
-        <div class="grid-item"><img class="grid-img " src="images/IMG-20211016-WA0012.jpg" alt="" /></div>
-        <div class="grid-item">
-          <p>omcidium baby charry</p>
-          <h2>65.000</h2>
-          <p>clima frio </p>
-          <bottom>
-        </div>
-      </div>
-      <i class="bottom-down">ver más</i>
-      <div class="subtitle-2">Otras plantas</div>
-      <div class="grid-container-2">
-        <div class="grid-item-2"> <img class="grid-img" src="images/IMG-20211013-WA0026.jpg" alt="" /></div>
-        <div class="grid-item">
-          <p>omcidium baby charry</p>
-          <h2>65.000</h2>
-          <p>clima frio </p>
-          <button>agregar al carrito </button>
-        </div>
-        <div class="grid-item-2"> <img class="grid-img" src="images/IMG-20211013-WA0030.jpg" alt="" /></div>
-        <div class="grid-item">
-          <p>omcidium baby charry</p>
-          <h2>65.000</h2>
-          <p>clima frio</p>
-          <button>agregar al carrito </button>
-        </div>
-        <div class="grid-item-2"><img class="grid-img" src="images/IMG-20211013-WA0010.jpg" alt="" /></div>
-        <div class="grid-item">
-          <p>omcidium baby charry</p>
-          <h2>65.000</h2>
-          <p>clima frio </p>
-          <button>agregar al carrito </button>
-        </div>
-        <div class="grid-item-2"><img class="grid-img " src="images/IMG-20211013-WA0045.jpg" alt="" /></div>
-        <div class="grid-item">
-          <p>omcidium baby charry</p>
-          <h2>65.000</h2>
-          <p>clima frio </p>
-          <button>agregar al carrito </button>
-        </div>
-      </div>
-      <i class="bottom-down">ver más</i>
-    </main>
+        <main>
+          <section class="los-mas-vendidos">
+            <h3 class="header-vendidos">Nuestros más vendidos </h3>
+            <div class="planta-container">
+              <div class="planta">
+                <div class="imagen-p-content">
+                  <img class="imagen-p" src="./images/IMG-20220513-WA0008.jpg" alt="">
+                </div>
+                <p class="nombre-p">
+                  nombre planta
+                </p>
+                <h3 class="precio-p">
+                  $123.456
+                </h3>
+                <p class="clima-p">
+                  clima
+                </p>
+              </div>
+              <div class="planta">
+                <div class="imagen-p-content">
+                  <img class="imagen-p" src="./images/IMG-20220513-WA0008.jpg" alt="">
+                </div>
+                <p class="nombre-p">
+                  nombre planta
+                </p>
+                <h3 class="precio-p">
+                  $123.456
+                </h3>
+                <p class="clima-p">
+                  clima
+                </p>
+              </div>
+              <div class="planta">
+                <div class="imagen-p-content">
+                  <img class="imagen-p" src="./images/IMG-20220513-WA0008.jpg" alt="">
+                </div>
+                <p class="nombre-p">
+                  nombre planta
+                </p>
+                <h3 class="precio-p">
+                  $123.456
+                </h3>
+                <p class="clima-p">
+                  clima
+                </p>
+              </div>
+            </div>
+          </section>
+        </main>
 
-    <%- include("partials/footer.ejs") %>
-  
-  </div>
-</body>
+        <%- include("partials/footer.ejs") %>
 
-</html>
-
-<!---->
+    </div>
+  </body>
