@@ -1,4 +1,4 @@
-/* ----- CUADRO SUPERIOR A TODO DE LA PAGINA */
+/* ----- UPPER ----- */
 .upper {
   height: 25px;
   display: flex;
@@ -23,6 +23,7 @@
   color: #ffffff;
   text-decoration: none;
 }
+
 /* ------ NAVBAR-MAIN ------ */
 
 .navbar-main {
@@ -33,12 +34,14 @@
 
 .img-header {
   height: 150px;
+  margin-top: 10px;
   width: 150px;
 }
+
 /* ------NAV PRINCIPAL------ */
 .nav-tabs {
   display: flex;
-  justify-content:center;
+  justify-content: center;
   display: none;
 }
 
@@ -47,13 +50,14 @@
 }
 
 .nav-icons {
-  padding:15px;
-  justify-content:center;
+  padding: 15px;
+  justify-content: center;
   color: #ffffff;
   text-decoration: none;
 }
+
 /* ------NAV DE ICONOS------ */
-.nav-tabs2{
+.nav-tabs2 {
   display: flex;
 }
 
@@ -61,11 +65,13 @@
   list-style: none;
 }
 
-.nav2-link{
-  padding:10px;
-  color:#ffffff;
+.nav2-link {
+  padding: 10px;
+  font-size: 25px;
+  color: #ffffff;
   text-decoration: none;
 }
+
 /* ------ BARRA DE BUSQUEDA ------ */
 .search {
   height: 30px;
@@ -97,10 +103,12 @@
   margin-right: auto;
   box-shadow: 3px 3px 10px #A8A8A8;
 }
+
 /* ------ H-REF DE HOME ------ */
 .home {
-  margin: 50px 48%;
   color: #ffffff;
+  display: flex;
+  justify-content: center;
 }
 
 /* ------ TEXTO PRINCIPAL EN SLIDER ------ */
@@ -108,6 +116,7 @@
 .text-slider {
   font-family: 'Radio Canada', sans-serif;
   color: #ffffff;
+  margin-bottom: 50px;
   font-size: 45px;
   padding-top: 160px;
   text-align: center;
@@ -124,20 +133,164 @@
 
 .intro-text {
   color: #ffffff;
+  font-size: 25px;
 }
+
 /* ------SMALLER PHONE------ */
 @media only screen and (min-width: 0px) and (max-width: 492px) {
 
-}
-/* ------TABLETS & lARGER SMARTPHONES------ */
-@media only screen and (min-width: 493px) and (max-width: 768px){
+  /* ------ UPPER ------ */
+  .upper-item {
+    font-size: 13px;
+  }
 
+  /* ------ NAVBAR-MAIN ------ */
+  .img-header {
+    height: 100px;
+    margin-top: 10px;
+    width: 100px;
+  }
+
+  /* ------ NAV DE ICONOS ------ */
+  .nav-tabs2 li {
+    margin-right: 8px;
+  }
+
+  /* ------ IMAGEN DE FONDO PRINCIPAL ------ */
+  .slider {
+    height: fit-content;
+    padding-bottom: 15px;
+  }
+
+  /* ------ TEXTO PRINCIPAL EN SLIDER ------ */
+  .text-slider {
+    font-size: 30px;
+  }
+
+  .intro-text {
+    font-size: 20px;
+  }
+
+  /* ------ H-REF DE HOME ------ */
+  .home {
+    display: flex;
+    font-size: 17px;
+    align-items: center;
+  }
 }
+
+/* ----- UPPER ----- */
+
+/* ------ NAVBAR-MAIN ------ */
+
+/* ------NAV PRINCIPAL------ */
+
+/* ------NAV DE ICONOS ------ */
+
+/* ------ BARRA DE BUSQUEDA ------ */
+
+/* ------ IMAGEN DE FONDO PRINCIPAL ------ */
+
+/* ------ H-REF DE HOME ------ */
+
+/* ------ TEXTO PRINCIPAL EN SLIDER ------ */
+
+@media only screen and (min-width: 493px) and (max-width: 768px) {
+
+  /* ------NAV DE ICONOS ------ */
+  .nav-tabs2 li {
+    margin-right: 20px;
+  }
+
+  /* ------ IMAGEN DE FONDO PRINCIPAL ------ */
+  .slider {
+    height: fit-content;
+    padding-bottom: 15px;
+  }
+
+  /* ------ H-REF DE HOME ------ */
+  .home {
+    font-size: 25px;
+  }
+}
+
 /* ------LAPTOPS, LARGER TABLETS IN LANDSCAPE, AND SMALL DESKTOPS  */
-@media only screen and (min-width: 7689px) and (max-width: 1279px){
+@media only screen and (min-width: 769px) and (max-width: 1279px) {
+
+  /* ------NAV PRINCIPAL------ */
+  .nav-tabs {
+    display: flex;
+    margin: auto;
+  }
+
+  /* ------NAV DE ICONOS ------ */
+
+  .nav-tabs2 .fa-bars,
+  .nav-tabs2 .fa-shopping-cart {
+    display: none;
+  }
+
+  /* ------ BARRA DE BUSQUEDA ------ */
+
+  .fa-search {
+    margin-right: 20px;
+    margin-top: 10px;
+  }
+
+  /* ------ IMAGEN DE FONDO PRINCIPAL ------ */
+
+  .slider {
+    height: fit-content;
+    padding-bottom: 15px;
+  }
 
 }
+
 /* ------LARGER DESKTOPS AND MONITORS */
 @media only screen and (min-width: 1280px) {
 
+  /* ------NAV PRINCIPAL------ */
+  .nav-tabs {
+    display: flex;
+    margin: auto;
+  }
+
+  /* ------NAV DE ICONOS ------ */
+  .nav-tabs2 .fa-bars,
+  .nav-tabs2 .fa-shopping-cart {
+    display: none;
+  }
+
+  .fa-search {
+    margin-top: 10px;
+
+  }
+
+  /* ------ BARRA DE BUSQUEDA ------ */
+
+  .search {
+    border: 1px solid #a3a3a3;
+    display: flex;
+    margin-right: 30px;
+    width: 280px;
+  }
+
+  /* ------ IMAGEN DE FONDO PRINCIPAL ------ */
+  .slider {
+    height: fit-content;
+    padding-bottom: 15px;
+  }
+
+  /* ------ TEXTO PRINCIPAL EN SLIDER ------ */
+
+  .text-slider {
+    padding-top: 120px;
+    margin-bottom: 20px;
+  }
+
+  .intro-text {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
 }
