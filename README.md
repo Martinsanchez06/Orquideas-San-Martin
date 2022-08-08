@@ -2,17 +2,17 @@
 
 sitios de inspiracion
 
-https://rof.flowercompany.ca/collections/orchids (nav)
+1.https://rof.flowercompany.ca/collections/orchids 
 
-https://www.orquivalle.com/ (como se ven los productos)
+2.https://www.orquivalle.com/ 
 
-https://lafloristeriaboutique.com/?gclid=Cj0KCQjw0JiXBhCFARIsAOSAKqCFydgSBDlWdIecG8aNFFFb5OFY9hdPNz3tweouzgkvWtU4ko74zccaAgavEALw_wcB(me gusta la pagina en general)
+3.https://lafloristeriaboutique.com/?gclid=Cj0KCQjw0JiXBhCFARIsAOSAKqCFydgSBDlWdIecG8aNFFFb5OFY9hdPNz3tweouzgkvWtU4ko74zccaAgavEALw_wcB
 
-https://flowershopcolombia.com/ (me gusta tambien en general la pagina)
+4.https://flowershopcolombia.com/ 
 
-https://www.proflowers.com/(me gusta como divide los productos con los sliders)
+5.https://www.proflowers.com/
 
 -------------------------------------------
 
 
-https://anunciografico.com/ (me gusta el portafolio)
+https://anunciografico.com/
