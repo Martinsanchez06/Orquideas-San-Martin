@@ -34,6 +34,7 @@
 
 .img-header {
   height: 150px;
+  border-radius: 100px ;
   margin-top: 10px;
   width: 150px;
 }
