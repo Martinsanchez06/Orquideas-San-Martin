@@ -8,7 +8,13 @@
 
       <div>
         
-        holaa
+        <ul>
+          <% for (let i = 0; i < orquideas.length; i++ ) { %>
+          <li>
+            <%=orquideas[i].nombre%> 
+          </li>
+          <% } %>
+        </ul>
         
       </div>
 
@@ -137,7 +143,7 @@
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum soluta aspernatur explicabo aut dolores! Ipsa dolores error molestiae architecto assumenda accusamus aliquam rerum  
           </div>
         </main>
-        <p> ejs </p>
+        
 
         <%- include("../partials/footer.ejs") %>
 
