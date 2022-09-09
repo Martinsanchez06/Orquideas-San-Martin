@@ -37,6 +37,7 @@
   border-radius: 100px ;
   margin-top: 10px;
   width: 150px;
+  margin-left: 20px;
 }
 
 /* ------NAV PRINCIPAL------ */
@@ -94,7 +95,7 @@
 /* ------ IMAGEN DE FONDO PRINCIPAL ------ */
 
 .slider {
-  height: 100vh;
+  height: 97vh;
   margin-bottom: 40px;
   margin-left: auto;
   background-image: url(/images/IMG-20220513-WA0003.jpg);
@@ -278,7 +279,6 @@
 
   /* ------ IMAGEN DE FONDO PRINCIPAL ------ */
   .slider {
-    height: fit-content;
     padding-bottom: 15px;
   }
 
