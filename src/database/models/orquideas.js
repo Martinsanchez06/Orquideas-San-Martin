@@ -1,4 +1,4 @@
-module.expotrts = (sequelize, DataTypes) => {
+module.exports= (sequelize, DataTypes) => {
     let alias = 'Orquideas'
     let cols = {
         id : {
@@ -47,6 +47,16 @@ module.expotrts = (sequelize, DataTypes) => {
     }
     const Orquideas= sequelize.define(alias, cols, config)
 
+    Orquideas.associate = function(models){
+        Orquideas.belongsTo(models.climas, {
+            as: 'climas', 
+            foreignKey: 'clima_id'
+        })
+    }
+
     return Orquideas
+
+
 }
+
 
