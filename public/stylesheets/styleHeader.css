@@ -26,6 +26,13 @@
 
 /* ------ NAVBAR-MAIN ------ */
 
+.navbar-main-container {
+  position: fixed;
+  margin-top: -169px;
+  display: block;
+  border-bottom:solid 2px #32A6A6;
+  width: 100%;
+}
 .navbar-main {
   display: flex;
   justify-content: space-between;
@@ -33,10 +40,10 @@
 }
 
 .img-header {
-  height: 150px;
+  height: 130px;
   border-radius: 100px ;
   margin-top: 10px;
-  width: 150px;
+  width: 130px;
   margin-left: 20px;
 }
 
@@ -54,7 +61,7 @@
 .nav-icons {
   padding: 15px;
   justify-content: center;
-  color: #ffffff;
+  color: #000000;
   text-decoration: none;
 }
 
@@ -278,9 +285,10 @@
   }
 
   /* ------ IMAGEN DE FONDO PRINCIPAL ------ */
-  .slider {
-    padding-bottom: 15px;
-  }
+    .slider {
+      margin-top: 169px;
+      padding-bottom: 15px;
+    }
 
   /* ------ TEXTO PRINCIPAL EN SLIDER ------ */
 
