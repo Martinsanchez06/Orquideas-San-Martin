@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const OrquideasController = require('../Controllers/OrquideasController')
+const OrquideasController = require('../Controllers/AdminController')
 const multer = require("multer");
 // const { body } = require("express-validator")
 // const path = require("path")
@@ -21,9 +21,13 @@ const imagenSubida = multer({ storage })
 
 router.get('/crear', OrquideasController.formCreate);
 
+router.get('/editar/:id', OrquideasController.formUpdate)
+
 // ----- CREA UN PRODUCTO -----
 
 router.post('/crear', imagenSubida.array('imagen', 3) , OrquideasController.create)
+
+router.post('/editar/:id' , imagenSubida.array('imagen', 3), OrquideasController.update)
 
 
 module.exports = router;

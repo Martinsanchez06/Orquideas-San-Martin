@@ -1,0 +1,12 @@
+
+<%- include('../partials/head.ejs') %> 
+<body>
+    <%- include('../partials/header.ejs') %> 
+    <h1>Orquideas: </h1>
+
+    <% orquideas.forEach(orquideas => { %>
+        <%- include("orquidea.ejs", {orquideas : orquideas}) %>
+    <% }) %> 
+
+</body>
+<%- include('../partials/footer.ejs') %> 

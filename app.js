@@ -5,8 +5,8 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
 const homeRouter = require('./src/routes/home');
-const usersRouter = require('./src/routes/users');
-const orquideasRouter = require('./src/routes/orquideas')
+const clientRouter = require('./src/routes/client');
+const adminRouter = require('./src/routes/admin')
 
 const app = express();
 
@@ -27,8 +27,8 @@ app.use(cookieParser());
 app.use(express.static('public'));
 
 app.use('/', homeRouter);
-app.use('/users', usersRouter);
-app.use('/orquideas', orquideasRouter)
+app.use('/user', clientRouter);
+app.use('/admin', adminRouter)
 
 // ----- CATCH 404 -----
 app.use(function(req, res, next) {
