@@ -23,11 +23,11 @@ module.exports= (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: false
         },
-        categoria : {
+        categoria_id : {
             type: DataTypes.STRING,
             allowNull: false
         },
-        tamaño : {
+        tamanio_id : {
             type: DataTypes.STRING,
             allowNull: false
         },
@@ -38,7 +38,19 @@ module.exports= (sequelize, DataTypes) => {
         flor : {
             type: DataTypes.STRING,
             allowNull: false
-        }
+        },
+        imagen1: {
+            type: DataTypes.STRING,
+            notNull: true
+        },
+        imagen2: {
+            type: DataTypes.STRING,
+            notNull: true
+        },
+        imagen3: {
+            type: DataTypes.STRING,
+            notNull: true
+        },
     }
     let config ={
         tableName: 'orquideas',
