@@ -55,14 +55,23 @@ const OrquideasController = {
             })
             let orquideasEncontradas = db.Orquideas.findAll()
             let climasEncontrados = db.climas.findAll()
-            Promise.all([orquideasEncontradas,climasEncontrados])
-                .then(function ([orquideas, climas]){
-                   return res.render('Client/listado', {orquideas, climas})
-                })      
+            Promise.all([orquideasEncontradas, climasEncontrados])
+                .then(function ([orquideas, climas]) {
+                    return res.render('Client/listado', { orquideas, climas })
+                })
         } catch (error) {
             res.send('error', error)
         }
     },
+    delete: (req, res) => {
+        db.Orquideas.destroy({
+            where: {
+                id: req.params.id
+            }
+        })
+
+        res.send('eliminado')
+    }
 
 }
 
