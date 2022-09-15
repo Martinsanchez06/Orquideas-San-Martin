@@ -20,12 +20,12 @@ module.exports = (sequelize, DataTypes) => {
 
     const Climas = sequelize.define(alias, cols, config)
 
-    // Climas.associate = function(models){
-    //     Climas.hasMany(models.Orquideas, {
-    //         as: 'orquideas', 
-    //         foreignKey: 'clima_id'
-    //     })
-    // }
+    Climas.associate = function(models){
+        Climas.hasMany(models.Orquideas, {
+            as: 'orquideas', 
+            foreignKey: 'clima_id'
+        })
+    }
 
 
     return Climas 

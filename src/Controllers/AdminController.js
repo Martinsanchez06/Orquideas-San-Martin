@@ -4,8 +4,15 @@ const db = require('../database/models')
 
 const OrquideasController = {
     formCreate: function (req, res) {
-        res.render('Admin/create')
-    },
+        let orquideasEncontradas = db.Orquideas.findAll()
+        let climasEncontrados = db.climas.findAll()
+        let categoriasEncontradas = db.categorias.findAll()
+        let tamaniosEncontrados = db.tamanios.findAll()
+        Promise.all([orquideasEncontradas,climasEncontrados, categoriasEncontradas, tamaniosEncontrados])
+            .then(function ([orquideas, climas, categorias, tamanios ]){
+                res.render('Admin/create', {orquideas, climas, categorias, tamanios})
+            })
+        },
     create: function (req, res) {
         try {
             db.Orquideas.create({
@@ -21,17 +28,24 @@ const OrquideasController = {
                 imagen2: req.files[1].filename,
                 imagen3: req.files[2].filename,
             })
-            res.send('archivo subido')
+            res.redirect('/user/listado')
         } catch (error) {
-            res.send('error', error)
+            res.send('error')
         }
     },
     formUpdate: function (req, res) {
-        let orquideasEncontradas = db.Orquideas.findByPk(req.params.id)
+        let orquideasEncontradas = db.Orquideas.findByPk(req.params.id ,
+            {
+                include : { 
+                    all: true,
+                    nested: true 
+                }
+            }
+        )
         let climasEncontrados = db.climas.findAll()
-        Promise.all([orquideasEncontradas, climasEncontrados])
-            .then(function ([orquideas, climas]) {
-                res.render('Admin/edit', { orquideas, climas })
+        Promise.all([orquideasEncontradas,climasEncontrados])
+            .then(function ([orquideas, climas]){
+                res.render('Client/edit', {orquideas, climas})
             })
     },
     update: (req, res) => {

@@ -11,7 +11,24 @@
             </div>
             <div class="form-group">
                 <label for="" class="form-label">Clima</label>
-                <input value="<%= orquideas.clima_id %> " name="clima" type="text" class="form-input">
+                <select name="categoria" id="category" class="control">
+                    <% for (let i = 0; i < climas.length; i++) { %>
+                        <% if (climas[i].id == productos.climas_id) {%>
+
+                            <option value="<%=climas[i].id%>" selected>
+                                <%=climas[i].tipoDeClima%>
+                            </option>
+
+                        <% } else { %>
+
+                            <option value="<%=climas[i].id%>">
+                                <%=climas[i].tipoDeClima%>
+                            </option>
+
+                        <% } %>
+
+                    <% } %>
+                </select>
             </div>
             <div class="form-group">
                 <label for="" class="form-label">Precio</label>

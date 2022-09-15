@@ -63,12 +63,18 @@ module.exports= (sequelize, DataTypes) => {
         Orquideas.belongsTo(models.climas, {
             as: 'climas', 
             foreignKey: 'clima_id'
+        }),
+        Orquideas.belongsTo(models.tamanios, {
+            as: 'tamanios',
+            foreignKey: 'tamanio_id'
+        }),
+        Orquideas.belongsTo(models.categorias, {
+            as: 'categorias',
+            foreignKey: 'categoria_id'
         })
     }
 
     return Orquideas
-
-
 }
 
 

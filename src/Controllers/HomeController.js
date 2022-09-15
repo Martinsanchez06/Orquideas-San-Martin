@@ -7,10 +7,14 @@ const HomeController = {
     home: (req, res) => {
         let orquideasEncontradas = db.Orquideas.findAll()
         let climasEncontrados = db.climas.findAll()
-        Promise.all([orquideasEncontradas,climasEncontrados])
-            .then(function ([orquideas, climas]){
-                res.render('home/home', {orquideas, climas})
+        let categoriasEncontradas = db.categorias.findAll()
+        let tamaniosEncontrados = db.tamanios.findAll()
+        Promise.all([orquideasEncontradas,climasEncontrados, categoriasEncontradas, tamaniosEncontrados])
+            .then(function ([orquideas, climas, categorias, tamanios ]){
+                res.render('home/home', {orquideas, climas, categorias, tamanios})
             })
+
+
         // db.Orquideas.findAll()
         // .then(function (orquideas) {
         //     res.render("home/home", { orquideas })
