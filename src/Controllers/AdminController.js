@@ -91,8 +91,12 @@ const OrquideasController = {
                 id: req.params.id
             }
         })
-
-        res.send('eliminado')
+        let orquideasEncontradas = db.Orquideas.findAll()
+        let climasEncontrados = db.climas.findAll()
+        Promise.all([orquideasEncontradas, climasEncontrados])
+            .then(function ([orquideas, climas]) {
+                return res.render('Client/listado', { orquideas, climas })
+            })
     }
 
 }
