@@ -23,6 +23,8 @@ router.get('/crear', AdminController.formCreate);
 
 router.get('/editar/:id', AdminController.formUpdate)
 
+router.get('/detalleAdmin/:id', AdminController.detalleAdmin)
+
 // ----- CREA UN PRODUCTO -----
 
 router.post('/crear', imagenSubida.array('imagen', 3) , AdminController.create)

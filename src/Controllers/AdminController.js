@@ -33,6 +33,14 @@ const OrquideasController = {
             res.send('error')
         }
     },
+    detalleAdmin: function (req, res) {
+        db.Orquideas.findByPk(req.params.id, {
+            include: [{ association: 'climas' }]
+        })
+            .then(function (orquideas) {
+                res.render("admin/detalleAdmin", { orquideas })
+            })
+    },
     formUpdate: function (req, res) {
         let orquideasEncontradas = db.Orquideas.findByPk(req.params.id ,
             {
@@ -45,7 +53,7 @@ const OrquideasController = {
         let climasEncontrados = db.climas.findAll()
         Promise.all([orquideasEncontradas,climasEncontrados])
             .then(function ([orquideas, climas]){
-                res.render('Client/edit', {orquideas, climas})
+                res.render('admin/edit', {orquideas, climas})
             })
     },
     update: (req, res) => {

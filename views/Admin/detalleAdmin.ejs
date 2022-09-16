@@ -1,0 +1,25 @@
+<%- include('../partials/head.ejs') %>
+
+    <body>
+        <%- include('../partials/header.ejs') %>
+            <h1>Estas viendo el detalle de <%= orquideas.nombre %>
+            </h1>
+            <div class="producto">
+                <div class="image-product">
+                    <img src="/images/orquideasimages/<%= orquideas.imagen1 %> " alt="">
+                    <img src="/images/orquideasimages/<%= orquideas.imagen2 %> " alt="">
+                    <img src="/images/orquideasimages/<%= orquideas.imagen3 %> " alt="">
+                </div>
+                <article class="info-detail">
+                    <p class="clima-detail">Clima: <%= orquideas.climas.tipoDeClima %> </p>
+                    <p class="precio"> Precio: <%= orquideas.precio %> </p>
+                    <p class="descripcion"> Descripcion: <%= orquideas.descripcion %> </p>
+                    <p class="disponibilidad-detail"> Dispnibilidad: <%= orquideas.disponibilidad %> </p>
+                    <p class="flor-detail"> Flor: <%= orquideas.flor %> </p>
+                </article>
+                <div class="editar-planta">
+                    <a class="editar-planta-a" href="/admin/editar/<%= orquideas.id %>">editar</a>
+                </div> 
+            </div>
+    </body>
+    <%- include('../partials/footer.ejs') %>

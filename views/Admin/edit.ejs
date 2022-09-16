@@ -11,9 +11,9 @@
             </div>
             <div class="form-group">
                 <label for="" class="form-label">Clima</label>
-                <select name="categoria" id="category" class="control">
+                <select name="clima" id="category" class="control">
                     <% for (let i = 0; i < climas.length; i++) { %>
-                        <% if (climas[i].id == productos.climas_id) {%>
+                        <% if (climas[i].id == orquideas.climas_id) {%>
 
                             <option value="<%=climas[i].id%>" selected>
                                 <%=climas[i].tipoDeClima%>
