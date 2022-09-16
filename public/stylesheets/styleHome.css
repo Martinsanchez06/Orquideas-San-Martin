@@ -143,7 +143,16 @@ body {
   display: grid;
   grid-template-columns: 44% 44%;
 }
-
+.container-productos-3{
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 44% 44%;
+}
+.container-productos-4{
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 44% 44%;
+}
 .header-orquideas-florecidas {
   display: inline-block;
   margin-bottom:5px;
