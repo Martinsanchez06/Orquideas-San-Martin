@@ -9,9 +9,10 @@ const HomeController = {
         let climasEncontrados = db.climas.findAll()
         let categoriasEncontradas = db.categorias.findAll()
         let tamaniosEncontrados = db.tamanios.findAll()
-        Promise.all([orquideasEncontradas,climasEncontrados, categoriasEncontradas, tamaniosEncontrados])
-            .then(function ([orquideas, climas, categorias, tamanios ]){
-                res.render('home/home', {orquideas, climas, categorias, tamanios})
+        let seccionesEncontradas = db.secciones.findAll()
+        Promise.all([orquideasEncontradas,climasEncontrados, categoriasEncontradas, tamaniosEncontrados, seccionesEncontradas])
+            .then(function ([orquideas, climas, categorias, tamanios, secciones ]){
+                res.render('home/home', {orquideas, climas, categorias, tamanios, secciones})
             })
 
 

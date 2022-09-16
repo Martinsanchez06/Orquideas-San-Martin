@@ -71,6 +71,10 @@ module.exports= (sequelize, DataTypes) => {
         Orquideas.belongsTo(models.categorias, {
             as: 'categorias',
             foreignKey: 'categoria_id'
+        }),
+        Orquideas.belongsTo(models.secciones, {
+            as: 'secciones',
+            foreignKey: 'categoria_id'
         })
     }
 
