@@ -27,43 +27,40 @@
 /* ------ NAVBAR-MAIN ------ */
 
 .navbar-main {
-  display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
 .img-header {
-  height: 150px;
-  border-radius: 100px ;
   margin-top: 10px;
-  width: 150px;
-  margin-left: 20px;
+  height: 100%;
+  width: 100%;
 }
 
 /* ------NAV PRINCIPAL------ */
-.nav-tabs {
+.nav-tabss {
   display: flex;
   justify-content: center;
   display: none;
 }
 
-.nav-tabs li {
+.nav-tabss li {
   list-style: none;
 }
 
 .nav-icons {
   padding: 15px;
   justify-content: center;
-  color: #ffffff;
+  color: #000000;
   text-decoration: none;
 }
 
 /* ------NAV DE ICONOS------ */
-.nav-tabs2 {
+.nav-tabss2 {
   display: flex;
 }
 
-.nav-tabs2 li {
+.nav-tabss2 li {
   list-style: none;
 }
 
@@ -95,7 +92,7 @@
 /* ------ IMAGEN DE FONDO PRINCIPAL ------ */
 
 .slider {
-  height: 97vh;
+  height: 130vh;
   margin-bottom: 40px;
   margin-left: auto;
   background-image: url(/images/orquideasImages/IMG-20220513-WA0003.jpg);
@@ -148,13 +145,13 @@
 
   /* ------ NAVBAR-MAIN ------ */
   .img-header {
-    height: 100px;
+    height: 100%;
     margin-top: 10px;
-    width: 100px;
+    width: 100%;
   }
 
   /* ------ NAV DE ICONOS ------ */
-  .nav-tabs2 li {
+  .nav-tabss2 li {
     margin-right: 8px;
   }
 
@@ -200,7 +197,7 @@
 @media only screen and (min-width: 493px) and (max-width: 768px) {
 
   /* ------NAV DE ICONOS ------ */
-  .nav-tabs2 li {
+  .nav-tabss2 li {
     margin-right: 20px;
   }
 
@@ -218,25 +215,28 @@
 
 /* ------LAPTOPS, LARGER TABLETS IN LANDSCAPE, AND SMALL DESKTOPS  */
 @media only screen and (min-width: 769px) and (max-width: 1279px) {
+  
+  .img-header{
+    position: relative;
+    z-index: 100;
+  }
 
   /* ------NAV PRINCIPAL------ */
-  .nav-tabs {
+  .nav-tabss {
     display: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
     margin: auto;
+    position: relative;
+    margin-top: -45px;
   }
 
   /* ------NAV DE ICONOS ------ */
 
-  .nav-tabs2 .fa-bars,
-  .nav-tabs2 .fa-shopping-cart {
+  .nav-tabss2 .fa-bars,
+  .nav-tabss2 .fa-shopping-cart,
+  .nav-tabss2 .fa-search {
     display: none;
-  }
-
-  /* ------ BARRA DE BUSQUEDA ------ */
-
-  .fa-search {
-    margin-right: 20px;
-    margin-top: 10px;
   }
 
   /* ------ IMAGEN DE FONDO PRINCIPAL ------ */
@@ -252,29 +252,22 @@
 @media only screen and (min-width: 1280px) {
 
   /* ------NAV PRINCIPAL------ */
-  .nav-tabs {
+  .nav-tabss {
     display: flex;
+    padding-top: 20px;
     margin: auto;
   }
 
+  .nav-tabss li a{
+    font-size: 20px;
+    color: #ffffff;
+  }
+
   /* ------NAV DE ICONOS ------ */
-  .nav-tabs2 .fa-bars,
-  .nav-tabs2 .fa-shopping-cart {
-    display: none;
-  }
-
+  .nav-tabss2 .fa-bars,
+  .nav-tabss2 .fa-shopping-cart,
   .fa-search {
-    margin-top: 10px;
-
-  }
-
-  /* ------ BARRA DE BUSQUEDA ------ */
-
-  .search {
-    border: 1px solid #a3a3a3;
-    display: flex;
-    margin-right: 30px;
-    width: 280px;
+    display: none;
   }
 
   /* ------ IMAGEN DE FONDO PRINCIPAL ------ */
@@ -293,5 +286,5 @@
     font-size: 20px;
     margin-bottom: 10px;
   }
-  
+
 }
