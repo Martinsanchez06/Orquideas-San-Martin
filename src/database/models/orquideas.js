@@ -39,6 +39,10 @@ module.exports= (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: false
         },
+        secciondehome_id : {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
         imagen1: {
             type: DataTypes.STRING,
             notNull: true

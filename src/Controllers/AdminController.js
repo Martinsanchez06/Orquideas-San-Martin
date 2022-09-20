@@ -8,9 +8,10 @@ const OrquideasController = {
         let climasEncontrados = db.climas.findAll()
         let categoriasEncontradas = db.categorias.findAll()
         let tamaniosEncontrados = db.tamanios.findAll()
-        Promise.all([orquideasEncontradas,climasEncontrados, categoriasEncontradas, tamaniosEncontrados])
-            .then(function ([orquideas, climas, categorias, tamanios ]){
-                res.render('Admin/create', {orquideas, climas, categorias, tamanios})
+        let seccionesEncontradas = db.secciones.findAll()
+        Promise.all([orquideasEncontradas,climasEncontrados, categoriasEncontradas, tamaniosEncontrados, seccionesEncontradas])
+            .then(function ([orquideas, climas, categorias, tamanios, secciones ]){
+                res.render('Admin/create', {orquideas, climas, categorias, tamanios, secciones})
             })
         },
     create: function (req, res) {
@@ -24,6 +25,7 @@ const OrquideasController = {
                 tamanio_id: req.body.tamanio,
                 disponibilidad: req.body.disponibilidad,
                 flor: req.body.flor,
+                secciondehome_id: req.body.seccion,
                 imagen1: req.files[0].filename,
                 imagen2: req.files[1].filename,
                 imagen3: req.files[2].filename,

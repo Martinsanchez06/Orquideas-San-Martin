@@ -13,7 +13,7 @@
                         <label for="" class="form-label">Clima :</label>
                         <select name="clima" id="category" class="control">
                             <% for (let i=0; i < climas.length; i++) { %>
-                                <% if (climas[i].id ===orquideas.clima_id) {%>
+                                <% if (climas[i].id===orquideas.clima_id) {%>
 
                                     <option value="<%=climas[i].id%>" selected>
                                         <%=climas[i].tipoDeClima%>
@@ -42,7 +42,7 @@
                         <label for="" class="form-label">Categoria</label>
                         <select name="categoria" id="category" class="control">
                             <% for (let i=0; i < categorias.length; i++) { %>
-                                <% if (categorias[i].id === orquideas.categoria_id) {%>
+                                <% if (categorias[i].id===orquideas.categoria_id) {%>
 
                                     <option value="<%=categorias[i].id%>" selected>
                                         <%=categorias[i].categoria%>
@@ -63,7 +63,7 @@
                         <label for="" class="form-label">tamaño</label>
                         <select name="tamanio" id="category" class="control">
                             <% for (let i=0; i < tamanios.length; i++) { %>
-                                <% if (tamanios[i].id === orquideas.tamanio_id) {%>
+                                <% if (tamanios[i].id===orquideas.tamanio_id) {%>
 
                                     <option value="<%=tamanios[i].id%>" selected>
                                         <%=tamanios[i].tamanio%>
@@ -87,6 +87,27 @@
                     <div class="form-group">
                         <label for="" class="form-label">flor</label>
                         <input name="flor" type="text" class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="form-label">Seccion de home</label>
+                        <select name="seccion" id="category" class="control">
+                            <% for (let i=0; i < secciones.length; i++) { %>
+                                <% if (secciones[i].id===orquideas.secciondehome_id) {%>
+
+                                    <option value="<%=secciones[i].id%>" selected>
+                                        <%=secciones[i].seccion%>
+                                    </option>
+
+                                    <% } else { %>
+
+                                        <option value="<%=secciones[i].id%>">
+                                            <%=secciones[i].seccion%>
+                                        </option>
+
+                                        <% } %>
+
+                                            <% } %>
+                        </select>
                     </div>
                     <div class="form-group">
                         <label for="" class="form-label">imagen 1</label>
