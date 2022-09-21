@@ -1,17 +1,18 @@
 .productos-listado{
     margin-top: 20px;
-    display: flex;
-    flex-direction: column;
+    display: grid;
     background-color: rgb(253, 253, 253);
 }
 @media only screen and (min-width: 0px) and (max-width: 492px) {  }
-@media only screen and (min-width: 592px) and (max-width: 718px) { 
+@media only screen and (min-width: 492px) and (max-width: 718px) { 
     .productos-listado {
-        display:flex;
-        flex-direction: row;
-        width: 100vw;
+    display: grid;
+    grid-template-columns: 50% 50%;
     }
  }
-@media only screen and (min-width: 768px) { 
-
+@media only screen and (min-width: 717px) { 
+    .productos-listado {
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        }
  }

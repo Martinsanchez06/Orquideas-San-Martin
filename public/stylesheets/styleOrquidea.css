@@ -12,15 +12,15 @@ section.Orquidea {
 }
 
 .card-img {
-    width: 61%;
-    height: 67%;
+    width: 77%;
+    height: 84%;
     margin-bottom: 10px;
 }
 
 .card-img img {
     width: 100%;
     border-radius: 20px;
-    height:100%;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -30,7 +30,9 @@ section.Orquidea {
     width: 61%;
 }
 
-.card-article h3, .card-article p, .card-article div {
+.card-article h3,
+.card-article p,
+.card-article div {
     margin-top: 5px;
 }
 
@@ -48,8 +50,25 @@ section.Orquidea {
 }
 
 
-@media only screen and (min-width: 592px) and (max-width: 718px) { 
+@media only screen and (min-width: 492px) and (max-width: 717px) {
     section.Orquidea {
-       width: 50%;
+        min-width: 50%;
     }
- }
+
+    .card-img {
+        width: 87%;
+        height: 97%;
+        margin-bottom: 10px;
+    }
+}
+@media only screen and (min-width: 717px) {
+    section.Orquidea {
+        min-width: 50%;
+    }
+
+    /* .card-img {
+        width: 67%;
+        height: 77%;
+        margin-bottom: 10px;
+    } */
+}
