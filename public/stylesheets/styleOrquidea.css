@@ -1,11 +1,10 @@
 section.Orquidea {
     display: flex;
-    margin-top: 20px;
+    margin-bottom: 20px;
     justify-content: center;
     align-items: center;
     padding: 10px;
     flex-direction: column;
-    border: 1px solid red;
 }
 
 .h1-listado {
@@ -13,8 +12,8 @@ section.Orquidea {
 }
 
 .card-img {
-    width: 61vw;
-    height: 67vh;
+    width: 61%;
+    height: 67%;
     margin-bottom: 10px;
 }
 
@@ -28,7 +27,7 @@ section.Orquidea {
 .card-article {
     text-align: center;
     border-radius: 10px;
-    width: 61vw;
+    width: 61%;
 }
 
 .card-article h3, .card-article p, .card-article div {
@@ -39,7 +38,7 @@ section.Orquidea {
     margin-bottom: 10px;
     background-color: #32A6A6;
     display: inline-block;
-    padding: 5px 20vw;
+    padding: 5px 20%;
     border-radius: 8px;
 }
 
@@ -47,3 +46,10 @@ section.Orquidea {
     text-decoration: none;
     color: #FFFFFF;
 }
+
+
+@media only screen and (min-width: 592px) and (max-width: 718px) { 
+    section.Orquidea {
+       width: 50%;
+    }
+ }
