@@ -7,9 +7,12 @@ const ClientController = {
     lista: (req, res) => {
         let orquideasEncontradas = db.Orquideas.findAll()
         let climasEncontrados = db.climas.findAll()
-        Promise.all([orquideasEncontradas,climasEncontrados])
-            .then(function ([orquideas, climas]){
-                res.render('Client/listado', {orquideas, climas})
+        let categoriasEncontradas = db.categorias.findAll()
+        let tamaniosEncontrados = db.tamanios.findAll()
+        let seccionesEncontradas = db.secciones.findAll()
+        Promise.all([orquideasEncontradas,climasEncontrados, categoriasEncontradas, tamaniosEncontrados, seccionesEncontradas])
+            .then(function ([orquideas, climas, categorias, tamanios, secciones ]){
+                res.render('Client/listado', {orquideas, climas, categorias, tamanios, secciones})
             })
     },
     detalle : (req, res) => {

@@ -1,23 +1,21 @@
-<article class="card">
-    <div class="card-left">
-        <figure>
-            <img src="/images/orquideasImages/<%= orquideas.imagen1 %>" alt="">
-        </figure>
+<section class="Orquidea">
 
-        <h3><%= orquideas.idP %></h3>
-
+    <div class="card-img">
+        <img class="" src="/images/orquideasImages/<%= orquideas.imagen1 %>" alt="">
     </div>
-    <div class="card-content">
-        
-        <h3 class="h3-product"><%= orquideas.nombre %></h3>
+    <article class="card-article">
 
-        <p class="p-product">precio: <span><%= orquideas.precio %></span></p>
+        <h3 class="h3-product">
+            <%= orquideas.nombre %>
+        </h3>
 
-        <p class="p-product">Tamaño: <span><%= orquideas.tamanio %></span></p>
-
+        <p class="p-product">precio: <span>
+                <%= orquideas.precio %>
+            </span></p>
         <div class="ver-detalle">
             <a class="ver-detalle-a" href="/user/detalle/<%= orquideas.id %>">Ver detalle</a>
-        </div> 
-    </div>
+        </div>
 
-</article>
+    </article>
+
+</section>
