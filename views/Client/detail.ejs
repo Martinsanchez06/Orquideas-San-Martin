@@ -5,7 +5,9 @@
             <div class="producto-detalle">
 
                 <div class="imagen-detalle">
-                    <img src="/images/orquideasimages/<%= orquideas.imagen1 %> " alt="">
+                    <div class="imagen-detalle-img">
+                        <img src="/images/orquideasimages/<%= orquideas.imagen1 %> " alt="">
+                    </div>
                     <div class="imagenes-buttom">
                         <img src="/images/orquideasimages/<%= orquideas.imagen3 %> " alt="">
                         <img src="/images/orquideasimages/<%= orquideas.imagen2 %> " alt="">
@@ -15,13 +17,14 @@
                     <h1 class="h1-detail">
                         <%= orquideas.nombre %>
                     </h1>
-                    <p class="clima-detail"> <strong>Clima:</strong>
-                        <%= orquideas.climas.tipoDeClima %>
-                    </p>
                     <p class="precio-detalle"><strong>
                             <%= orquideas.precio %>
                         </strong>
                     </p>
+                    <p class="clima-detail"> <strong>Clima:</strong>
+                        <%= orquideas.climas.tipoDeClima %>
+                    </p>
+
                     <h3 class="h3-detail">Descripcion del producto:</h3>
                     <p class="descripcion-detail">
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis dolorem ab maiores voluptas!
@@ -29,7 +32,7 @@
                         quaerat aliquid quod in voluptatem?
 
                     </p>
-                    <div class="info-detail-buttom" >
+                    <div class="info-detail-buttom">
                         <p class="disponibilidad-detail"> <strong>
                                 <%= orquideas.disponibilidad %>
                             </strong>
