@@ -2,20 +2,49 @@
 
     <body>
         <%- include('../partials/header.ejs') %>
-            <h1>Estas viendo el detalle de <%= orquideas.nombre %>
-            </h1>
-            <div class="producto">
-                <div class="image-product">
+            <div class="producto-detalle">
+
+                <div class="imagen-detalle">
                     <img src="/images/orquideasimages/<%= orquideas.imagen1 %> " alt="">
-                    <img src="/images/orquideasimages/<%= orquideas.imagen2 %> " alt="">
-                    <img src="/images/orquideasimages/<%= orquideas.imagen3 %> " alt="">
+                    <div class="imagenes-buttom">
+                        <img src="/images/orquideasimages/<%= orquideas.imagen3 %> " alt="">
+                        <img src="/images/orquideasimages/<%= orquideas.imagen2 %> " alt="">
+                    </div>
                 </div>
                 <article class="info-detail">
-                    <p class="clima-detail">Clima: <%= orquideas.climas.tipoDeClima %> </p>
-                    <p class="precio"> Precio: <%= orquideas.precio %> </p>
-                    <p class="descripcion"> Descripcion: <%= orquideas.descripcion %> </p>
-                    <p class="disponibilidad-detail"> Dispnibilidad: <%= orquideas.disponibilidad %> </p>
-                    <p class="flor-detail"> Flor: <%= orquideas.flor %> </p>
+                    <h1 class="h1-detail">
+                        <%= orquideas.nombre %>
+                    </h1>
+                    <p class="clima-detail"> <strong>Clima:</strong>
+                        <%= orquideas.climas.tipoDeClima %>
+                    </p>
+                    <p class="precio-detalle"><strong>
+                            <%= orquideas.precio %>
+                        </strong>
+                    </p>
+                    <h3 class="h3-detail">Descripcion del producto:</h3>
+                    <p class="descripcion-detail">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis dolorem ab maiores voluptas!
+                        Ipsam iste ipsum perferendis omnis asperiores aut obcaecati fugiat provident natus. Atque
+                        quaerat aliquid quod in voluptatem?
+
+                    </p>
+                    <div class="info-detail-buttom" >
+                        <p class="disponibilidad-detail"> <strong>
+                                <%= orquideas.disponibilidad %>
+                            </strong>
+
+                        </p>
+                        <p class="flor-detail"> <strong>
+                                <%= orquideas.flor %>
+                            </strong>
+
+                        </p>
+                    </div>
+                    <hr class="hr-detail">
+                    <form class="compra-detail">
+                        <input class="btn-compra-detail" type="submit" value="Agregar al carrito de compras"></input>
+                    </form>
                 </article>
             </div>
     </body>

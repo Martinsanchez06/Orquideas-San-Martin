@@ -1,0 +1,116 @@
+.h1-detail {
+    text-align: center;
+}
+
+.producto-detalle {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid rgb(228, 228, 228);
+    margin: 10px 15px;
+    border-radius: 8px;
+}
+
+.imagen-detalle img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.imagen-detalle {
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.h1-detail {
+    margin: 5px 15px;
+}
+
+.imagenes-buttom {
+    width: 50%;
+    display: flex;
+}
+
+.imagenes-buttom img {
+    width: 100%;
+    border-radius: 15px;
+    margin: 5px 10px 5px 0px;
+}
+
+.imagenes-buttom {
+    width: 33.3%;
+}
+
+.info-detail {
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
+
+.info-detail p,
+.info-detail h3 {
+    margin-top: 10px;
+    color: rgb(43, 43, 43);
+    margin-left: 6px;
+}
+
+
+.precio-detalle strong {
+    font-size: 30px;
+    color: #324535 !important;
+}
+
+.precio-detalle {
+    margin-bottom: 20px;
+}
+
+.info-detail p strong {
+    color: rgb(0, 0, 0);
+}
+
+.info-detail-buttom {
+    display: flex;
+}
+
+.clima-detail {
+    font-size: 19px;
+    margin-bottom: 20px;
+}
+
+.info-detail-buttom p {
+    background-color: #324535;
+    padding: 5px;
+    margin-top: 20px;
+    color: #fff;
+    width: 50%;
+    text-align: center;
+    border-radius: 15px;
+    margin-right: 10px;
+}
+
+.info-detail-buttom p strong {
+    color: #fff;
+}
+
+.compra-detail {
+    
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.btn-compra-detail {
+    background-color: #324535;
+    border-color: #324535;
+    color: #fff;
+    font-size: 18px;
+    width: 70%;
+    height: 5vh;
+    border-radius: 10px;
+    margin-top:20px;
+}
+
+.hr-detail {
+    margin-top: 20px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
