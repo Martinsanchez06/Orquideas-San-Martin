@@ -1,4 +1,7 @@
-/* ----- UPPER ----- */
+/* ----- UPPER ----- 
+1263
+143
+*/
 .upper {
   height: 25px;
   display: flex;
@@ -32,9 +35,20 @@
 }
 
 .img-header {
-  margin-top: 10px;
   height: 100%;
+}
+
+.bc-header {
+  background-color: #002F30;
+  display: flex;
+  justify-content: center;
   width: 100%;
+  height: 160px;
+}
+
+.nav-tabs-div {
+  background-color: #002F30;
+  border-bottom: 3px solid #fff;
 }
 
 /* ------NAV PRINCIPAL------ */
@@ -42,6 +56,7 @@
   display: flex;
   justify-content: center;
   display: none;
+  background-color: #002F30;
 }
 
 .nav-tabss li {
@@ -92,7 +107,6 @@
 /* ------ IMAGEN DE FONDO PRINCIPAL ------ */
 
 .slider {
-  height: 130vh;
   margin-bottom: 40px;
   margin-left: auto;
   background-image: url(/images/orquideasImages/IMG-20220513-WA0003.jpg);
@@ -215,8 +229,8 @@
 
 /* ------LAPTOPS, LARGER TABLETS IN LANDSCAPE, AND SMALL DESKTOPS  */
 @media only screen and (min-width: 769px) and (max-width: 1279px) {
-  
-  .img-header{
+
+  .img-header {
     position: relative;
     z-index: 100;
   }
@@ -224,11 +238,14 @@
   /* ------NAV PRINCIPAL------ */
   .nav-tabss {
     display: flex;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 20px 0px;
     margin: auto;
     position: relative;
-    margin-top: -45px;
+  }
+
+  .nav-tabss li a {
+    font-size: 20px;
+    color: #ffffff;
   }
 
   /* ------NAV DE ICONOS ------ */
@@ -236,7 +253,7 @@
   .nav-tabss2 .fa-bars,
   .nav-tabss2 .fa-shopping-cart,
   .nav-tabss2 .fa-search {
-    display: none;
+    display: hidden;
   }
 
   /* ------ IMAGEN DE FONDO PRINCIPAL ------ */
@@ -254,22 +271,20 @@
   /* ------NAV PRINCIPAL------ */
   .nav-tabss {
     display: flex;
-    padding-top: 20px;
+    padding: 20px 0px;
     margin: auto;
   }
 
-  .nav-tabss li a{
+  .nav-tabss li a {
     font-size: 20px;
     color: #ffffff;
   }
 
   /* ------NAV DE ICONOS ------ */
-  .nav-tabss2 .fa-bars,
-  .nav-tabss2 .fa-shopping-cart,
-  .fa-search {
-    display: none;
+  .nav-tabs-div {
+    background-color: #002F30;
+    border-bottom: 3px solid #fff;
   }
-
   /* ------ IMAGEN DE FONDO PRINCIPAL ------ */
   .slider {
     padding-bottom: 15px;
