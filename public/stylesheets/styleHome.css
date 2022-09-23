@@ -59,6 +59,7 @@ body {
 /* ------ CONTENEDOR PARA GRID DE PLANTAS (UNO POR CADA SECCIÓN) ------ */
 
 .container-productos{
+  background-color: rgb(236, 236, 236);
   justify-content: center;
   display: grid;
   grid-template-columns: 45% 45%;

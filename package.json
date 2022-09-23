@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "test": "node ./bin/www",
+    "start": "node app.js",
     "server": "nodemon node app.js  "
   },
   "dependencies": {
