@@ -124,9 +124,8 @@
   .text-slider-home {
     font-family: 'Radio Canada', sans-serif;
     color: #ffffff;
-    margin-bottom: 50px;
     font-size: 45px;
-    padding-top: 160px;
+    padding: 160px 0px;
     text-align: center;
   }
   
@@ -284,8 +283,7 @@
     /* ------ TEXTO PRINCIPAL EN SLIDER ------ */
   
     .text-slider-home {
-      padding-top: 120px;
-      margin-bottom: 20px;
+      padding: 100px 0px;
     }
   
     .intro-text-home {

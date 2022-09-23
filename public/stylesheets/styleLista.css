@@ -1,5 +1,9 @@
+.h1-listado {
+    margin-top: 70px;
+}
+
 .productos-listado{
-    margin-top: 20px;
+    margin-top: 40px;
     display: grid;
     background-color: rgb(253, 253, 253);
 }
