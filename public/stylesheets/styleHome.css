@@ -10,6 +10,10 @@ body {
 
 /* ------ CUADRO SUPERIOR DE LA TIENDA ------ */
 
+.contain {
+  background-color: rgb(247, 247, 247);
+}
+
 .container-top {
   border: 1px solid #b1b1b1;
   height: 40px;
@@ -59,7 +63,6 @@ body {
 /* ------ CONTENEDOR PARA GRID DE PLANTAS (UNO POR CADA SECCIÓN) ------ */
 
 .container-productos{
-  background-color: rgb(236, 236, 236);
   justify-content: center;
   display: grid;
   grid-template-columns: 45% 45%;
