@@ -27,7 +27,7 @@ app.use(cookieParser());
 app.use(express.static('public'));
 
 app.use('/', homeRouter);
-app.use('/user', clientRouter);
+app.use('/usuario', clientRouter);
 app.use('/admin', adminRouter)
 
 // ----- CATCH 404 -----

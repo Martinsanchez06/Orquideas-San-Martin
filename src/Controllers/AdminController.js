@@ -30,7 +30,7 @@ const OrquideasController = {
                 imagen2: req.files[1].filename,
                 imagen3: req.files[2].filename,
             })
-            res.redirect('/user/listado')
+            res.redirect('/usuario/listado')
         } catch (error) {
             res.send('error')
         }
