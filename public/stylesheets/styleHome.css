@@ -68,41 +68,6 @@ body {
   grid-template-columns: 45% 45%;
 }
 
-/* ------ CONTENEDOR DE CADA PLANATA ------ */
-
-.planta {
-  display: flex;
-  flex-direction: column;
-  justify-content: center; 
-  align-items: center;
-  width: 100%;
-}
-.imagen-p-content{
-  width: 85%;
-  margin: 15px 0px 10px 0px;
-}
-.nombre-p, .precio-p, .clima-p, .detalle-planta {
-  margin: 2.5px 0px 2.5px 0px;
-}
-.imagen-p{
-  border-radius: 7px;
-  width: 100%;
-}
-.nombre-p{
-  font-size: 17px;
-}
-.precio-p {
-  font-size: 15px;
-  color:#545454;
-}
-.detalle-planta {
-  background-color: #03687C;
-  border-color: #03687C;
-  width: 65%;
-  height: 3.8vh;
-  border-radius: 7px;
-  color:#ffffff;
-}
 
 /* ------ DIV BUSCAR PLANATA ------ */
 
@@ -251,18 +216,6 @@ body {
     border: none;
     width: 20%;
     height: 100%;
-  }
-
-  .planta {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; 
-    align-items: center;
-    width: 100%;
-  }
-  .imagen-p-content{
-    width: 85%;
-    margin: 15px 0px 10px 0px;
   }
 
   .div-text {

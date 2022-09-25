@@ -41,104 +41,19 @@
         <h3 class="header-vendidos">Nuestros más vendidos </h3>
         <section class="los-mas-vendidos">
           <div class="container-productos">
-            <div class="planta">
-              <div class="imagen-p-content">
-                <img class="imagen-p" src="./images/orquideasImages/IMG-20220513-WA0008.jpg" alt="">
-              </div>
-              <h3 class="nombre-p">
-                nombre planta
-              </h3>
-              <p class="precio-p">
-                $123.456
-              </p>
-              <p class="clima-p">
-                clima
-              </p>
-              <button class="detalle-planta" type="submit">Ver detalle</button>
-            </div>
-            <div class="planta">
-              <div class="imagen-p-content">
-                <img class="imagen-p" src="./images/orquideasImages/IMG-20220513-WA0008.jpg" alt="">
-              </div>
-              <h3 class="nombre-p">
-                nombre planta
-              </h3>
-              <p class="precio-p">
-                $123.456
-              </p>
-              <p class="clima-p">
-                clima
-              </p>
-              <button class="detalle-planta" type="submit">Ver detalle</button>
-            </div>
-            <div class="planta">
-              <div class="imagen-p-content">
-                <img class="imagen-p" src="./images/orquideasImages/IMG-20220513-WA0008.jpg" alt="">
-              </div>
-              <h3 class="nombre-p">
-                nombre planta
-              </h3>
-              <p class="precio-p">
-                $123.456
-              </p>
-              <p class="clima-p">
-                clima
-              </p>
-              <button class="detalle-planta" type="submit">Ver detalle</button>
-            </div>
-            <div class="planta">
-              <div class="imagen-p-content">
-                <img class="imagen-p" src="./images/orquideasImages/IMG-20220513-WA0008.jpg" alt="">
-              </div>
-              <h3 class="nombre-p">
-                nombre planta
-              </h3>
-              <p class="precio-p">
-                $123.456
-              </p>
-              <p class="clima-p">
-                clima
-              </p>
-              <button class="detalle-planta" type="submit">Ver detalle</button>
-            </div>
-            <div class="planta">
-              <div class="imagen-p-content">
-                <img class="imagen-p" src="./images/orquideasImages/IMG-20220513-WA0008.jpg" alt="">
-              </div>
-              <h3 class="nombre-p">
-                nombre planta
-              </h3>
-              <p class="precio-p">
-                $123.456
-              </p>
-              <p class="clima-p">
-                clima
-              </p>
-              <button class="detalle-planta" type="submit">Ver detalle</button>
-            </div>
-            <div class="planta">
-              <div class="imagen-p-content">
-                <img class="imagen-p" src="./images/orquideasImages/IMG-20220513-WA0008.jpg" alt="">
-              </div>
-              <h3 class="nombre-p">
-                nombre planta
-              </h3>
-              <p class="precio-p">
-                $123.456
-              </p>
-              <p class="clima-p">
-                clima
-              </p>
-              <button class="detalle-planta" type="submit">Ver detalle</button>
-            </div>
+            <% orquideas.forEach(orquideas => { %>
+             <% if (orquideas.secciondehome_id === 1) { %>
+              <%- include('../Client/orquidea.ejs', {orquideas}) %> 
+             <% } %>
+            <% }) %>
           </div>
           <div class="div-buscador">
             <p class="titulo-buscador">¿Qué planta quieres encontrar?</p>
             <input type="search" name="Buscar..." id="buscador-home">
             <ul>
-              <% for (let i=0; i < categorias.length; i++ ) { %>
+              <% for (let i=0; i < secciones.length; i++ ) { %>
                 <li class="categoria">
-                  <%=categorias[i].categoria%>
+                  <%=secciones[i].seccion %>
                 </li>
                 <% } %>
             </ul>
@@ -148,51 +63,11 @@
         <section class="orquideas-florecidas">
           <h3 class="header-orquideas-florecidas">Orquideas florecidas</h3>
           <div class="container-productos-2">
-            <div class="planta">
-              <div class="imagen-p-content">
-                <img class="imagen-p" src="./images/orquideasImages/IMG-20220513-WA0008.jpg" alt="">
-              </div>
-              <h3 class="nombre-p">
-                nombre planta
-              </h3>
-              <p class="precio-p">
-                $123.456
-              </p>
-              <p class="clima-p">
-                clima
-              </p>
-              <button class="detalle-planta" type="submit">Ver detalle</button>
-            </div>
-            <div class="planta">
-              <div class="imagen-p-content">
-                <img class="imagen-p" src="./images/orquideasImages/IMG-20220513-WA0008.jpg" alt="">
-              </div>
-              <h3 class="nombre-p">
-                nombre planta
-              </h3>
-              <p class="precio-p">
-                $123.456
-              </p>
-              <p class="clima-p">
-                clima
-              </p>
-              <button class="detalle-planta" type="submit">Ver detalle</button>
-            </div>
-            <div class="planta">
-              <div class="imagen-p-content">
-                <img class="imagen-p" src="./images/orquideasImages/IMG-20220513-WA0008.jpg" alt="">
-              </div>
-              <h3 class="nombre-p">
-                nombre planta
-              </h3>
-              <p class="precio-p">
-                $123.456
-              </p>
-              <p class="clima-p">
-                clima
-              </p>
-              <button class="detalle-planta" type="submit">Ver detalle</button>
-            </div>
+            <% orquideas.forEach(orquideas => { %>
+              <% if (orquideas.secciondehome_id === 2) { %>
+               <%- include('../Client/orquidea.ejs', {orquideas}) %> 
+              <% } %>
+             <% }) %>
           </div>
         </section>
         <div class="div-text">
@@ -210,69 +85,19 @@
         </div>
         <div class="container-productos-3">
           <h3 class="header-descuento">En descuento</h3>
-          <div class="planta">
-            <div class="imagen-p-content">
-              <img class="imagen-p" src="./images/orquideasImages/IMG-20220513-WA0008.jpg" alt="">
-            </div>
-            <h3 class="nombre-p">
-              nombre planta
-            </h3>
-            <p class="precio-p">
-              $123.456
-            </p>
-            <p class="clima-p">
-              clima
-            </p>
-            <button class="detalle-planta" type="submit">Ver detalle</button>
-          </div>
+          <% orquideas.forEach(orquideas => { %>
+            <% if (orquideas.secciondehome_id === 3){ %>
+             <%- include('../Client/orquidea.ejs', {orquideas}) %> 
+            <% } %>
+           <% }) %>
         </div>
         <section class="mas-plantas">
           <div class="container-productos-4">
-            <div class="planta">
-              <div class="imagen-p-content">
-                <img class="imagen-p" src="./images/orquideasImages/IMG-20220513-WA0008.jpg" alt="">
-              </div>
-              <h3 class="nombre-p">
-                nombre planta
-              </h3>
-              <p class="precio-p">
-                $123.456
-              </p>
-              <p class="clima-p">
-                clima
-              </p>
-              <button class="detalle-planta" type="submit">Ver detalle</button>
-            </div>
-            <div class="planta">
-              <div class="imagen-p-content">
-                <img class="imagen-p" src="./images/orquideasImages/IMG-20220513-WA0008.jpg" alt="">
-              </div>
-              <h3 class="nombre-p">
-                nombre planta
-              </h3>
-              <p class="precio-p">
-                $123.456
-              </p>
-              <p class="clima-p">
-                clima
-              </p>
-              <button class="detalle-planta" type="submit">Ver detalle</button>
-            </div>
-            <div class="planta">
-              <div class="imagen-p-content">
-                <img class="imagen-p" src="./images/orquideasImages/IMG-20220513-WA0008.jpg" alt="">
-              </div>
-              <h3 class="nombre-p">
-                nombre planta
-              </h3>
-              <p class="precio-p">
-                $123.456
-              </p>
-              <p class="clima-p">
-                clima
-              </p>
-              <button class="detalle-planta" type="submit">Ver detalle</button>
-            </div>
+            <% orquideas.forEach(orquideas => { %>
+              <% if (orquideas.secciondehome_id === 4) { %>
+               <%- include('../Client/orquidea.ejs', {orquideas}) %> 
+              <% } %>
+             <% }) %>
           </div>
         </section>
       </main>
