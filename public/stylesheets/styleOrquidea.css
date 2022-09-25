@@ -1,3 +1,14 @@
+/*
+
+002f30
+03687c
+037587
+025e96
+0152a3
+0046af 
+
+*/
+
 section.Orquidea {
     display: flex;
     margin-bottom: 20px;
@@ -61,6 +72,7 @@ section.Orquidea {
         margin-bottom: 10px;
     }
 }
+
 @media only screen and (min-width: 717px) {
     section.Orquidea {
         min-width: 50%;

@@ -52,7 +52,7 @@
 
 .precio-detalle strong {
     font-size: 30px;
-    color: #324535 !important;
+    color: #002F30 !important;
 }
 
 .precio-detalle {
@@ -73,7 +73,7 @@
 }
 
 .info-detail-buttom p {
-    background-color: #324535;
+    background-color: #025E96;
     padding: 5px;
     margin-top: 20px;
     color: #fff;
@@ -95,8 +95,8 @@
 }
 
 .btn-compra-detail {
-    background-color: #324535;
-    border-color: #324535;
+    background-color: #025E96;
+    border-color: #025E96;
     color: #fff;
     font-size: 18px;
     width: 70%;
