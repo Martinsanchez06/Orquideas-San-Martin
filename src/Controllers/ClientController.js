@@ -1,4 +1,5 @@
 const fs = require('fs')
+const bcryptjs = require('bcryptjs');
 const path = require('path')
 const db = require('../database/models')
 
@@ -29,15 +30,9 @@ const ClientController = {
     registro : (req, res) => {
         try {
             db.usuarios.create({
-                nombre: req.body.nombre,
-                documento: req.body.documento,
-                tipoDeDocumento: req.body.tipoDeDocumento,
-                email: req.body.email,
-                contrasenia: req.body.contrasenia,
-                contraseniaConf: req.body.contraseniaConf,
-                pais: req.body.pais,
-                ciudad: req.body.ciudad,
-                direccion: req.body.direccion
+                ...req.body,
+                contrasenia: bcryptjs.hashSync(req.body.contrasenia, 10),
+                contraseniaConf: bcryptjs.hashSync(req.body.contraseniaConf, 10),
             })
             res.redirect('/')
         } catch (error) {

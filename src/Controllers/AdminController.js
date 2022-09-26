@@ -17,15 +17,11 @@ const OrquideasController = {
     create: function (req, res) {
         try {
             db.Orquideas.create({
-                nombre: req.body.nombre,
-                clima_id: req.body.clima,
-                precio: req.body.precio,
-                descripcion: req.body.descripcion,
+                ...req.body,
                 categoria_id: req.body.categoria,
                 tamanio_id: req.body.tamanio,
-                disponibilidad: req.body.disponibilidad,
-                flor: req.body.flor,
                 secciondehome_id: req.body.seccion,
+                clima_id: req.body.clima,
                 imagen1: req.files[0].filename,
                 imagen2: req.files[1].filename,
                 imagen3: req.files[2].filename,
