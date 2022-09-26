@@ -56,11 +56,44 @@ const ClientController = {
                 let contraseñaCorrecta = bcryptjs.compareSync(req.body.contrasenia, usuarioParaCrear.contrasenia)
                 console.log(contraseñaCorrecta)
                 if (contraseñaCorrecta) {
-                   return res.send('bien hecho')
+                    delete usuarioParaCrear.contrasenia;
+                    delete usuarioParaCrear.contraseniaConf;
+                    req.session.usuarioLogueado = usuarioParaCrear;
+                   
+                    if (req.body.remember_user) {
+                        res.cookie("userEmail", req.body.email, { maxAge: (1000 * 60) * 60 });
+                    }
+    
+                    return res.render('Client/perfil');
                 } else {
-                    return res.send('mal hecho')
+                    return res.render('login', {
+                        errors: {
+                            email: {
+                                msg: 'las credenciales no son validas'
+                            }
+                        }
+                    })
                 }
             }
+            return res.render('Client/login', {
+                errors: {
+                    email: {
+                        msg: 'Usuario no valido'
+                    }
+                }
+            })
+        })
+    }, 
+    perfil:(req, res) => {
+        let emaiil = req.session.usuarioLogueado.email
+        db.usuarios.findOne({
+            where: { email: emaiil },
+        })
+        .then(function (usuarios) {
+            console.log(usuarios)
+            res.render("Client/perfil", {
+                usuarios
+            })
         })
     }
 }

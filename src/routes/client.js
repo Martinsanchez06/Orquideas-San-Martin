@@ -11,6 +11,8 @@ router.get("/registro", ClientController.registroForm)
 
 router.get("/login", ClientController.loginForm)
 
+router.get("/perfil", ClientController.perfil)
+
 
 // ------ ENVIA INFORMACION ------
 

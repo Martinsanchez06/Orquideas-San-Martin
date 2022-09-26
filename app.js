@@ -1,4 +1,5 @@
 const createError = require('http-errors');
+const session = require('express-session');
 const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
@@ -9,6 +10,12 @@ const clientRouter = require('./src/routes/client');
 const adminRouter = require('./src/routes/admin')
 
 const app = express();
+
+app.use(session({
+  secret : 'shh es secreto',
+  resave : false,
+  saveUninitialized : false
+}))
 
 // ----- VIEW ENGINE SETP -----
 app.set('views', path.join(__dirname, 'views'));
