@@ -25,6 +25,24 @@ const ClientController = {
     },
     registroForm : (req, res) => {
         res.render('Client/registro')
+    },
+    registro : (req, res) => {
+        try {
+            db.usuarios.create({
+                nombre: req.body.nombre,
+                documento: req.body.documento,
+                tipoDeDocumento: req.body.tipoDeDocumento,
+                email: req.body.email,
+                contrasenia: req.body.contrasenia,
+                contraseniaConf: req.body.contraseniaConf,
+                pais: req.body.pais,
+                ciudad: req.body.ciudad,
+                direccion: req.body.direccion
+            })
+            res.redirect('/')
+        } catch (error) {
+            res.send('error')
+        }
     }
 }
 

@@ -10,5 +10,10 @@ router.get('/detalle/:id', ClientController.detalle)
 router.get("/registro", ClientController.registroForm)
 
 
+// ------ ENVIA INFORMACION ------
+
+router.post("/registro", ClientController.registro)
+
+
 
 module.exports = router;
