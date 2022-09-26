@@ -60,7 +60,7 @@
           <div class="container-productos">
             <% orquideas.forEach(orquideas=> { %>
               <% if (orquideas.secciondehome_id===1) { %>
-                <%- include('../Client/orquidea.ejs', {orquideas}) %>
+                <%- include('../Client/orquideaHome.ejs', {orquideas}) %>
                   <% } %>
                     <% }) %>
           </div>
@@ -82,7 +82,7 @@
           <div class="container-productos-2">
             <% orquideas.forEach(orquideas=> { %>
               <% if (orquideas.secciondehome_id===2) { %>
-                <%- include('../Client/orquidea.ejs', {orquideas}) %>
+                <%- include('../Client/orquideaHome.ejs', {orquideas}) %>
                   <% } %>
                     <% }) %>
           </div>
@@ -104,7 +104,7 @@
           <h3 class="header-descuento">En descuento</h3>
           <% orquideas.forEach(orquideas=> { %>
             <% if (orquideas.secciondehome_id===3){ %>
-              <%- include('../Client/orquidea.ejs', {orquideas}) %>
+              <%- include('../Client/orquideaHome.ejs', {orquideas}) %>
                 <% } %>
                   <% }) %>
         </div>
@@ -112,7 +112,7 @@
           <div class="container-productos-4">
             <% orquideas.forEach(orquideas=> { %>
               <% if (orquideas.secciondehome_id===4) { %>
-                <%- include('../Client/orquidea.ejs', {orquideas}) %>
+                <%- include('../Client/orquideaHome.ejs', {orquideas}) %>
                   <% } %>
                     <% }) %>
           </div>

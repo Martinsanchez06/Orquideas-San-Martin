@@ -175,10 +175,11 @@ body {
     display: flex;
   }
   .container-productos{
+    margin: 0px 40px;
     width: 75%;
     justify-content: center;
     display: grid;
-    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-template-columns: 25% 25% 25% 25%;
   }
 
   .header-vendidos {
@@ -192,13 +193,15 @@ body {
   }
 
   .container-productos-2{
+    margin: 0px 40px;
     width: 75%;
     justify-content: center;
     display: grid;
-    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-template-columns: 25% 25% 25% 25%;
   }
 
   .container-productos-3{
+    margin: 0px 40px;
     width: 75%;
     justify-content: center;
     display: grid;
@@ -206,14 +209,20 @@ body {
   }
 
   .container-productos-4{
+    margin: 0px 40px;
     width: 75%;
     justify-content: center;
     display: grid;
-    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-template-columns: 25% 25% 25% 25%;
   }
 
   .div-buscador {
     border: none;
+    background-color: #fff;
+    padding: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    margin-right: 20px;
     width: 20%;
     height: 100%;
   }
