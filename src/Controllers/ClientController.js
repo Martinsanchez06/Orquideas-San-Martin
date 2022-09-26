@@ -38,6 +38,30 @@ const ClientController = {
         } catch (error) {
             res.send('error')
         }
+    },
+    loginForm:(req, res) => {
+        db.usuarios.findAll()
+        .then(function (usuarios){  
+            res.render('Client/login')
+        })
+    },
+    login:(req, res)=>{
+        db.usuarios.findOne({
+            where : { 
+                email : req.body.email
+            }
+        })
+        .then(function (usuarioParaCrear){
+            if (usuarioParaCrear) {
+                let contraseñaCorrecta = bcryptjs.compareSync(req.body.contrasenia, usuarioParaCrear.contrasenia)
+                console.log(contraseñaCorrecta)
+                if (contraseñaCorrecta) {
+                   return res.send('bien hecho')
+                } else {
+                    return res.send('mal hecho')
+                }
+            }
+        })
     }
 }
 

@@ -9,10 +9,14 @@ router.get('/detalle/:id', ClientController.detalle)
 
 router.get("/registro", ClientController.registroForm)
 
+router.get("/login", ClientController.loginForm)
+
 
 // ------ ENVIA INFORMACION ------
 
 router.post("/registro", ClientController.registro)
+
+router.post("/login", ClientController.login)
 
 
 
