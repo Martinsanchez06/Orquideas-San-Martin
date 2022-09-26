@@ -1,0 +1,50 @@
+<%- include('../partials/head.ejs') %>
+
+    <body>
+        <%- include('../partials/header.ejs') %>
+
+            <form action="/usuario/registro" class="registro-f">
+                <label for="">Nombre:</label>
+                <input type="text" name="nombre" placeholder="Tu nombre"> 
+                <br> 
+                <br>
+                <label for="">Email:</label>
+                <input type="email" name="email" placeholder="Tu email"> 
+                <br> 
+                <br>
+                <label for="">Contraseña</label>
+                <input type="text" name="contraseña" placeholder="******"> 
+                <br> 
+                <br>
+                <label for="">Tipo de documento</label>
+                <select name="tipoDeDocumento" id="tipoDeDocumento" class="control">
+                    <option value="">Selecciona tu tipo de documento</option>
+                    <option value="">Cedula de ciudadania CC</option>
+                    <option value="">Tarjeta de identidad TI</option>
+                </select> 
+                <br> 
+                <br>
+                <label for="">Numero de documento</label>
+                <input type="text" placeholder="123456789"> 
+                <br> 
+                <br>
+                <label for="">Pais</label>
+                <select name="pais" id="pais">
+                    <option value="">Selecciona tu pais</option>
+                    <option value="">Colombia</option>
+                    <option value="">Ecuador</option>
+                </select> 
+                <br> 
+                <br>
+                <label for="">Ciudad</label>
+                <select name="ciudad" id="ciudad">
+                    <option value="">Bogota </option> 
+                    <option value="">Guayaquil </option>
+                </select> 
+                <br> 
+                <br>
+
+            </form>
+
+    </body>
+    <%- include('../partials/footer.ejs') %>

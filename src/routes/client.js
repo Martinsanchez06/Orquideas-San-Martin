@@ -7,6 +7,8 @@ router.get('/listado', ClientController.lista);
 
 router.get('/detalle/:id', ClientController.detalle)
 
+router.get("/registro", ClientController.registroForm)
+
 
 
 module.exports = router;

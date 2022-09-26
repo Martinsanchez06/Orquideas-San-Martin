@@ -22,6 +22,9 @@ const ClientController = {
             .then(function (orquideas) {
                 res.render("Client/detail", { orquideas })
             })
+    },
+    registroForm : (req, res) => {
+        res.render('Client/registro')
     }
 }
 
