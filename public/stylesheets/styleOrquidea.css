@@ -47,6 +47,10 @@ section.Orquidea {
     object-fit: cover;
 }
 
+.precio-p {
+    color: #525252;
+}
+
 .card-article {
     text-align: center;
     border-radius: 10px;
