@@ -6,6 +6,10 @@
     "start": "node app.js",
     "server": "nodemon node app.js"
   },
+  "engines": {
+    "node": "16.14.2",
+    "npm": "8.18.0"
+  },
   "dependencies": {
     "bcrypt": "^5.0.1",
     "bcryptjs": "^2.4.3",
