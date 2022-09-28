@@ -54,7 +54,6 @@ const ClientController = {
         .then(function (usuarioParaCrear){
             if (usuarioParaCrear) {
                 let contraseñaCorrecta = bcryptjs.compareSync(req.body.contrasenia, usuarioParaCrear.contrasenia)
-                console.log(contraseñaCorrecta)
                 if (contraseñaCorrecta) {
                     delete usuarioParaCrear.contrasenia;
                     delete usuarioParaCrear.contraseniaConf;
@@ -64,7 +63,7 @@ const ClientController = {
                         res.cookie("userEmail", req.body.email, { maxAge: (1000 * 60) * 60 });
                     }
     
-                    return res.render('Client/perfil');
+                    return res.redirect('perfil');
                 } else {
                     return res.render('login', {
                         errors: {
