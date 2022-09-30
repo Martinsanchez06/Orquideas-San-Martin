@@ -2,18 +2,16 @@ const fs = require('fs')
 const bcryptjs = require('bcryptjs');
 const path = require('path')
 const db = require('../database/models')
+const Op = db.Sequelize.Op;
 
 
 const ClientController = {
     lista: (req, res) => {
         let orquideasEncontradas = db.Orquideas.findAll()
         let climasEncontrados = db.climas.findAll()
-        let categoriasEncontradas = db.categorias.findAll()
-        let tamaniosEncontrados = db.tamanios.findAll()
-        let seccionesEncontradas = db.secciones.findAll()
-        Promise.all([orquideasEncontradas,climasEncontrados, categoriasEncontradas, tamaniosEncontrados, seccionesEncontradas])
-            .then(function ([orquideas, climas, categorias, tamanios, secciones ]){
-                res.render('Client/listado', {orquideas, climas, categorias, tamanios, secciones})
+        Promise.all([orquideasEncontradas,climasEncontrados])
+            .then(function ([orquideas, climas]){
+                res.render('Client/listado', {orquideas, climas})
             })
     },
     detalle : (req, res) => {
@@ -94,6 +92,17 @@ const ClientController = {
                 usuarios
             })
         })
+    },
+    search: (req, res) => {
+
+        db.Orquideas.findAll({
+            include: [{ association: 'climas' }],
+            where: {
+                nombre: { [Op.like]: `%${req.query.search}%` }
+            }
+        })
+            .then(orquideas => { res.render("Client/resultado", { orquideas }); })
+            .catch(error => res.send(error))
     }
 }
 

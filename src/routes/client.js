@@ -13,6 +13,10 @@ router.get("/login", ClientController.loginForm)
 
 router.get("/perfil", ClientController.perfil)
 
+router.get("/resultado", function(req, res){
+res.send('ok')
+});
+
 
 // ------ ENVIA INFORMACION ------
 
