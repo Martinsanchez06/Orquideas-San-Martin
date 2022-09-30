@@ -16,7 +16,7 @@ const HomeController = {
         let categoriasEncontradas = db.categorias.findAll()
         Promise.all([orquideasEncontradas, seccionesEncontradas, climasEncontradas, categoriasEncontradas])
             .then(function ([orquideas, secciones, climas, categorias]) {
-                res.render('home/home', { orquideas, secciones, climas, categorias})
+                res.render('Home/home', { orquideas, secciones, climas, categorias})
             })
 
         // db.Orquideas.findAll()
