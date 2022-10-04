@@ -30,7 +30,11 @@
 /* ------ NAVBAR-MAIN ------ */
 
 .navbar-main-container {
-  height: 129.5vh;
+  background-color: #002F30;
+}
+
+.navbar-main-container-home {
+  padding-bottom: 5px;
   background-color: #002F30;
 }
 
@@ -114,14 +118,14 @@
   margin-bottom: 40px;
   margin-left: auto;
   margin-right: auto;
-  border-radius: 20px;
-  margin-top: -600px;
+  border-top-left-radius: 70px;
+  border-bottom-right-radius: 70px;
   background-image: url(/images/orquideasImages/IMG-20220513-WA0003.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment:fixed ;
   margin-right: auto;
-  height: 100vh;
+  padding-bottom:40px; 
   width: 95%;
 }
 
