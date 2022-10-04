@@ -108,6 +108,54 @@
   border-radius: 15px;
 }
 
+/* ------ IMAGEN DE FONDO PRINCIPAL ------ */
+  
+.slider-home {
+  margin-bottom: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+  margin-top: -600px;
+  background-image: url(/images/orquideasImages/IMG-20220513-WA0003.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment:fixed ;
+  margin-right: auto;
+  height: 100vh;
+  width: 95%;
+}
+
+/* ------ H-REF DE HOME ------ */
+.home-home {
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+}
+
+/* ------ TEXTO PRINCIPAL EN SLIDER ------ */
+
+.text-slider-home {
+  font-family: 'Radio Canada', sans-serif;
+  color: #ffffff;
+  font-size: 45px;
+  padding: 160px 0px;
+  text-align: center;
+}
+
+.intro-home {
+  background-color: rgba(0, 0, 0, 0.237);
+  margin: 40px;
+  margin-top: 110px;
+  padding: 10px;
+  border-radius: 30px;
+
+}
+
+.intro-text-home {
+  color: #ffffff;
+  font-size: 25px;
+}
+
 /* ------SMALLER PHONE------ */
 
 @media only screen and (min-width: 0px) and (max-width: 492px) {
