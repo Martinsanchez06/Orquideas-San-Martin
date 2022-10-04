@@ -104,12 +104,16 @@
   .slider-home {
     margin-bottom: 40px;
     margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    margin-top: -600px;
     background-image: url(/images/orquideasImages/IMG-20220513-WA0003.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
+    background-attachment:fixed ;
     margin-right: auto;
-    box-shadow: 3px 3px 10px #A8A8A8;
+    height: 100vh;
+    width: 95%;
   }
   
   /* ------ H-REF DE HOME ------ */

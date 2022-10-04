@@ -29,6 +29,11 @@
 
 /* ------ NAVBAR-MAIN ------ */
 
+.navbar-main-container {
+  height: 129.5vh;
+  background-color: #002F30;
+}
+
 .navbar-main {
   justify-content: center;
   align-items: center;
@@ -48,7 +53,6 @@
 
 .nav-tabs-div {
   background-color: #002F30;
-  border-bottom: 3px solid #fff;
 }
 
 /* ------NAV PRINCIPAL------ */
@@ -239,7 +243,6 @@
   /* ------NAV DE ICONOS ------ */
   .nav-tabs-div {
     background-color: #002F30;
-    border-bottom: 3px solid #fff;
   }
   /* ------ IMAGEN DE FONDO PRINCIPAL ------ */
   .slider {
