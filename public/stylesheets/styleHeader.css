@@ -34,7 +34,8 @@
 }
 
 .navbar-main-container-home {
-  padding-bottom: 5px;
+  padding-bottom: 50px;
+  margin-bottom: 40px;
   background-color: #002F30;
 }
 
@@ -115,7 +116,6 @@
 /* ------ IMAGEN DE FONDO PRINCIPAL ------ */
   
 .slider-home {
-  margin-bottom: 40px;
   margin-left: auto;
   margin-right: auto;
   border-top-left-radius: 70px;
