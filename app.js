@@ -4,12 +4,14 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
-
+const userLogguedMiddleware = require('./src/middlewares/userLogguedMiddleware');
 const homeRouter = require('./src/routes/home');
 const clientRouter = require('./src/routes/client');
 const adminRouter = require('./src/routes/admin')
 
 const app = express();
+
+app.use(userLogguedMiddleware)
 
 app.use(session({
   secret : 'shh es secreto',

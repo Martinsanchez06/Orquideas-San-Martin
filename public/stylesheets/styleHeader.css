@@ -80,11 +80,11 @@
 }
 
 /* ------NAV DE ICONOS------ */
-.nav-tabss2 {
+.nav2-link {
   display: flex;
 }
 
-.nav-tabss2 li {
+.nav2-link li {
   list-style: none;
 }
 
@@ -177,7 +177,7 @@
   }
 
   /* ------ NAV DE ICONOS ------ */
-  .nav-tabss2 li {
+  .nav2-link li {
     margin-right: 8px;
   }
 
@@ -223,7 +223,7 @@
 @media only screen and (min-width: 493px) and (max-width: 768px) {
 
   /* ------NAV DE ICONOS ------ */
-  .nav-tabss2 li {
+  .nav2-link li {
     margin-right: 20px;
   }
 
@@ -262,9 +262,10 @@
 
   /* ------NAV DE ICONOS ------ */
 
-  .nav-tabss2 .fa-bars,
-  .nav-tabss2 .fa-shopping-cart,
-  .nav-tabss2 .fa-search {
+  .nav2-link .fa-bars,
+  .nav2-link .fa-shopping-cart,
+  .nav2-link .fa-search,
+  .nav2-link .fa-user {
     display: hidden;
   }
 
