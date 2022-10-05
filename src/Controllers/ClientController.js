@@ -9,12 +9,12 @@ const ClientController = {
     lista: (req, res) => {
         let orquideasEncontradas = db.Orquideas.findAll()
         let climasEncontrados = db.climas.findAll()
-        Promise.all([orquideasEncontradas,climasEncontrados])
-            .then(function ([orquideas, climas]){
-                res.render('Client/listado', {orquideas, climas})
+        Promise.all([orquideasEncontradas, climasEncontrados])
+            .then(function ([orquideas, climas]) {
+                res.render('Client/listado', { orquideas, climas })
             })
     },
-    detalle : (req, res) => {
+    detalle: (req, res) => {
         db.Orquideas.findByPk(req.params.id, {
             include: [{ association: 'climas' }]
         })
@@ -22,10 +22,10 @@ const ClientController = {
                 res.render("Client/detail", { orquideas })
             })
     },
-    registroForm : (req, res) => {
+    registroForm: (req, res) => {
         res.render('Client/registro')
     },
-    registro : (req, res) => {
+    registro: (req, res) => {
         try {
             db.usuarios.create({
                 ...req.body,
@@ -37,61 +37,66 @@ const ClientController = {
             res.send('error')
         }
     },
-    loginForm:(req, res) => {
+    loginForm: (req, res) => {
         db.usuarios.findAll()
-        .then(function (usuarios){  
-            res.render('Client/login')
-        })
-    },
-    login:(req, res)=>{
-        db.usuarios.findOne({
-            where : { 
-                email : req.body.email
-            }
-        })
-        .then(function (usuarioParaCrear){
-            if (usuarioParaCrear) {
-                let contraseñaCorrecta = bcryptjs.compareSync(req.body.contrasenia, usuarioParaCrear.contrasenia)
-                if (contraseñaCorrecta) {
-                    delete usuarioParaCrear.contrasenia;
-                    delete usuarioParaCrear.contraseniaConf;
-                    req.session.usuarioLogueado = usuarioParaCrear;
-                   
-                    if (req.body.remember_user) {
-                        res.cookie("userEmail", req.body.email, { maxAge: (1000 * 60) * 60 });
-                    }
-    
-                    return res.redirect('perfil');
-                } else {
-                    return res.render('login', {
-                        errors: {
-                            email: {
-                                msg: 'las credenciales no son validas'
-                            }
-                        }
-                    })
-                }
-            }
-            return res.render('Client/login', {
-                errors: {
-                    email: {
-                        msg: 'Usuario no valido'
-                    }
-                }
+            .then(function (usuarios) {
+                res.render('Client/login')
             })
+    },
+    login: (req, res) => {
+        db.usuarios.findOne({
+            where: {
+                email: req.body.email
+            }
         })
-    }, 
-    perfil:(req, res) => {
+            .then(function (usuarioParaCrear) {
+                if (usuarioParaCrear) {
+                    let contraseñaCorrecta = bcryptjs.compareSync(req.body.contrasenia, usuarioParaCrear.contrasenia)
+                    if (contraseñaCorrecta) {
+                        delete usuarioParaCrear.contrasenia;
+                        delete usuarioParaCrear.contraseniaConf;
+                        req.session.usuarioLogueado = usuarioParaCrear;
+
+                        if (req.body.remember_user) {
+                            res.cookie("userEmail", req.body.email, { maxAge: (1000 * 60) * 60 });
+                        }
+
+                        return res.redirect('perfil');
+                    } else {
+                        return res.render('login', {
+                            errors: {
+                                email: {
+                                    msg: 'las credenciales no son validas'
+                                }
+                            }
+                        })
+                    }
+                }
+                return res.render('Client/login', {
+                    errors: {
+                        email: {
+                            msg: 'Usuario no valido'
+                        }
+                    }
+                })
+            })
+    },
+    perfil: (req, res) => {
         let emaiil = req.session.usuarioLogueado.email
         db.usuarios.findOne({
             where: { email: emaiil },
         })
-        .then(function (usuarios) {
-            console.log(usuarios)
-            res.render("Client/perfil", {
-                usuarios
+            .then(function (usuarios) {
+                console.log(usuarios)
+                res.render("Client/perfil", {
+                    usuarios
+                })
             })
-        })
+    },
+    logout: (req, res) => {
+        res.clearCookie("userEmail");
+        req.session.destroy();
+        return res.redirect("/")
     },
     search: (req, res) => {
 

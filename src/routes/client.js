@@ -15,6 +15,8 @@ router.get("/login",  guestMiddleware, ClientController.loginForm)
 
 router.get("/perfil",authMiddleware , ClientController.perfil)
 
+router.get("/logout",authMiddleware , ClientController.logout)
+
 router.get("/resultado", function(req, res){
 res.send('ok')
 });

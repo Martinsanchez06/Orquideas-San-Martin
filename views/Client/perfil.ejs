@@ -3,7 +3,10 @@
     <body>
         <%- include('../partials/header.ejs') %>
 
-<h1>Bienvenido: <%= usuarios.nombre %> </h1>
+            <h1>Bienvenido: <%= usuarios.nombre %>
+            </h1>
+
+            <a class="nav-icons" href="/usuario/logout/">Logout</a>
 
     </body>
     <%- include('../partials/footer.ejs') %>
