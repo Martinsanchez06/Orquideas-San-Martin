@@ -2,7 +2,7 @@ const createError = require('http-errors');
 const session = require('express-session');
 const express = require('express');
 const path = require('path');
-const cookieParser = require('cookie-parser');
+const cookies = require('cookie-parser');
 const logger = require('morgan');
 const userLogguedMiddleware = require('./src/middlewares/userLogguedMiddleware');
 const homeRouter = require('./src/routes/home');
@@ -32,7 +32,7 @@ app.listen(port, () =>{
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
+app.use(cookies());
 app.use(express.static('public'));
 
 app.use('/', homeRouter);

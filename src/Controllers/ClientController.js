@@ -23,6 +23,7 @@ const ClientController = {
             })
     },
     registroForm: (req, res) => {
+        res.cookie("cookie", 'hola mundo perro', { maxAge: 1000 * 30 });
         res.render('Client/registro')
     },
     registro: (req, res) => {
@@ -40,6 +41,7 @@ const ClientController = {
     loginForm: (req, res) => {
         db.usuarios.findAll()
             .then(function (usuarios) {
+                console.log(req.cookies.cookie)
                 res.render('Client/login')
             })
     },
@@ -57,8 +59,8 @@ const ClientController = {
                         delete usuarioParaCrear.contraseniaConf;
                         req.session.usuarioLogueado = usuarioParaCrear;
 
-                        if (req.body.remember_user) {
-                            res.cookie("userEmail", req.body.email, { maxAge: (1000 * 60) * 60 });
+                        if (req.body.recuerdame) {
+                            res.cookie("userEmail", req.body.email, { maxAge: ((1000 * 60) * 60) * 24 });
                         }
 
                         return res.redirect('perfil');
@@ -87,7 +89,7 @@ const ClientController = {
             where: { email: emaiil },
         })
             .then(function (usuarios) {
-                console.log(usuarios)
+                console.log(req.cookies.userEmail)
                 res.render("Client/perfil", {
                     usuarios
                 })
