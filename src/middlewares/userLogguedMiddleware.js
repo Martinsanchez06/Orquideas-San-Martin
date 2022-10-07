@@ -12,7 +12,7 @@ function userLoggedMiddleware(req, res, next) {
         userFromCookie
             .then(function (usuario) {
                 console.log(usuario);
-                if (usuario) {
+                if (req.session) {
                     req.session.usuarioLogueado = usuario;
                 }
                 if (req.session && req.session.usuarioLogueado) {
