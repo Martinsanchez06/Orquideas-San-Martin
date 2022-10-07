@@ -48,6 +48,7 @@ const ClientController = {
         try {
             db.usuarios.create({
                 ...req.body,
+                tipoDeUsuario: 1,
                 contrasenia: bcryptjs.hashSync(req.body.contrasenia, 10),
                 contraseniaConf: bcryptjs.hashSync(req.body.contraseniaConf, 10),
             })

@@ -42,6 +42,10 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: false
         },
+        tipoDeUsuario: {
+            type: DataTypes.INTEGER,
+            allowNull: false
+        }
     }
     let config = {
         tablename: 'usuarios',
