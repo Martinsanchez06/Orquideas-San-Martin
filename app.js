@@ -11,13 +11,14 @@ const adminRouter = require('./src/routes/admin')
 
 const app = express();
 
-app.use(userLogguedMiddleware)
-
+app.use(cookies());
 app.use(session({
   secret : 'shh es secreto',
   resave : false,
   saveUninitialized : false
 }))
+app.use(userLogguedMiddleware)
+
 
 // ----- VIEW ENGINE SETP -----
 app.set('views', path.join(__dirname, 'views'));
@@ -32,7 +33,6 @@ app.listen(port, () =>{
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(cookies());
 app.use(express.static('public'));
 
 app.use('/', homeRouter);
