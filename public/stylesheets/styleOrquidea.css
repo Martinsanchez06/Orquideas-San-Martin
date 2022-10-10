@@ -27,8 +27,8 @@ section.Orquidea {
     margin-bottom: 10px;
 }
 .card-img-home {
-    width: 77%;
-    height: 84%;
+    width: 87%;
+    height: 94%;
     margin-bottom: 10px;
 }
 
@@ -87,8 +87,6 @@ section.Orquidea {
     }
 
     .card-img-home {
-        width: 87%;
-        height: 97%;
         margin-bottom: 10px;
     }
 }
