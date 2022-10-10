@@ -5,17 +5,19 @@ function userLoggedMiddleware(req, res, next) {
     
     if (req.cookies.userEmail) {
         let emailInCookie = req.cookies.userEmail;
-        console.log(req.cookies.userEmail);
         let userFromCookie = db.usuarios.findOne({
             where: { email: emailInCookie },
         });
         userFromCookie
             .then(function (usuario) {
-                console.log(usuario);
                 if (req.session) {
                     req.session.usuarioLogueado = usuario;
+                    
                 }
                 if (req.session && req.session.usuarioLogueado) {
+                    if(usuario.tipoDeUsuario == 2){
+                        res.locals.usuarioAdmin = true 
+                    }
                     res.locals.isLogged = true;
                     res.locals.usuarioLogueado = req.session.usuarioLogueado;
                 }

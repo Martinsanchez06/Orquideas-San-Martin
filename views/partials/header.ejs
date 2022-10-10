@@ -12,21 +12,28 @@
         </div>
         <div class="nav-tabs-div">
             <ul class="nav-tabss">
-                <% if (locals.isLogged) { %>
+                <% if (locals.isLogged && locals.usuarioAdmin) { %>
                     <li><a class="nav-icons" href="/">Inicio</a></li>
                     <li><a class="nav-icons" href="/productos/lista">Donde estamos</a></li>
                     <li><a class="nav-icons" href="/usuario/login">Mi cuenta</a></li>
                     <li><a class="nav-icons" href="/usuario/listado">Catalogo</a></li>
                     <li><a class="nav-icons" href="#Contactos">Contáctanos</a></li>
-                    <li><a class="nav2-link" href='#'> <i class="far fa-user"></i></a></li>
-                    <% } else { %>
-
+                    <li><a class="nav-icons" href="#">Admin</a></li>
+                    <li><a class="nav-icons" href='#'> <i class="far fa-user"></i></a></li>
+                    <% } else if (locals.isLogged) { %>
                         <li><a class="nav-icons" href="/">Inicio</a></li>
                         <li><a class="nav-icons" href="/productos/lista">Donde estamos</a></li>
                         <li><a class="nav-icons" href="/usuario/login">Mi cuenta</a></li>
                         <li><a class="nav-icons" href="/usuario/listado">Catalogo</a></li>
                         <li><a class="nav-icons" href="#Contactos">Contáctanos</a></li>
-                        <% } %>
+                        <li><a class="nav-icons" href='#'> <i class="far fa-user"></i></a></li>
+                        <% } else { %>
+                            <li><a class="nav-icons" href="/">Inicio</a></li>
+                            <li><a class="nav-icons" href="/productos/lista">Donde estamos</a></li>
+                            <li><a class="nav-icons" href="/usuario/login">Mi cuenta</a></li>
+                            <li><a class="nav-icons" href="/usuario/listado">Catalogo</a></li>
+                            <li><a class="nav-icons" href="#Contactos">Contáctanos</a></li>
+                            <% } %>
 
 
             </ul>
