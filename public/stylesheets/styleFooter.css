@@ -14,6 +14,7 @@ footer {
     width: 344px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 20px;
 }
 
 /* DIV NUESTRA COMPAÑIA */
@@ -34,4 +35,36 @@ footer {
 .nuestraCompañia ul li a{
     text-decoration: none;
     color: #ffffff;
+}
+ 
+
+/* DIV NUESTRAS REDES SOCIALES */
+
+
+.redesSociales {
+    margin-left: 20px;
+    display: flex;
+    color: #ffffff;
+    flex-direction: column;
+}
+
+.redesSociales ul li {
+    list-style: none;
+    text-decoration: none;
+    padding-top: 15px;
+}
+
+.redesSociales ul li a{
+    text-decoration: none;
+    color: #ffffff;
+
+}
+
+.redesSociales ul li i{
+    margin-right: 10px;
+    font-size: 2rem;
+}
+
+.redesSociales h2 {
+    margin-top: 20px;
 }
