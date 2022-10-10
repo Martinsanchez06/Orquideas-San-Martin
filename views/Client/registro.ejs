@@ -2,60 +2,60 @@
 
     <body>
         <%- include('../partials/header.ejs') %>
+            <div class="container">
+                <form action="/usuario/registro" method="post" class="registro-f">
+                    <label for="">Nombre:</label>
+                    <input type="text" name="nombre" placeholder="Tu nombre">
+                    <br>
+                    <br>
+                    <label for="">Email:</label>
+                    <input type="email" name="email" placeholder="Tu email">
+                    <br>
+                    <br>
+                    <label for="">Contraseña</label>
+                    <input type="password" name="contrasenia" placeholder="******">
+                    <br>
+                    <br>
+                    <label for="">Confirma tu contraseña</label>
+                    <input type="password" name="contraseniaConf" placeholder="******">
+                    <br>
+                    <br>
+                    <label for="">Tipo de documento</label>
+                    <select name="tipoDeDocumento" id="tipoDeDocumento" class="control">
+                        <option value="Selecciona tu tipo de documento">Selecciona tu tipo de documento</option>
+                        <option value="Cedula de ciudadania CC">Cedula de ciudadania CC</option>
+                        <option value="Tarjeta de identidad TI">Tarjeta de identidad TI</option>
+                    </select>
+                    <br>
+                    <br>
+                    <label for="">Numero de documento</label>
+                    <input type="text" name="documento" placeholder="123456789">
+                    <br>
+                    <br>
+                    <label for="">Pais</label>
+                    <select name="pais" id="pais">
+                        <option value="Selecciona tu pais">Selecciona tu pais</option>
+                        <option value="Colombia">Colombia</option>
+                        <option value="Ecuador">Ecuador</option>
+                    </select>
+                    <br>
+                    <br>
+                    <label for="">Ciudad</label>
+                    <select name="ciudad" id="ciudad">
+                        <option value="Selecciona tu ciudad">Selecciona tu ciudad</option>
+                        <option value="Bogota">Bogota </option>
+                        <option value="Guayaquil">Guayaquil </option>
+                    </select>
+                    <br>
+                    <br>
+                    <label for="">Direccion</label>
+                    <input type="text" name="direccion" id="direccion">
+                    <br>
+                    <br>
 
-            <form action="/usuario/registro" method="post" class="registro-f">
-                <label for="">Nombre:</label>
-                <input type="text" name="nombre" placeholder="Tu nombre"> 
-                <br> 
-                <br>
-                <label for="">Email:</label>
-                <input type="email" name="email" placeholder="Tu email"> 
-                <br> 
-                <br>
-                <label for="">Contraseña</label>
-                <input type="password" name="contrasenia" placeholder="******"> 
-                <br> 
-                <br>
-                <label for="">Confirma tu contraseña</label>
-                <input type="password" name="contraseniaConf" placeholder="******"> 
-                <br> 
-                <br>
-                <label for="">Tipo de documento</label>
-                <select name="tipoDeDocumento" id="tipoDeDocumento" class="control">
-                    <option value="Selecciona tu tipo de documento">Selecciona tu tipo de documento</option>
-                    <option value="Cedula de ciudadania CC">Cedula de ciudadania CC</option>
-                    <option value="Tarjeta de identidad TI">Tarjeta de identidad TI</option>
-                </select> 
-                <br> 
-                <br>
-                <label for="">Numero de documento</label>
-                <input type="text" name="documento" placeholder="123456789"> 
-                <br> 
-                <br>
-                <label for="">Pais</label>
-                <select name="pais" id="pais">
-                    <option value="Selecciona tu pais">Selecciona tu pais</option>
-                    <option value="Colombia">Colombia</option>
-                    <option value="Ecuador">Ecuador</option>
-                </select> 
-                <br> 
-                <br>
-                <label for="">Ciudad</label>
-                <select name="ciudad" id="ciudad">
-                    <option value="Selecciona tu ciudad">Selecciona tu ciudad</option>
-                    <option value="Bogota">Bogota </option> 
-                    <option value="Guayaquil">Guayaquil </option>
-                </select> 
-                <br> 
-                <br>
-                <label for="">Direccion</label>
-                <input type="text" name="direccion" id="direccion">
-                <br> 
-                <br>
+                    <input type="submit" value="Enviar">
 
-                <input type="submit" value="Enviar">
-
-            </form>
-
+                </form>
+            </div>
     </body>
     <%- include('../partials/footer.ejs') %>

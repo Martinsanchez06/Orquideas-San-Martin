@@ -2,11 +2,13 @@
 
     <body>
         <%- include('../partials/header.ejs') %>
-            <h1 class="h1-listado">Nuestras Orquideas</h1>
-            <div class="productos-listado">
-                <% orquideas.forEach(orquideas=> { %>
-                    <%- include("orquidea.ejs", {orquideas : orquideas}) %>
-                        <% }) %>
+            <div class="container">
+                <h1 class="h1-listado">Nuestras Orquideas</h1>
+                <div class="productos-listado">
+                    <% orquideas.forEach(orquideas=> { %>
+                        <%- include("orquidea.ejs", {orquideas : orquideas}) %>
+                            <% }) %>
+                </div>
             </div>
     </body>
     <%- include('../partials/footer.ejs') %>

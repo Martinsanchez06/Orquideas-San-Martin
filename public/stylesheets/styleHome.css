@@ -8,6 +8,10 @@ body {
   padding: 0px;
 }
 
+.container {
+  min-height: 100vh;
+}
+
 /* ------ CUADRO SUPERIOR DE LA TIENDA ------ */
 
 .contain {
