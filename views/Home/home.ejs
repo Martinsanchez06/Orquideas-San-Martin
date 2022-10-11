@@ -3,7 +3,7 @@
   <body>
     <div class="contain">
       <%- include("../partials/headerHome.ejs") %>
-      
+
         <div>
 
         </div>
@@ -11,7 +11,6 @@
         <div class="container-top">
           <div class="estilos-de-pagina">
             <i class="fas fa-th"></i>
-            <i class="fas fa-list"></i>
           </div>
           <select class="buscar-por-categoria" name="categoria" id="category" class="control">
             <% for (let i=0; i < categorias.length; i++) { %>
@@ -37,7 +36,7 @@
         </div>
 
         <main>
-          <h3 class="header-vendidos">Nuestros más vendidos </h3>
+          <h3 id="masVendidos" class="header-vendidos">Nuestros más vendidos </h3>
           <section class="los-mas-vendidos">
             <div class="container-productos">
               <% orquideas.forEach(orquideas=> { %>
@@ -52,17 +51,24 @@
                 <input type="search" name="search" id="buscador-home" placeholder=" Buscar...">
               </form>
               <ul>
-                <% for (let i=0; i < secciones.length; i++ ) { %>
-                  <li class="categoria">
-                    <%=secciones[i].seccion %>
-                  </li>
-                  <% } %>
+                <li class="categoria">
+                  <a class="categoria" href="#masVendidos">Nuestros mas vendidos</a>
+                </li>
+                <li class="categoria">
+                  <a class="categoria" href="#florecidas">Orquideas florecidas</a>
+                </li>
+                <li class="categoria">
+                  <a class="categoria" href="#descuento">En descuento</a>
+                </li>
+                <li class="categoria">
+                  <a class="categoria" href="#otras">Otras</a>
+                </li>
               </ul>
             </div>
 
           </section>
           <section class="orquideas-florecidas">
-            <h3 class="header-orquideas-florecidas">Orquideas florecidas</h3>
+            <h3 id="florecidas" class="header-orquideas-florecidas">Orquideas florecidas</h3>
             <div class="container-productos-2">
               <% orquideas.forEach(orquideas=> { %>
                 <% if (orquideas.secciondehome_id===2) { %>
@@ -75,7 +81,7 @@
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum soluta aspernatur explicabo aut dolores! Ipsa
           dolores error molestiae architecto assumenda accusamus aliquam rerum
         </div> -->
-          <div class="quienes-somos">
+          <div id="quienesSomos" class="quienes-somos">
             <div class="img-somos-home">
               <img src="/images/LinkedIn cover - 3.png" alt="">
             </div>
@@ -85,14 +91,14 @@
               officiis non, dolorem obcaecati beatae voluptates veniam iste? Vel commodi aspernatur aliquam?</p>
           </div>
           <div class="container-productos-3">
-            <h3 class="header-descuento">En descuento</h3>
+            <h3 id="descuento" class="header-descuento">En descuento</h3>
             <% orquideas.forEach(orquideas=> { %>
               <% if (orquideas.secciondehome_id===3){ %>
                 <%- include('../Client/orquideaHome.ejs', {orquideas}) %>
                   <% } %>
                     <% }) %>
           </div>
-          <section class="mas-plantas">
+          <section id="otras" class="mas-plantas">
             <div class="container-productos-4">
               <% orquideas.forEach(orquideas=> { %>
                 <% if (orquideas.secciondehome_id===4) { %>
@@ -104,7 +110,7 @@
         </main>
 
 
-        
-      </div>
-    </body>
-    <%- include("../partials/footer.ejs") %>
+
+    </div>
+  </body>
+  <%- include("../partials/footer.ejs") %>

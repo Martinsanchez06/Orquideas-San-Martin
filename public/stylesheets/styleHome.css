@@ -169,6 +169,13 @@ body {
   height: 120px;
 }
 
+.categoria {
+  list-style: none;
+  margin-top: 5px;
+  text-decoration: none;
+  color: #000000;
+}
+
 /* ------SMALLER PHONE------ */
 @media only screen and (min-width: 0px) and (max-width: 492px) {
   .estilos-de-pagina {
