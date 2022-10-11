@@ -10,8 +10,7 @@ footer {
 
 .img-footer {
     margin-top: 20px;
-    height: 130px;
-    width: 344px;
+    height: 120px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
@@ -32,11 +31,11 @@ footer {
     padding-top: 6px;
 }
 
-.nuestraCompañia ul li a{
+.nuestraCompañia ul li a {
     text-decoration: none;
     color: #ffffff;
 }
- 
+
 
 /* DIV NUESTRAS REDES SOCIALES */
 
@@ -54,17 +53,64 @@ footer {
     padding-top: 15px;
 }
 
-.redesSociales ul li a{
+.redesSociales ul li a {
     text-decoration: none;
     color: #ffffff;
 
 }
 
-.redesSociales ul li i{
+.redesSociales ul li i {
     margin-right: 10px;
     font-size: 2rem;
 }
 
 .redesSociales h2 {
     margin-top: 20px;
+}
+
+@media only screen and (min-width: 740px) {
+    footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 60px;
+    }
+
+    .img-footer {
+        margin-top: 20px;
+        height: 120px;
+        margin-left: 50px;
+        margin-bottom: 20px;
+    }
+
+    .nuestraCompañia {
+        margin-left: auto;
+        margin-top: 30px;
+        margin-right: auto;
+        display: flex;
+        color: #ffffff;
+        flex-direction: column;
+    }
+
+    .nuestraCompañia ul li {
+        list-style: none;
+        text-decoration: none;
+        padding-top: 6px;
+    }
+
+    .nuestraCompañia ul li a {
+        text-decoration: none;
+        color: #ffffff;
+    }
+    .redesSociales {
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        margin-top: 30px;
+        color: #ffffff;
+        flex-direction: column;
+    }
 }
