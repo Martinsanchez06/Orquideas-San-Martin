@@ -47,6 +47,7 @@ section.Orquidea {
 
 .precio-p {
     color: #525252;
+    font-weight: 200;
 }
 
 .card-article {
@@ -72,6 +73,11 @@ section.Orquidea {
 .ver-detalle-a {
     text-decoration: none;
     color: #FFFFFF;
+    font-weight: 500;
+}
+
+.h3-product{
+    font-weight: 500;
 }
 
 

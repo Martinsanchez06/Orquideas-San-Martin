@@ -1,6 +1,8 @@
 * {
   padding: 0px;
   margin: 0px;
+  font-family: 'Archivo', sans-serif;
+  font-style: italic ;
 }
 
 body {
@@ -10,6 +12,10 @@ body {
 
 .container {
   min-height: 100vh;
+}
+
+h3 {
+  font-weight: 700;
 }
 
 /* ------ CUADRO SUPERIOR DE LA TIENDA ------ */

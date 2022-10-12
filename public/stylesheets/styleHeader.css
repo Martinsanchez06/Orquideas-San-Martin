@@ -132,6 +132,7 @@
 /* ------ H-REF DE HOME ------ */
 .home-home {
   color: #ffffff;
+  font-weight: 100;
   display: flex;
   justify-content: center;
 }
@@ -158,6 +159,7 @@
 .intro-text-home {
   color: #ffffff;
   font-size: 25px;
+  font-weight: 200;
 }
 
 /* ------SMALLER PHONE------ */
@@ -290,6 +292,7 @@
 
   .nav-tabss li a {
     font-size: 20px;
+    font-weight: 100;
     color: #ffffff;
   }
 

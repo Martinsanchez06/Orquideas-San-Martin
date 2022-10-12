@@ -12,6 +12,7 @@
           <div class="estilos-de-pagina">
             <i class="fas fa-th"></i>
           </div>
+          <form action="/" method="post">
           <select class="buscar-por-categoria" name="categoria" id="category" class="control">
             <% for (let i=0; i < categorias.length; i++) { %>
               <% if (categorias[i].id===orquideas.categoria_id) {%>
@@ -30,6 +31,7 @@
 
                     <% } %>
           </select>
+        </form>
           <div class="pagina">
             <p class="pagina-texto">Mostrando 1-10 de 30 plantas</p>
           </div>
