@@ -46,7 +46,7 @@ const ClientController = {
     },
     registro: (req, res) => {
         try {
-            db.usuarios.create({
+            db.usuarios.create({   
                 ...req.body,
                 tipoDeUsuario: 1,
                 contrasenia: bcryptjs.hashSync(req.body.contrasenia, 10),
