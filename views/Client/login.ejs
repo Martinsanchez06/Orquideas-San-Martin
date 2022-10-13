@@ -2,18 +2,24 @@
 
     <body>
         <%- include('../partials/header.ejs') %>
-        <div class="container">
-            <form action="/usuario/login" method="post" class="registro-f">
-                <label for="">Email:</label>
-                <input type="email" name="email" placeholder="Tu email"> 
-                <label for="">Contraseña</label>
-                <input type="password" name="contrasenia" placeholder="******"> 
-                <input type="checkbox" name="recuerdame">Recordar usuario
-                <p>¿Aun no estas registrado? <a href="/usuario/registro">Registrate aqui</a></p>
-                <input type="submit" value="Enviar">
+            <div class="container containerLogin">
+                <form action="/usuario/login" method="post" class="registro-f">
+                    <label class="email" for="">Email:</label>
+                    <input class="email" type="email" name="email" placeholder="Tu email">
+                    <label class="contrasenia" for="">Contraseña</label>
+                    <input class="contrasenia" type="password" name="contrasenia" placeholder="******">
+                    <div class="recuerdame"><label>Recordar usuario</label>
+                        <input type="checkbox" name="recuerdame">
+                    </div>
+                    <p>¿Aun no estas registrado?</p>
+                    <div class="buttons">
+                        <a href="/usuario/registro">Registrate aqui</a>
+                        <input class="enviar" type="submit" value="Enviar">
+                    </div>
 
-            </form>
-        </div>
+
+                </form>
+            </div>
 
     </body>
     <%- include('../partials/footer.ejs') %>

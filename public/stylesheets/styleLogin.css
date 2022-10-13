@@ -1,0 +1,58 @@
+/* Container padre */
+.containerLogin form {
+    margin-top: 50px;
+    border-radius: 20px ;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 65vh;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid rgb(70, 70, 70);
+}
+
+/* LABEL E INPUT DE EMAIL */
+
+.containerLogin form .email {
+    margin-top: 10px;
+    width: 80%;
+    text-align: center;
+}
+
+/* LABEL E INPUT DE CONTRASEÑA */
+
+.containerLogin form .contrasenia {
+    margin-top: 10px;
+    width: 80%;
+    text-align: center;
+}
+
+/* CHECKBOX DE RECUERDAME */
+
+.containerLogin form .recuerdame {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.containerLogin form p {
+    margin-top: 50px;
+    margin-right: 40%;
+}
+
+.containerLogin form .buttons {
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-between;
+    width: 70%;
+}
+
+@media only screen and (min-width: 500px) {
+
+    .containerLogin form {
+        border: 2px solid rgb(70, 70, 70);
+        width: 30vw;
+    }
+
+}
