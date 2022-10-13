@@ -43,9 +43,28 @@
 
 .containerLogin form .buttons {
     display: flex;
-    margin-top: 30px;
+    margin-top: 10px;
     justify-content: space-between;
     width: 70%;
+}
+
+.containerLogin form .buttons a {
+    background-color:#025e96;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+.containerLogin form .buttons .enviar {
+    background-color:#025e96;
+    border-color: #025e96;
+    
+    border-style:none;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px;
+    border-radius: 10px;
 }
 
 @media only screen and (min-width: 500px) {
