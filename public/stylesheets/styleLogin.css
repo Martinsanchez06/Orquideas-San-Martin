@@ -9,7 +9,7 @@
     height: 65vh;
     margin-left: auto;
     margin-right: auto;
-    border: 2px solid rgb(70, 70, 70);
+    border: 2px solid #025e96;
 }
 
 /* LABEL E INPUT DE EMAIL */
@@ -36,6 +36,10 @@
     display: inline-block;
 }
 
+.containerLogin form .recuerdame input{
+    margin-left: 5px;
+}
+
 .containerLogin form p {
     margin-top: 50px;
     margin-right: 40%;
@@ -59,7 +63,7 @@
 .containerLogin form .buttons .enviar {
     background-color:#025e96;
     border-color: #025e96;
-    
+
     border-style:none;
     color: #fff;
     text-decoration: none;
@@ -67,10 +71,17 @@
     border-radius: 10px;
 }
 
+/* EMAIL */
+
+input.email, input.contrasenia {
+    height: 30px;
+    border-radius: 20px;
+    border: 1px solid rgb(153, 153, 153);
+}
 @media only screen and (min-width: 500px) {
 
     .containerLogin form {
-        border: 2px solid rgb(70, 70, 70);
+        border: 2px solid #025e96;
         width: 30vw;
     }
 
