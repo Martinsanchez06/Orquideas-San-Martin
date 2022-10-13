@@ -195,7 +195,7 @@ h3 {
   }
   .container-productos{
     margin: 0px 0px 0px 40px;
-    width: 87%;
+    width: 80%;
     justify-content: center;
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
