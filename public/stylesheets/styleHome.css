@@ -241,7 +241,8 @@ h3 {
     padding: 20px;
     border-bottom-left-radius: 20px;
     border-top-right-radius: 20px;
-    margin-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
     width: 20%;
     height: 100%;
   }
