@@ -28,14 +28,17 @@ const ClientController = {
 
     search: (req, res) => {
 
-        db.Orquideas.findAll({
+        let orquideasEncontradas = db.Orquideas.findAll({
             include: [{ association: 'climas' }],
             where: {
                 nombre: { [Op.like]: `%${req.query.search}%` }
             }
         })
-            .then(orquideas => { res.render("Client/resultado", { orquideas }); })
-            .catch(error => res.send(error))
+        let categoriasEncontradas = db.categorias.findAll()
+        Promise.all([orquideasEncontradas, categoriasEncontradas])
+            .then(function ([orquideas, categorias]) {
+                res.render("Client/resultado", { orquideas, categorias})
+            })
     },
 
     // ------USUARIOS------

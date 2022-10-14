@@ -13,25 +13,25 @@
             <i class="fas fa-th"></i>
           </div>
           <form action="/" method="post">
-          <select class="buscar-por-categoria" name="categoria" id="category" class="control">
-            <% for (let i=0; i < categorias.length; i++) { %>
-              <% if (categorias[i].id===orquideas.categoria_id) {%>
+            <select class="buscar-por-categoria" name="categoria" id="category" class="control">
+              <% for (let i=0; i < categorias.length; i++) { %>
+                <% if (categorias[i].id===orquideas.categoria_id) {%>
 
-                <option value="<%=categorias[i].id%>" selected>
-                  <%=categorias[i].categoria%>
-                </option>
-
-                <% } else { %>
-
-                  <option value="<%=categorias[i].id%>">
+                  <option value="<%=categorias[i].id%>" selected>
                     <%=categorias[i].categoria%>
                   </option>
 
-                  <% } %>
+                  <% } else { %>
+
+                    <option value="<%=categorias[i].id%>">
+                      <%=categorias[i].categoria%>
+                    </option>
 
                     <% } %>
-          </select>
-        </form>
+
+                      <% } %>
+            </select>
+          </form>
           <div class="pagina">
             <p class="pagina-texto">Mostrando 1-10 de 30 plantas</p>
           </div>
@@ -49,7 +49,7 @@
             </div>
             <div class="div-buscador">
               <p class="titulo-buscador">¿Qué planta quieres encontrar?</p>
-              <form action="/usuarios/resultado" method="get">
+              <form action="/usuario/resultado" method="get">
                 <input type="search" name="search" id="buscador-home" placeholder=" Buscar...">
               </form>
               <ul>

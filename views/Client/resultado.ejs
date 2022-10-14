@@ -1,12 +1,41 @@
 <%- include('../partials/head.ejs') %>
 
     <body>
-        <%- include('../partials/header.ejs') %>
-            <h1 class="h1-listado">Nuestras Orquideas</h1>
-            <div class="productos-listado">
-                <% orquideas.forEach(orquideas=> { %>
-                    <%- include("orquidea.ejs", {orquideas : orquideas}) %>
-                        <% }) %>
+        <%- include('../partials/headerHome.ejs') %>
+            <div class="container">
+                <div class="container-top">
+                    <div class="estilos-de-pagina">
+                        <i class="fas fa-th"></i>
+                    </div>
+                    <form action="/" method="post">
+                        <select class="buscar-por-categoria" name="categoria" id="category" class="control">
+                            <% for (let i=0; i < categorias.length; i++) { %>
+                                <% if (categorias[i].id===orquideas.categoria_id) {%>
+
+                                    <option value="<%=categorias[i].id%>" selected>
+                                        <%=categorias[i].categoria%>
+                                    </option>
+
+                                    <% } else { %>
+
+                                        <option value="<%=categorias[i].id%>">
+                                            <%=categorias[i].categoria%>
+                                        </option>
+
+                                        <% } %>
+
+                                            <% } %>
+                        </select>
+                    </form>
+                    <div class="pagina">
+                        <p class="pagina-texto">Mostrando 1-10 de 30 plantas</p>
+                    </div>
+                </div>
+                <div class="productos-listado">
+                    <% orquideas.forEach(orquideas=> { %>
+                        <%- include("orquidea.ejs", {orquideas : orquideas}) %>
+                            <% }) %>
+                </div>
             </div>
     </body>
     <%- include('../partials/footer.ejs') %>

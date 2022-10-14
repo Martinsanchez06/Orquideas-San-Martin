@@ -17,9 +17,7 @@ router.get("/perfil",authMiddleware , ClientController.perfil)
 
 router.get("/logout",authMiddleware , ClientController.logout)
 
-router.get("/resultado", function(req, res){
-res.send('ok')
-});
+router.get("/resultado",ClientController.search);
 
 
 // ------ ENVIA INFORMACION ------
