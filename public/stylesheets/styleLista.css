@@ -3,7 +3,7 @@
 }
 
 .productos-listado{
-    margin-top: 40px;
+    margin: 40px 15px;
     display: grid;
     background-color: rgb(253, 253, 253);
 }

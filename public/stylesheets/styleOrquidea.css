@@ -13,8 +13,17 @@ section.Orquidea {
     display: flex;
     margin-bottom: 20px;
     justify-content: center;
+    border-radius: 10px;
     align-items: center;
     flex-direction: column;
+    transition: 1s;
+}
+
+section.Orquidea:hover {
+    color: #fff !important; 
+    border-radius: 20px;
+    background-color: #037587;
+    transform: scale(1.06);
 }
 
 .h1-listado {
@@ -46,7 +55,7 @@ section.Orquidea {
 }
 
 .precio-p {
-    color: #525252;
+    
     font-weight: 200;
 }
 
