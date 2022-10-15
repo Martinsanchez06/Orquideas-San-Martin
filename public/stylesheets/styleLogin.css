@@ -78,6 +78,7 @@ input.email, input.contrasenia {
     border-radius: 20px;
     border: 1px solid rgb(153, 153, 153);
 }
+
 @media only screen and (min-width: 500px) {
 
     .containerLogin form {
@@ -85,4 +86,24 @@ input.email, input.contrasenia {
         width: 30vw;
     }
 
+}
+
+@media only screen and (min-width:500px) and (max-width: 852px){
+
+    .containerLogin form{
+        padding-bottom: 10%;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    .buttons input {
+    margin: 30% 0px;
+    }
+
+
+
+
+  
 }
