@@ -5,7 +5,12 @@
             <div class="container containerLogin">
                 <form action="/usuario/login" method="post" class="registro-f">
                     <label class="email" for="">Email:</label>
-                    <input class="email" type="email" name="email" placeholder="Tu email">
+                    <input class="email" type="email" name="email" placeholder="Tu email">  
+                    <%if (locals.errors && errors.email) {%>
+                        <div class="mensaje-error">
+                            <%= errors.email.msg %>
+                        </div>
+                    <% } %>
                     <label class="contrasenia" for="">Contraseña</label>
                     <input class="contrasenia" type="password" name="contrasenia" placeholder="******">
                     <div class="recuerdame"><label>Recordar usuario</label>

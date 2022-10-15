@@ -2,6 +2,7 @@ const db = require('../database/models')
 
 function userLoggedMiddleware(req, res, next) {
     res.locals.isLogged = false;
+    usuarioYaLogueado = false
     
     if (req.cookies.userEmail) {
         let emailInCookie = req.cookies.userEmail;
@@ -22,6 +23,8 @@ function userLoggedMiddleware(req, res, next) {
                     res.locals.usuarioLogueado = req.session.usuarioLogueado;
                 }
             })
+    } else if (req.session.usuarioLogueado){
+       usuarioYaLogueado = true
     }
     next();
 };

@@ -82,11 +82,12 @@ const ClientController = {
 
                         if (req.body.recuerdame) {
                             res.cookie("userEmail", req.body.email, { maxAge: (((1000 * 60) *60) * 24) });
-                        }
+                        } 
+
 
                         return res.redirect('perfil');
                     } else {
-                        return res.render('login', {
+                        return res.render('Client/login', {
                             errors: {
                                 email: {
                                     msg: 'las credenciales no son validas'

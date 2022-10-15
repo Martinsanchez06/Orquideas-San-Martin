@@ -89,6 +89,7 @@ h3 {
   margin-right: auto;
   flex-direction: column;
   width: 80%;
+  grid-column: 1/3;
   padding: 20px;
   margin-top: 15px;
   margin-bottom: 30px;
@@ -212,48 +213,44 @@ a.categoria:hover {
   }
 
   .container-productos {
-    margin: 0px 0px 0px 40px;
+    margin: 0px 40px;
     justify-content: center;
     display: grid;
     grid-template-columns: 20% 20% 20% 20% 20%;
   }
 
   .header-vendidos {
-    width: 75%;
     margin-top: 20px;
   }
 
   .header-orquideas-florecidas {
-    width: 75%;
     margin-top: 20px;
   }
 
   .container-productos-2 {
     margin: 0px 40px;
-    width: 75%;
     justify-content: center;
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-columns: 20% 20% 20% 20% 20%;
   }
 
   .container-productos-3 {
     margin: 0px 40px;
-    width: 75%;
     justify-content: center;
     display: grid;
-    grid-template-columns: 33.3%;
+    grid-template-columns: 25%;
   }
 
   .container-productos-4 {
     margin: 0px 40px;
-    width: 75%;
     justify-content: center;
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-columns: 20% 20% 20% 20% 20%;
   }
 
   .div-buscador {
     padding: 20px;
+    grid-column: 1/6;
   }
 
   .div-text {
@@ -262,11 +259,10 @@ a.categoria:hover {
     margin: 35px 20px;
     padding: 15px;
     border-radius: 10px;
-    width: 75%;
   }
 
   .quienes-somos {
-    width: 70%;
+   margin: 15px 40px;
   }
 
   .quienes-somos h1 {
