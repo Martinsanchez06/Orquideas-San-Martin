@@ -81,7 +81,7 @@ const ClientController = {
                         req.session.usuarioLogueado = usuarioParaCrear;
 
                         if (req.body.recuerdame) {
-                            res.cookie("userEmail", req.body.email, { maxAge: (((1000 * 60) *60) * 24) });
+                            res.cookie("userEmail", req.body.email, { maxAge: (1000 * 60)});
                         } 
 
 

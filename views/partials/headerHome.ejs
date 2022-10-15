@@ -12,7 +12,7 @@
         </div>
         <div class="nav-tabs-div">
             <ul class="nav-tabss">
-                <% if (locals.isLogged && locals.usuarioAdmin) { %>
+                <% if ((locals.isLogged && locals.usuarioAdmin) || (usuarioYaLogueado && usuarioAdmin)) { %>
                     <li><a class="nav-icons" href="/">Inicio</a></li>
                     <li><a class="nav-icons" href="/productos/lista">Donde estamos</a></li>
                     <li><a class="nav-icons" href="/usuario/login">Mi cuenta</a></li>
