@@ -48,26 +48,44 @@
 .containerLogin form .buttons {
     display: flex;
     margin-top: 10px;
-    justify-content: space-between;
-    width: 70%;
+    width:100%;
+    transition: 1s;
 }
 
 .containerLogin form .buttons a {
-    background-color:#025e96;
-    color: #fff;
     text-decoration: none;
-    padding: 8px;
-    border-radius: 10px;
+    color: black;
+    transition: 1s;
+    padding: 0px 10px;
+    margin: 5px auto;
+}
+
+.containerLogin form .buttons a:hover {
+    color: #fff;
+    padding: 10px;
+    border-radius: 20px;
+    margin-top: -3px;
+    text-align: center;
+    background-color:#025e96;
 }
 
 .containerLogin form .buttons .enviar {
-    background-color:#025e96;
-    border-color: #025e96;
+    margin: 0 auto;
     border-style:none;
-    color: #fff;
+    color: rgb(0, 0, 0);
     text-decoration: none;
-    padding: 8px;
-    border-radius: 10px;
+    background-color: #fff;
+    transition: 1s;
+    padding: 0px 10px;
+}
+
+.containerLogin form .buttons .enviar:hover {
+    background-color:#025e96;
+    color: #fff;
+    margin-top: -3px;
+    border-color: #025e96;
+    padding: 10px;
+    border-radius: 20px;
 }
 
 /* EMAIL */
@@ -76,6 +94,11 @@ input.email, input.contrasenia {
     height: 30px;
     border-radius: 20px;
     border: 1px solid rgb(153, 153, 153);
+    transition: 1s;
+}
+
+input.email:hover, input.contrasenia:hover{
+    border: 1px solid #00C851;
 }
 
 @media only screen and (min-width: 500px) {
