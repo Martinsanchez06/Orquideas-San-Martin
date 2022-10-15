@@ -3,15 +3,21 @@
 }
 
 .producto-detalle {
-    display: flex;  
+    display: flex;
     flex-direction: column;
     border: 2px solid rgb(228, 228, 228);
     margin: 70px 15px;
     border-radius: 8px;
 }
 
-.imagen-detalle-img img{
+.imagen-detalle-img img {
     width: 100%;
+    transition: 1s;
+}
+
+.imagen-detalle-img img:hover {
+    transform: scale(1.02);
+    border-radius: 20px;
 }
 
 .imagen-detalle {
@@ -31,6 +37,12 @@
 .imagenes-buttom img {
     width: 100%;
     margin: 5px 10px 5px 0px;
+    transition: 1s;
+}
+
+.imagenes-buttom img:hover {
+    transform: scale(1.05);
+    border-radius: 20px;
 }
 
 .imagenes-buttom {
@@ -88,7 +100,7 @@
 }
 
 .compra-detail {
-    
+
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -102,7 +114,7 @@
     width: 70%;
     height: 5vh;
     border-radius: 10px;
-    margin-top:20px;
+    margin-top: 20px;
 }
 
 .hr-detail {
@@ -144,7 +156,7 @@
         padding: 100px 30px 0px 30px;
         margin-bottom: 0px;
         display: flex;
-        justify-content: flex-end; 
+        justify-content: flex-end;
     }
 
     .btn-compra-detail {
@@ -167,6 +179,7 @@
         height: 40%;
         flex-direction: column;
     }
+
     .imagenes-buttom img {
         width: 100%;
     }

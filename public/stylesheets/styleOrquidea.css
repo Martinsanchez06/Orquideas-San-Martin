@@ -16,14 +16,23 @@ section.Orquidea {
     border-radius: 10px;
     align-items: center;
     flex-direction: column;
-    transition: 1s;
+    transition: 1.2s;
 }
 
 section.Orquidea:hover {
     color: #fff !important; 
     border-radius: 20px;
     background-color: #037587;
-    transform: scale(1.06);
+    transform: scale(1.08);
+}
+
+.enDescuento {
+    transition: 1s;
+}
+
+.enDescuento:hover {
+    transform: scale(0.9);
+    
 }
 
 .h1-listado {

@@ -2,7 +2,7 @@
   padding: 0px;
   margin: 0px;
   font-family: 'Archivo', sans-serif;
-  font-style: italic ;
+  font-style: italic;
 }
 
 body {
@@ -20,9 +20,6 @@ h3 {
 
 /* ------ CUADRO SUPERIOR DE LA TIENDA ------ */
 
-.contain {
-  background-color: rgb(247, 247, 247);
-}
 
 .container-top {
   border: 1px solid #b1b1b1;
@@ -63,8 +60,9 @@ h3 {
 }
 
 .header-vendidos {
+  color: #222222;
   display: inline-block;
-  margin-bottom:15px;
+  margin-bottom: 15px;
   font-size: 25px;
   display: flex;
   justify-content: center;
@@ -72,7 +70,7 @@ h3 {
 
 /* ------ CONTENEDOR PARA GRID DE PLANTAS (UNO POR CADA SECCIÓN) ------ */
 
-.container-productos{
+.container-productos {
   justify-content: center;
   display: grid;
   grid-template-columns: 45% 45%;
@@ -82,50 +80,69 @@ h3 {
 /* ------ DIV BUSCAR PLANATA ------ */
 
 .div-buscador {
-  border: 1px solid rgb(211, 211, 211);
   display: flex;
-  border-radius: 7px;
+  border: none;
+  background-color: rgb(250, 250, 250);
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 20px;
+  margin-left: auto;
+  margin-right: auto;
   flex-direction: column;
   width: 80%;
-  margin-top: 15px; 
+  padding: 20px;
+  margin-top: 15px;
   margin-bottom: 30px;
 }
 
-#buscador-home{
+#buscador-home {
   width: 100%;
   height: 22px;
   margin-left: auto;
-  margin-right:auto;
-  margin-top:7px;
+  margin-right: auto;
+  margin-top: 7px;
   margin-bottom: 10px;
   border-radius: 9px;
   border: solid 1px #b4b4b4;
+  transition: 1s;
 }
 
-.categoria{
+#buscador-home:hover {
+  border: 1px solid #00C851;
+}
+
+.categoria {
   margin-bottom: 5px;
+  transition: 1s;
+}
+
+a.categoria:hover {
+  display: inline;
+  color: #025e96;
 }
 
 /* ------ SECCION ORQUIDEAS FLORECIDAS ------ */
 
-.container-productos-2{
+.container-productos-2 {
   justify-content: center;
   display: grid;
   grid-template-columns: 44% 44%;
 }
-.container-productos-3{
+
+.container-productos-3 {
   justify-content: center;
   display: grid;
   grid-template-columns: 44%;
 }
-.container-productos-4{
+
+.container-productos-4 {
   justify-content: center;
   display: grid;
   grid-template-columns: 44% 44%;
 }
+
 .header-orquideas-florecidas {
   display: inline-block;
-  margin-bottom:15px;
+  margin-bottom: 15px;
   font-size: 25px;
   display: flex;
   justify-content: center;
@@ -135,13 +152,13 @@ h3 {
   text-align: center;
 }
 
-.div-text{
+.div-text {
   background-color: #a7a7a7;
   display: flex;
-  margin:15px 0px;
+  margin: 15px 0px;
   padding: 15px;
   border-radius: 10px;
-  width: 85%; 
+  width: 85%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -149,7 +166,7 @@ h3 {
 .quienes-somos {
   padding: 25px;
   display: flex;
-  background-color: #002f30;  
+  background-color: #002f30;
   border-radius: 15px;
   margin-left: 2.5%;
   color: #fff;
@@ -193,12 +210,12 @@ h3 {
   .los-mas-vendidos {
     display: flex;
   }
-  .container-productos{
+
+  .container-productos {
     margin: 0px 0px 0px 40px;
-    width: 80%;
     justify-content: center;
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-columns: 20% 20% 20% 20% 20%;
   }
 
   .header-vendidos {
@@ -206,12 +223,12 @@ h3 {
     margin-top: 20px;
   }
 
-  .header-orquideas-florecidas{
+  .header-orquideas-florecidas {
     width: 75%;
     margin-top: 20px;
   }
 
-  .container-productos-2{
+  .container-productos-2 {
     margin: 0px 40px;
     width: 75%;
     justify-content: center;
@@ -219,7 +236,7 @@ h3 {
     grid-template-columns: 25% 25% 25% 25%;
   }
 
-  .container-productos-3{
+  .container-productos-3 {
     margin: 0px 40px;
     width: 75%;
     justify-content: center;
@@ -227,7 +244,7 @@ h3 {
     grid-template-columns: 33.3%;
   }
 
-  .container-productos-4{
+  .container-productos-4 {
     margin: 0px 40px;
     width: 75%;
     justify-content: center;
@@ -236,24 +253,16 @@ h3 {
   }
 
   .div-buscador {
-    border: none;
-    background-color: #fff;
     padding: 20px;
-    border-bottom-left-radius: 20px;
-    border-top-right-radius: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 20%;
-    height: 100%;
   }
 
   .div-text {
     background-color: #a7a7a7;
     display: inline-block;
-    margin:35px 20px;
+    margin: 35px 20px;
     padding: 15px;
     border-radius: 10px;
-    width: 75%; 
+    width: 75%;
   }
 
   .quienes-somos {
@@ -261,7 +270,7 @@ h3 {
   }
 
   .quienes-somos h1 {
-    margin-bottom: 20px;    
+    margin-bottom: 20px;
   }
-  
+
 }

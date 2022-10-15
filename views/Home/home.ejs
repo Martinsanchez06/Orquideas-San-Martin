@@ -46,26 +46,26 @@
                   <%- include('../Client/orquideaHome.ejs', {orquideas}) %>
                     <% } %>
                       <% }) %>
-            </div>
-            <div class="div-buscador">
-              <p class="titulo-buscador">¿Qué planta quieres encontrar?</p>
-              <form action="/usuario/resultado" method="get">
-                <input type="search" name="search" id="buscador-home" placeholder=" Buscar...">
-              </form>
-              <ul>
-                <li class="categoria">
-                  <a class="categoria" href="#masVendidos">Nuestros mas vendidos</a>
-                </li>
-                <li class="categoria">
-                  <a class="categoria" href="#florecidas">Orquideas florecidas</a>
-                </li>
-                <li class="categoria">
-                  <a class="categoria" href="#descuento">En descuento</a>
-                </li>
-                <li class="categoria">
-                  <a class="categoria" href="#otras">Otras</a>
-                </li>
-              </ul>
+                      <div class="div-buscador">
+                        <p class="titulo-buscador">¿Qué planta quieres encontrar?</p>
+                        <form action="/usuario/resultado" method="get">
+                          <input type="search" name="search" id="buscador-home" placeholder=" Buscar...">
+                        </form>
+                        <ul>
+                          <li class="categoria">
+                            <a class="categoria" href="#masVendidos">Nuestros mas vendidos</a>
+                          </li>
+                          <li class="categoria">
+                            <a class="categoria" href="#florecidas">Orquideas florecidas</a>
+                          </li>
+                          <li class="categoria">
+                            <a class="categoria" href="#descuento">En descuento</a>
+                          </li>
+                          <li class="categoria">
+                            <a class="categoria" href="#otras">Otras</a>
+                          </li>
+                        </ul>
+                      </div>
             </div>
 
           </section>
@@ -94,11 +94,13 @@
           </div>
           <div class="container-productos-3">
             <h3 id="descuento" class="header-descuento">En descuento</h3>
-            <% orquideas.forEach(orquideas=> { %>
-              <% if (orquideas.secciondehome_id===3){ %>
-                <%- include('../Client/orquideaHome.ejs', {orquideas}) %>
-                  <% } %>
-                    <% }) %>
+            <div class="enDescuento">
+              <% orquideas.forEach(orquideas=> { %>
+                <% if (orquideas.secciondehome_id===3){ %>
+                  <%- include('../Client/orquideaHome.ejs', {orquideas}) %>
+                    <% } %>
+                      <% }) %>
+            </div>
           </div>
           <section id="otras" class="mas-plantas">
             <div class="container-productos-4">
