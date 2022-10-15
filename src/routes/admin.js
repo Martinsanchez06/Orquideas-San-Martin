@@ -21,6 +21,8 @@ const imagenSubida = multer({ storage })
 
 router.get('/crear', AdminController.formCreate);
 
+router.get('/opcionesAdmin', AdminController.opcionesAdmin);
+
 router.get('/editar/:id', AdminController.formUpdate)
 
 router.get('/detalleAdmin/:id', AdminController.detalleAdmin)

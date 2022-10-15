@@ -3,6 +3,9 @@ const path = require('path')
 const db = require('../database/models')
 
 const OrquideasController = {
+    opcionesAdmin: (req, res) => {
+        res.render("Admin/opcionesAdmin")
+    },
     formCreate: function (req, res) {
         let orquideasEncontradas = db.Orquideas.findAll()
         let climasEncontrados = db.climas.findAll()

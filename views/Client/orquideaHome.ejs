@@ -5,7 +5,7 @@
     </div>
     <article class="card-article">
 
-        
+
         <h3 class="h3-product">
             <%= orquideas.nombre %>
         </h3>
@@ -13,9 +13,15 @@
         <p class="precio-p"><span>
                 <%= orquideas.precio %>
             </span></p>
-        <div class="ver-detalle">
-            <a class="ver-detalle-a" href="/usuario/detalle/<%= orquideas.id %>">Ver detalle</a>
-        </div>
+        <% if ((locals.isLogged && locals.usuarioAdmin) || (usuarioYaLogueado && usuarioAdmin)) { %>
+            <div class="ver-detalle">
+                <a class="ver-detalle-a" href="/admin/detalleAdmin/<%= orquideas.id %>">Ver detalle admin</a>
+            </div>
+
+            <% } %>
+                <div class="ver-detalle">
+                    <a class="ver-detalle-a" href="/usuario/detalle/<%= orquideas.id %>">Ver detalle</a>
+                </div>
 
     </article>
 

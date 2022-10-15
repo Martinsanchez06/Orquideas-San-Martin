@@ -12,6 +12,12 @@
         <p class="precio-p"><span>
                 <%= orquideas.precio %>
             </span></p>
+            <% if ((locals.isLogged && locals.usuarioAdmin) || (usuarioYaLogueado && usuarioAdmin)) { %>
+                <div class="ver-detalle">
+                    <a class="ver-detalle-a" href="/admin/detalleAdmin/<%= orquideas.id %>">Ver detalle admin</a>
+                </div>
+             
+            <% } %>
         <div class="ver-detalle">
             <a class="ver-detalle-a" href="/usuario/detalle/<%= orquideas.id %>">Ver detalle</a>
         </div>
