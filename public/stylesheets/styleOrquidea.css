@@ -13,6 +13,7 @@ section.Orquidea {
     display: flex;
     margin-bottom: 20px;
     justify-content: center;
+    padding: 10px;
     border-radius: 10px;
     align-items: center;
     flex-direction: column;
@@ -118,7 +119,7 @@ section.Orquidea:hover {
 @media only screen and (min-width: 717px) {
     section.Orquidea {
         min-width: 50%;
-        padding: 10px;
+        
     }
 
     /* .card-img {
