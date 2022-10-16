@@ -242,13 +242,12 @@
 
   .cont-menu {
     background-color: #fff;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    border-radius: 20px;
     padding: 15px;
     transition: all .9s ease;
     position: absolute;
     top: 1;
-    right: 0;
+    margin-right: 10px;
   }
 
   .cont-menu ul li {
@@ -276,7 +275,7 @@
   .icon {
     transition: 1.05s;
     transform: scale(1.2);
-    margin-right: 5px;
+    margin-right: 15px;
     color: #000000;
   }
 

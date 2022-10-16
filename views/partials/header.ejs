@@ -39,8 +39,46 @@
             </ul>
             <ul class="nav-tabss2" hidden>
                 <% if ((locals.isLogged && locals.usuarioAdmin) || (usuarioYaLogueado && usuarioAdmin)) { %>
-                    <li><a class="nav2-link" href='#'> <i class="far fa-user"></i></a></li>
+
+                    <div class="nav2-link icono-menu">
+                        <i class="fas fa-bars" id="icono-menu"></i>
+                    </div>
+
+                    <div class="cont-menu active-hidden" id="menu">
+                        <ul>
+                            <li><a class="nav-icons" href="/">Inicio</a></li>
+                            <li><a class="nav-icons" href="/usuario/mapa">Donde estamos</a></li>
+                            <li><a class="nav-icons" href="/usuario/login">Mi cuenta</a></li>
+                            <li><a class="nav-icons" href="/usuario/listado">Catalogo</a></li>
+                            <li><a class="nav-icons" href="#Contactos">Contáctanos</a></li>
+                            <li><a class="nav-icons" href="/admin/opcionesAdmin">Opciones Admin</a></li>
+                            <li><a class="nav-icons" href='/usuario/perfil'> <i class="far fa-user"></i></a></li>
+                        </ul>
+                    </div>
+
+                    <li><a class="nav-icons" href='/usuario/perfil'> <i class="far fa-user"></i></a></li>
+                    <li><a class="nav2-link" href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                    <li><a class="nav2-link" href="#"><i class="fas fa-search"></i></a></li>
                     <% } else if (locals.isLogged || usuarioYaLogueado) { %>
+
+                        <div class="nav2-link icono-menu">
+                            <i class="fas fa-bars" id="icono-menu"></i>
+                        </div>
+
+                        <div class="cont-menu active-hidden" id="menu">
+                            <ul>
+                                <li><a class="nav-icons" href="/">Inicio</a></li>
+                                <li><a class="nav-icons" href="/usuario/mapa">Donde estamos</a></li>
+                                <li><a class="nav-icons" href="/usuario/login">Mi cuenta</a></li>
+                                <li><a class="nav-icons" href="/usuario/listado">Catalogo</a></li>
+                                <li><a class="nav-icons" href="#Contactos">Contáctanos</a></li>
+                            </ul>
+                        </div>
+
+                        <li><a class="nav-icons" href='/usuario/perfil'> <i class="far fa-user"></i></a></li>
+                        <li><a class="nav2-link" href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                        <li><a class="nav2-link" href="#"><i class="fas fa-search"></i></a></li>
+
                         <% } else { %>
                             <div class="nav2-link icono-menu">
                                 <i class="fas fa-bars" id="icono-menu"></i>
