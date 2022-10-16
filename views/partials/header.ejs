@@ -18,6 +18,7 @@
                     <li><a class="nav-icons" href="/usuario/login">Mi cuenta</a></li>
                     <li><a class="nav-icons" href="/usuario/listado">Catalogo</a></li>
                     <li><a class="nav-icons" href="#Contactos">Contáctanos</a></li>
+                    <li><a class="nav-icons" href="/usuario/carritoDeCompras">Carrito de compras</a></li>
                     <li><a class="nav-icons" href="/admin/opcionesAdmin">Opciones Admin</a></li>
                     <li><a class="nav-icons" href='/usuario/perfil'> <i class="far fa-user"></i></a></li>
                     <% } else if (locals.isLogged || usuarioYaLogueado) { %>
@@ -26,6 +27,7 @@
                         <li><a class="nav-icons" href="/usuario/login">Mi cuenta</a></li>
                         <li><a class="nav-icons" href="/usuario/listado">Catalogo</a></li>
                         <li><a class="nav-icons" href="#Contactos">Contáctanos</a></li>
+                        <li><a class="nav-icons" href="/usuario/carritoDeCompras">Carrito de compras</a></li>
                         <li><a class="nav-icons" href='/usuario/perfil'> <i class="far fa-user"></i></a></li>
                         <% } else { %>
                             <li><a class="nav-icons" href="/">Inicio</a></li>
@@ -33,6 +35,7 @@
                             <li><a class="nav-icons" href="/usuario/login">Mi cuenta</a></li>
                             <li><a class="nav-icons" href="/usuario/listado">Catalogo</a></li>
                             <li><a class="nav-icons" href="#Contactos">Contáctanos</a></li>
+                            <li><a class="nav-icons" href="/usuario/carritoDeCompras">Carrito de compras</a></li>
                             <% } %>
 
 
@@ -51,12 +54,13 @@
                             <li><a class="nav-icons" href="/usuario/login">Mi cuenta</a></li>
                             <li><a class="nav-icons" href="/usuario/listado">Catalogo</a></li>
                             <li><a class="nav-icons" href="#Contactos">Contáctanos</a></li>
+                            <li><a class="nav-icons" href="/usuario/carritoDeCompras">Carrito de compras</a></li>
                             <li><a class="nav-icons" href="/admin/opcionesAdmin">Opciones Admin</a></li>
                             <li><a class="nav-icons" href='/usuario/perfil'> <i class="far fa-user"></i></a></li>
                         </ul>
                     </div>
 
-                    <li><a class="nav2-link" href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                    <li><a class="nav2-link" href="/usuario/carritoDeCompras"><i class="fas fa-shopping-cart"></i></a></li>
                     <li><a class="nav2-link" href="#"><i class="fas fa-search"></i></a></li>
                     <% } else if (locals.isLogged || usuarioYaLogueado) { %>
 
@@ -71,11 +75,12 @@
                                 <li><a class="nav-icons" href="/usuario/login">Mi cuenta</a></li>
                                 <li><a class="nav-icons" href="/usuario/listado">Catalogo</a></li>
                                 <li><a class="nav-icons" href="#Contactos">Contáctanos</a></li>
+                                <li><a class="nav-icons" href="/usuario/carritoDeCompras">Carrito de compras</a></li>
                             </ul>
                         </div>
 
 
-                        <li><a class="nav2-link" href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                        <li><a class="nav2-link" href="/usuario/carritoDeCompras/usuario/carritoDeCompras"><i class="fas fa-shopping-cart"></i></a></li>
                         <li><a class="nav2-link" href="#"><i class="fas fa-search"></i></a></li>
 
                         <% } else { %>
@@ -90,11 +95,13 @@
                                     <li><a class="nav-icons" href="/usuario/login">Mi cuenta</a></li>
                                     <li><a class="nav-icons" href="/usuario/listado">Catalogo</a></li>
                                     <li><a class="nav-icons" href="#Contactos">Contáctanos</a></li>
+                                    <li><a class="nav-icons" href="/usuario/carritoDeCompras">Carrito de compras</a>
+                                    </li>
                                 </ul>
                             </div>
 
 
-                            <li><a class="nav2-link" href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                            <li><a class="nav2-link" href="/usuario/carritoDeCompras"><i class="fas fa-shopping-cart"></i></a></li>
                             <li><a class="nav2-link" href="#"><i class="fas fa-search"></i></a></li>
                             <% } %>
             </ul>

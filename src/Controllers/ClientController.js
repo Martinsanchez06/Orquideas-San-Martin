@@ -47,6 +47,9 @@ const ClientController = {
         console.log(req.cookies.userEmail)
         res.render('Client/registro')
     },
+    carrito: (req, res) => {
+        res.render('Client/carritoDeCompras')
+    },
     registro: (req, res) => {
         try {
             db.usuarios.create({   
