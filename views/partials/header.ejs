@@ -14,7 +14,7 @@
             <ul class="nav-tabss">
                 <% if ((locals.isLogged && locals.usuarioAdmin) || (usuarioYaLogueado && usuarioAdmin)) { %>
                     <li><a class="nav-icons" href="/">Inicio</a></li>
-                    <li><a class="nav-icons" href="/productos/lista">Donde estamos</a></li>
+                    <li><a class="nav-icons" href="/usuario/mapa">Donde estamos</a></li>
                     <li><a class="nav-icons" href="/usuario/login">Mi cuenta</a></li>
                     <li><a class="nav-icons" href="/usuario/listado">Catalogo</a></li>
                     <li><a class="nav-icons" href="#Contactos">Contáctanos</a></li>
@@ -22,14 +22,14 @@
                     <li><a class="nav-icons" href='/usuario/perfil'> <i class="far fa-user"></i></a></li>
                     <% } else if (locals.isLogged || usuarioYaLogueado) { %>
                         <li><a class="nav-icons" href="/">Inicio</a></li>
-                        <li><a class="nav-icons" href="/productos/lista">Donde estamos</a></li>
+                        <li><a class="nav-icons" href="/usuario/mapa">Donde estamos</a></li>
                         <li><a class="nav-icons" href="/usuario/login">Mi cuenta</a></li>
                         <li><a class="nav-icons" href="/usuario/listado">Catalogo</a></li>
                         <li><a class="nav-icons" href="#Contactos">Contáctanos</a></li>
                         <li><a class="nav-icons" href='/usuario/perfil'> <i class="far fa-user"></i></a></li>
                         <% } else { %>
                             <li><a class="nav-icons" href="/">Inicio</a></li>
-                            <li><a class="nav-icons" href="/productos/lista">Donde estamos</a></li>
+                            <li><a class="nav-icons" href="/usuario/mapa">Donde estamos</a></li>
                             <li><a class="nav-icons" href="/usuario/login">Mi cuenta</a></li>
                             <li><a class="nav-icons" href="/usuario/listado">Catalogo</a></li>
                             <li><a class="nav-icons" href="#Contactos">Contáctanos</a></li>
@@ -38,18 +38,29 @@
 
             </ul>
             <ul class="nav-tabss2" hidden>
-                <% if (locals.isLogged) { %>
+                <% if ((locals.isLogged && locals.usuarioAdmin) || (usuarioYaLogueado && usuarioAdmin)) { %>
                     <li><a class="nav2-link" href='#'> <i class="far fa-user"></i></a></li>
-                    <% } %>
-                        <li><a class="nav2-link" href='#'><i class="fas fa-bars"></i></a></li>
-                        <li><a class="nav2-link" href="#"><i class="fas fa-shopping-cart"></i></a></li>
-                        <li><a class="nav2-link" href="#"><i class="fas fa-search"></i></a></li>
+                    <% } else if (locals.isLogged || usuarioYaLogueado) { %>
+                        <% } else { %>
+                            <div class="nav2-link icono-menu">
+                                <i class="fas fa-bars" id="icono-menu"></i>
+                            </div>
 
+                            <div class="cont-menu active-hidden" id="menu">
+                                <ul>
+                                    <li><a class="nav-icons" href="/">Inicio</a></li>
+                                    <li><a class="nav-icons" href="/usuario/mapa">Donde estamos</a></li>
+                                    <li><a class="nav-icons" href="/usuario/login">Mi cuenta</a></li>
+                                    <li><a class="nav-icons" href="/usuario/listado">Catalogo</a></li>
+                                    <li><a class="nav-icons" href="#Contactos">Contáctanos</a></li>
+                                </ul>
+                            </div>
+
+
+                            <li><a class="nav2-link" href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                            <li><a class="nav2-link" href="#"><i class="fas fa-search"></i></a></li>
+                            <% } %>
             </ul>
-            <div class="search" hidden>
-                <input type="search" name="search" id="search-header" placeholder="¿Que planta deseas encontrar?"
-                    autocomplete="off">
-            </div>
         </div>
     </nav>
 </div>

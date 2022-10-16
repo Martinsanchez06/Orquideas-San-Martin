@@ -114,7 +114,7 @@
 }
 
 /* ------ IMAGEN DE FONDO PRINCIPAL ------ */
-  
+
 .slider-home {
   margin-left: auto;
   margin-right: auto;
@@ -123,9 +123,9 @@
   background-image: url(../images/orquideasImages/IMG-20220513-WA0003.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment:fixed ;
+  background-attachment: fixed;
   margin-right: auto;
-  padding-bottom:40px; 
+  padding-bottom: 40px;
   width: 95%;
 }
 
@@ -222,6 +222,75 @@
 
 /* ------ TEXTO PRINCIPAL EN SLIDER ------ */
 
+
+
+@media only screen and (min-width: 0px) and (max-width: 768px) {
+
+  .nav-tabss2 {
+    display: flex;
+    list-style: none;
+    flex-direction: row-reverse;
+  }
+
+  .icono-menu {
+    z-index: 10
+  }
+
+  .fa-bars {
+    cursor: pointer
+  }
+
+  .cont-menu {
+    background-color: #fff;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 15px;
+    transition: all .9s ease;
+    position: absolute;
+    top: 1;
+    right: 0;
+  }
+
+  .cont-menu ul li {
+    list-style: none;
+    transition: .5s;
+    margin-bottom: 15px;
+  }
+
+  .cont-menu ul li a {
+    transition: 1.05s;
+  }
+
+  .cont-menu ul li:hover {
+    margin: 25px 0px;
+    display: block;
+  }
+
+  .cont-menu ul li a:hover {
+    background-color: #0152a3;
+    color: #fff;
+    padding: 10px 8px;
+    border-radius: 20px;
+  }
+
+  .icon {
+    transition: 1.05s;
+    transform: scale(1.2);
+    margin-right: 5px;
+    color: #000000;
+  }
+
+  .opacity {
+    transition: all 1s ease;
+  }
+
+  .active-hidden {
+    transform: translate(-600px);
+  }
+
+
+}
+
 @media only screen and (min-width: 493px) and (max-width: 768px) {
 
   /* ------NAV DE ICONOS ------ */
@@ -306,6 +375,7 @@
   .nav-tabs-div {
     background-color: #002F30;
   }
+
   /* ------ IMAGEN DE FONDO PRINCIPAL ------ */
   .slider {
     padding-bottom: 15px;
