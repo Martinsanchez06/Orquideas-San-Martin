@@ -39,7 +39,7 @@ const OrquideasController = {
             include: [{ association: 'climas' }]
         })
             .then(function (orquideas) {
-                res.render("admin/detalleAdmin", { orquideas })
+                res.render("Admin/detalleAdmin", { orquideas })
             })
     },
     formUpdate: function (req, res) {
