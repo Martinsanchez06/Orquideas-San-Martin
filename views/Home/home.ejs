@@ -33,7 +33,7 @@
             </select>
           </form>
           <div class="pagina">
-            <p class="pagina-texto">Mostrando 1-16 de <%=orquideas.length%>  plantas</p>
+            <p class="pagina-texto">Mostrando 1-16 de <%=orquideas.length%> plantas</p>
           </div>
         </div>
 
@@ -46,27 +46,27 @@
                   <%- include('../Client/orquideaHome.ejs', {orquideas}) %>
                     <% } %>
                       <% }) %>
-                      
-                      <div id="buscar" class="div-buscador">
-                        <p class="titulo-buscador">¿Qué planta quieres encontrar?</p>
-                        <form action="/usuario/resultado" method="get">
-                          <input type="search" name="search" id="buscador-home" placeholder=" Buscar...">
-                        </form>
-                        <ul>
-                          <li class="categoria">
-                            <a class="categoria" href="#masVendidos">Nuestros mas vendidos</a>
-                          </li>
-                          <li class="categoria">
-                            <a class="categoria" href="#florecidas">Orquideas florecidas</a>
-                          </li>
-                          <li class="categoria">
-                            <a class="categoria" href="#descuento">En descuento</a>
-                          </li>
-                          <li class="categoria">
-                            <a class="categoria" href="#otras">Otras</a>
-                          </li>
-                        </ul>
-                      </div>
+
+                        <div id="buscar" class="div-buscador">
+                          <p class="titulo-buscador">¿Qué planta quieres encontrar?</p>
+                          <form action="/usuario/resultado" method="get">
+                            <input type="search" name="search" id="buscador-home" placeholder=" Buscar...">
+                          </form>
+                          <ul>
+                            <li class="categoria">
+                              <a class="categoria" href="#masVendidos">Nuestros mas vendidos</a>
+                            </li>
+                            <li class="categoria">
+                              <a class="categoria" href="#florecidas">Orquideas florecidas</a>
+                            </li>
+                            <li class="categoria">
+                              <a class="categoria" href="#descuento">En descuento</a>
+                            </li>
+                            <li class="categoria">
+                              <a class="categoria" href="#otras">Otras</a>
+                            </li>
+                          </ul>
+                        </div>
             </div>
 
           </section>
@@ -117,5 +117,5 @@
 
 
     </div>
-  
-  <%- include("../partials/footer.ejs") %>
+
+    <%- include("../partials/footer.ejs") %>

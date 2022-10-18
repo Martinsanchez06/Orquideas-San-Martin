@@ -21,7 +21,7 @@ section.Orquidea {
 }
 
 section.Orquidea:hover {
-    color: #fff !important; 
+    color: #fff !important;
     border-radius: 20px;
     background-color: #037587;
     transform: scale(1.08);
@@ -33,7 +33,7 @@ section.Orquidea:hover {
 
 .enDescuento:hover {
     transform: scale(0.9);
-    
+
 }
 
 .h1-listado {
@@ -45,10 +45,12 @@ section.Orquidea:hover {
     height: 70%;
     margin-bottom: 10px;
 }
+
 .card-img-home {
     height: 94%;
     margin-bottom: 10px;
 }
+
 
 .card-img img {
     width: 100%;
@@ -56,6 +58,7 @@ section.Orquidea:hover {
     height: 100%;
     object-fit: cover;
 }
+
 .card-img-home img {
     width: 100%;
     border-radius: 5px;
@@ -64,7 +67,7 @@ section.Orquidea:hover {
 }
 
 .precio-p {
-    
+
     font-weight: 200;
 }
 
@@ -81,11 +84,20 @@ section.Orquidea:hover {
 }
 
 .ver-detalle {
-    margin-bottom: 10px;
-    background-color: #03687C;
-    display: inline-block;
     padding: 5px 20%;
     border-radius: 8px;
+    transition: 1.5s;
+    opacity: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-left: -100%;
+}
+
+
+section.Orquidea:hover .ver-detalle {
+    transition:  1.1s;
+    transform: scale(1.2) translate(20%) rotate(-360deg);
+    opacity: 1;
 }
 
 .ver-detalle-a {
@@ -94,7 +106,7 @@ section.Orquidea:hover {
     font-weight: 500;
 }
 
-.h3-product{
+.h3-product {
     font-weight: 500;
 }
 
@@ -118,7 +130,7 @@ section.Orquidea:hover {
 @media only screen and (min-width: 717px) {
     section.Orquidea {
         min-width: 50%;
-        
+
     }
 
     /* .card-img {
@@ -126,7 +138,7 @@ section.Orquidea:hover {
         height: 77%;
         margin-bottom: 10px;
     } */
-    
+
     .card-img-home {
         width: 100%;
         height: 100%;

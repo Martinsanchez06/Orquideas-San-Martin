@@ -1,4 +1,4 @@
-<section class="Orquidea">
+<section class="Orquidea" id="sectionOrquidea">
     <div class="card-img-home">
         <a href="/usuario/detalle/<%= orquideas.id %>">
             <img class="" src="/images/orquideasImages/<%= orquideas.imagen1 %>" alt="">
@@ -19,7 +19,12 @@
                 <a class="ver-detalle-a" href="/admin/detalleAdmin/<%= orquideas.id %>">Ver detalle admin</a>
             </div>
 
+            
             <% } %>
+            <div class="ver-detalle" id="detalleOrquidea">
+                <a class="ver-detalle-a" href="/usuario/detalle/<%= orquideas.id %> "><i class="fas fa-shopping-cart"></i></a>
+                
+            </div>
 
     </article>
 
