@@ -33,7 +33,7 @@
             </select>
           </form>
           <div class="pagina">
-            <p class="pagina-texto">Mostrando 1-10 de 30 plantas</p>
+            <p class="pagina-texto">Mostrando 1-16 de <%=orquideas.length%>  plantas</p>
           </div>
         </div>
 
@@ -46,7 +46,8 @@
                   <%- include('../Client/orquideaHome.ejs', {orquideas}) %>
                     <% } %>
                       <% }) %>
-                      <div class="div-buscador">
+                      
+                      <div id="buscar" class="div-buscador">
                         <p class="titulo-buscador">¿Qué planta quieres encontrar?</p>
                         <form action="/usuario/resultado" method="get">
                           <input type="search" name="search" id="buscador-home" placeholder=" Buscar...">
