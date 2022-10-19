@@ -1,8 +1,17 @@
 <%- include('../partials/head.ejs') %>
 
-    <body>
-        <%- include('../partials/header.ejs') %>
-          
-        <main class="container"></main>
-    
-    <%- include('../partials/footer.ejs') %>
+  <body>
+    <%- include('../partials/header.ejs') %>
+
+      <main class="container">
+
+        <h1 class="h1-listado">Nuestras Orquideas</h1>
+        <div class="productos-listado">
+          <% orquideas.forEach(orquideas=> { %>
+            <%- include("orquidea.ejs", {orquideas : orquideas}) %>
+              <% }) %>
+        </div>
+
+      </main>
+
+      <%- include('../partials/footer.ejs') %>
