@@ -55,7 +55,12 @@ const ClientController = {
         res.render('Client/registro')
     },
     carrito: (req, res) => {
-        res.render('Client/carritoDeCompras')
+        let orquideasEncontradas = db.Orquideas.findAll()
+        let climasEncontrados = db.climas.findAll()
+        Promise.all([orquideasEncontradas, climasEncontrados])
+            .then(function ([orquideas, climas]) {
+                res.render('Client/carritoDeCompras', { orquideas, climas })
+            })
     },
     registro: (req, res) => {
         try {

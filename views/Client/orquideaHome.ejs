@@ -1,28 +1,25 @@
-<section class="Orquidea" id="sectionOrquidea">
-    <div class="card-img-home">
-        <a href="/usuario/detalle/<%= orquideas.id %>">
-            <img class="img-orquidea" src="/images/orquideasImages/<%= orquideas.imagen1 %>" alt="">
-        </a>
-    </div>
-    <article class="card-article">
+<div class="card-img-home">
+    <a href="/usuario/detalle/<%= orquideas.id %>">
+        <img class="img-orquidea" src="/images/orquideasImages/<%= orquideas.imagen1 %>" alt="">
+    </a>
+</div>
+<article class="card-article">
 
 
-        <h3 class="h3-product">
-            <%= orquideas.nombre %>
-        </h3>
+    <h3 class="h3-product">
+        <%= orquideas.nombre %>
+    </h3>
 
-        <p class="precio-p"><span>
-                <%= orquideas.precio %>
-            </span></p>
-        <% if ((locals.isLogged && locals.usuarioAdmin) || (usuarioYaLogueado && usuarioAdmin)) { %>
+    <p class="precio-p"><span>
+            <%= orquideas.precio %>
+        </span></p>
+    <% if ((locals.isLogged && locals.usuarioAdmin) || (usuarioYaLogueado && usuarioAdmin)) { %>
+        <div class="ver-detalle">
+            <a class="ver-detalle-a" href="/admin/detalleAdmin/<%= orquideas.id %>">Ver detalle admin</a>
+        </div>
+        <% } %>
             <div class="ver-detalle">
-                <a class="ver-detalle-a" href="/admin/detalleAdmin/<%= orquideas.id %>">Ver detalle admin</a>
+                <a class="ver-detalle-a button" href="#" data-id=<%= orquideas.id %> ><i class="fas fa-shopping-cart"></i></a>
             </div>
-            <% } %>
-                <div class="ver-detalle" id="detalleOrquidea">
-                    <button class="button"><i class="fas fa-shopping-cart"></i></button>
-                </div>
 
-    </article>
-
-</section>
+</article>

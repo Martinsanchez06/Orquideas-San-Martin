@@ -5,11 +5,25 @@
 
       <main class="container">
 
-        <h1 class="h1-listado">Nuestras Orquideas</h1>
-        <div class="productos-listado">
-          <% orquideas.forEach(orquideas=> { %>
-            <%- include("orquidea.ejs", {orquideas : orquideas}) %>
-              <% }) %>
+        <h1 class="h1-listado">Carrito de compras</h1>
+        <div id="carrito">
+          <p class="vacio">Carrito vacio</p>
+          <table id="lista-carrito" class="u-full-width">
+
+            <thead>
+
+              <tr>
+
+              </tr>
+
+            </thead>
+
+            <tbody>
+              
+            </tbody>
+
+          </table>
+          <a href="#" id="vaciar-carrito">Vaciar carrito</a>
         </div>
 
       </main>

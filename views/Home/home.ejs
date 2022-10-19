@@ -4,10 +4,6 @@
     <div class="contain">
       <%- include("../partials/headerHome.ejs") %>
 
-        <div>
-
-        </div>
-
         <div class="container-top">
           <div class="estilos-de-pagina">
             <i class="fas fa-th"></i>
@@ -37,13 +33,18 @@
           </div>
         </div>
 
-        <main>
-          <h3 id="masVendidos" class="header-vendidos">Nuestros más vendidos </h3>
-          <section class="los-mas-vendidos">
-            <div class="container-productos">
-              <% orquideas.forEach(orquideas=> { %>
-                <% if (orquideas.secciondehome_id===1) { %>
-                  <%- include('../Client/orquideaHome.ejs', {orquideas}) %>
+        <div id="lista-platillos">
+
+
+          <main>
+            <h3 id="masVendidos" class="header-vendidos">Nuestros más vendidos </h3>
+            <section class="los-mas-vendidos">
+              <div class="container-productos">
+                <% orquideas.forEach(orquideas=> { %>
+                  <% if (orquideas.secciondehome_id===1) { %>
+                    <section class="Orquidea" id=<%=orquideas.id %> >
+                      <%- include('../Client/orquideaHome.ejs', {orquideas}) %>
+                    </section>
                     <% } %>
                       <% }) %>
 
@@ -67,52 +68,62 @@
                             </li>
                           </ul>
                         </div>
-            </div>
+              </div>
 
-          </section>
-          <section class="orquideas-florecidas">
-            <h3 id="florecidas" class="header-orquideas-florecidas">Orquideas florecidas</h3>
-            <div class="container-productos-2">
-              <% orquideas.forEach(orquideas=> { %>
-                <% if (orquideas.secciondehome_id===2) { %>
-                  <%- include('../Client/orquideaHome.ejs', {orquideas}) %>
+            </section>
+            <section class="orquideas-florecidas">
+              <h3 id="florecidas" class="header-orquideas-florecidas">Orquideas florecidas</h3>
+              <div class="container-productos-2">
+                <% orquideas.forEach(orquideas=> { %>
+                  <% if (orquideas.secciondehome_id===2) { %>
+                    <section class="Orquidea" id=<%=orquideas.id %> >
+                      <%- include('../Client/orquideaHome.ejs', {orquideas}) %>
+                    </section>
                     <% } %>
                       <% }) %>
+              </div>
+            </section>
+            <!-- <div class="div-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum soluta aspernatur explicabo aut dolores! Ipsa
+            dolores error molestiae architecto assumenda accusamus aliquam rerum
+          </div> -->
+            <div id="quienesSomos" class="quienes-somos">
+              <div class="img-somos-home">
+                <img src="/images/LinkedIn cover - 3.png" alt="">
+              </div>
+              <h1>Quienes somos</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla aliquam voluptate, vero dolorum at
+                error cum fuga suscipit culpa omnis cumque illo recusandae veritatis consequuntur provident ipsa in
+                officiis non, dolorem obcaecati beatae voluptates veniam iste? Vel commodi aspernatur aliquam?</p>
             </div>
-          </section>
-          <!-- <div class="div-text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum soluta aspernatur explicabo aut dolores! Ipsa
-          dolores error molestiae architecto assumenda accusamus aliquam rerum
-        </div> -->
-          <div id="quienesSomos" class="quienes-somos">
-            <div class="img-somos-home">
-              <img src="/images/LinkedIn cover - 3.png" alt="">
-            </div>
-            <h1>Quienes somos</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla aliquam voluptate, vero dolorum at
-              error cum fuga suscipit culpa omnis cumque illo recusandae veritatis consequuntur provident ipsa in
-              officiis non, dolorem obcaecati beatae voluptates veniam iste? Vel commodi aspernatur aliquam?</p>
-          </div>
-          <div class="container-productos-3">
-            <h3 id="descuento" class="header-descuento">En descuento</h3>
-            <div class="enDescuento">
-              <% orquideas.forEach(orquideas=> { %>
-                <% if (orquideas.secciondehome_id===3){ %>
-                  <%- include('../Client/orquideaHome.ejs', {orquideas}) %>
+            <div class="container-productos-3">
+              <h3 id="descuento" class="header-descuento">En descuento</h3>
+              <div class="enDescuento">
+                <% orquideas.forEach(orquideas=> { %>
+                  <% if (orquideas.secciondehome_id===3){ %>
+                    <section class="Orquidea" id=<%=orquideas.id %> >
+                      <%- include('../Client/orquideaHome.ejs', {orquideas}) %>
+                    </section>
                     <% } %>
                       <% }) %>
+              </div>
             </div>
-          </div>
-          <section id="otras" class="mas-plantas">
-            <div class="container-productos-4">
-              <% orquideas.forEach(orquideas=> { %>
-                <% if (orquideas.secciondehome_id===4) { %>
-                  <%- include('../Client/orquideaHome.ejs', {orquideas}) %>
+            <section id="otras" class="mas-plantas">
+              <div class="container-productos-4">
+                <% orquideas.forEach(orquideas=> { %>
+                  <% if (orquideas.secciondehome_id===4) { %>
+                    <section class="Orquidea" id=<%=orquideas.id %> >
+                      <%- include('../Client/orquideaHome.ejs', {orquideas}) %>
+                    </section>
                     <% } %>
                       <% }) %>
-            </div>
-          </section>
-        </main>
+              </div>
+            </section>
+          </main>
+
+
+
+        </div>
 
 
 

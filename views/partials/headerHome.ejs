@@ -35,10 +35,38 @@
                             <li><a class="nav-icons" href="/usuario/login">Mi cuenta</a></li>
                             <li><a class="nav-icons" href="/usuario/listado">Catalogo</a></li>
                             <li><a class="nav-icons" href="#Contactos">Contáctanos</a></li>
-                            <li><a class="nav-icons" href="/usuario/carritoDeCompras">Carrito de compras</a></li>
                             <% } %>
 
 
+                                <div class="nav2-link icono-shop">
+                                    <i class="fas fa-shopping-cart " id="icono-shop"></i>
+                                </div>
+
+                                <div class="cont-shop active-hidden-2" id="shop">
+                                    <div class="carritoMain">
+                                        <h1 class="h1-listad">Carrito de compras</h1>
+                                        <div id="carrito">
+                                            <p class="vacio">Carrito vacio</p>
+                                            <table id="lista-carrito" class="u-full-width">
+
+                                                <thead>
+
+                                                    <tr>
+
+                                                    </tr>
+
+                                                </thead>
+
+                                                <tbody>
+
+                                                </tbody>
+
+                                            </table>
+                                            <a href="#" id="vaciar-carrito">Vaciar carrito</a>
+
+                                        </div>
+                                    </div>
+                                </div>
             </ul>
             <ul class="nav-tabss2" hidden>
                 <% if ((locals.isLogged && locals.usuarioAdmin) || (usuarioYaLogueado && usuarioAdmin)) { %>
@@ -60,8 +88,9 @@
                         </ul>
                     </div>
 
-                    
-                    <li><a class="nav2-link" href="/usuario/carritoDeCompras"><i class="fas fa-shopping-cart"></i></a></li>
+
+                    <li><a class="nav2-link" href="/usuario/carritoDeCompras"><i class="fas fa-shopping-cart"></i></a>
+                    </li>
                     <li><a class="nav2-link" href="#"><i class="fas fa-search"></i></a></li>
                     <% } else if (locals.isLogged || usuarioYaLogueado) { %>
 
@@ -80,8 +109,9 @@
                             </ul>
                         </div>
 
-                        
-                        <li><a class="nav2-link" href="/usuario/carritoDeCompras"><i class="fas fa-shopping-cart"></i></a></li>
+
+                        <li><a class="nav2-link" href="/usuario/carritoDeCompras"><i
+                                    class="fas fa-shopping-cart"></i></a></li>
                         <li><a class="nav2-link" href="#"><i class="fas fa-search"></i></a></li>
 
                         <% } else { %>
@@ -96,12 +126,10 @@
                                     <li><a class="nav-icons" href="/usuario/login">Mi cuenta</a></li>
                                     <li><a class="nav-icons" href="/usuario/listado">Catalogo</a></li>
                                     <li><a class="nav-icons" href="#Contactos">Contáctanos</a></li>
-                                    <li><a class="nav-icons" href="/usuario/carritoDeCompras">Carrito de compras</a></li>
+                                    <li><a class="nav-icons" href="/usuario/carritoDeCompras">Carrito de compras</a>
+                                    </li>
                                 </ul>
                             </div>
-
-
-                            <li><a class="nav2-link" href="/usuario/carritoDeCompras"><i class="fas fa-shopping-cart"></i></a></li>
                             <li><a class="nav2-link" href="#buscar"><i class="fas fa-search"></i></a></li>
                             <% } %>
             </ul>

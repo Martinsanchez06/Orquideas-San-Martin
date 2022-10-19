@@ -35,11 +35,23 @@
                             <li><a class="nav-icons" href="/usuario/login">Mi cuenta</a></li>
                             <li><a class="nav-icons" href="/usuario/listado">Catalogo</a></li>
                             <li><a class="nav-icons" href="#Contactos">Contáctanos</a></li>
-                            <li><a class="nav-icons" href="/usuario/carritoDeCompras">Carrito de compras</a></li>
                             <% } %>
+                            <div class="nav2-link icono-shop">
+                                <i class="fas fa-shopping-cart " id="icono-shop"></i>
+                            </div>
 
-
-            </ul>
+                            <div class="cont-shop active-hidden-2" id="shop">
+                                <ul>
+                                    <li><a class="nav-icons2" href="/">Inicio</a></li>
+                                    <li><a class="nav-icons2" href="/usuario/mapa">Donde estamos</a></li>
+                                    <li><a class="nav-icons2" href="/usuario/login">Mi cuenta</a></li>
+                                    <li><a class="nav-icons2" href="/usuario/listado">Catalogo</a></li>
+                                    <li><a class="nav-icons2" href="#Contactos">Contáctanos</a></li>
+                                    <li><a class="nav-icons2" href="/usuario/carritoDeCompras">Carrito de
+                                            compras</a></li>
+                                </ul>
+                            </div>
+        </ul>
             <ul class="nav-tabss2" hidden>
                 <% if ((locals.isLogged && locals.usuarioAdmin) || (usuarioYaLogueado && usuarioAdmin)) { %>
 
@@ -100,8 +112,10 @@
                                 </ul>
                             </div>
 
+                           
 
-                            <li><a class="nav2-link" href="/usuario/carritoDeCompras"><i class="fas fa-shopping-cart"></i></a></li>
+
+                            <li><a class="nav2-link" href="/usuario/carritoDeCompras"></a></li>
                             <li><a class="nav2-link" href="#"><i class="fas fa-search"></i></a></li>
                             <% } %>
             </ul>
