@@ -18,7 +18,6 @@
                     <li><a class="nav-icons" href="/usuario/login">Mi cuenta</a></li>
                     <li><a class="nav-icons" href="/usuario/listado">Catalogo</a></li>
                     <li><a class="nav-icons" href="#Contactos">Contáctanos</a></li>
-                    <li><a class="nav-icons" href="/usuario/carritoDeCompras">Carrito de compras</a></li>
                     <li><a class="nav-icons" href="/admin/opcionesAdmin">Opciones Admin</a></li>
                     <li><a class="nav-icons" href='/usuario/perfil'> <i class="far fa-user"></i></a></li>
                     <% } else if (locals.isLogged || usuarioYaLogueado){ %>
@@ -27,7 +26,6 @@
                         <li><a class="nav-icons" href="/usuario/login">Mi cuenta</a></li>
                         <li><a class="nav-icons" href="/usuario/listado">Catalogo</a></li>
                         <li><a class="nav-icons" href="#Contactos">Contáctanos</a></li>
-                        <li><a class="nav-icons" href="/usuario/carritoDeCompras">Carrito de compras</a></li>
                         <li><a class="nav-icons" href='/usuario/perfil'> <i class="far fa-user"></i></a></li>
                         <% } else { %>
                             <li><a class="nav-icons" href="/">Inicio</a></li>
@@ -38,23 +36,15 @@
                             <% } %>
 
 
-                                <div class="nav2-link icono-shop">
+                                <!-- <div class="nav2-link icono-shop">
                                     <i class="fas fa-shopping-cart " id="icono-shop"></i>
                                 </div>
 
                                 <div class="cont-shop active-hidden-2" id="shop">
                                     <div class="carritoMain">
-                                        <h3>Carrito de compras</h3>
-                                        <p><span>Tus compras</span></p>
-                                        <% orquideas.forEach(orquideas=> { %>
-                                            <% if (orquideas.secciondehome_id===1) { %>
-                                              <section class="Orquidea" id=<%=orquideas.id %> >
-                                                <%- include('../Client/orquideaHome.ejs', {orquideas}) %>
-                                              </section>
-                                              <% } %>
-                                                <% }) %>
+                                       <h3>En desarrollo...</h3>
                                     </div>
-                                </div>
+                                </div> -->
             </ul>
             <ul class="nav-tabss2" hidden>
                 <% if ((locals.isLogged && locals.usuarioAdmin) || (usuarioYaLogueado && usuarioAdmin)) { %>
@@ -70,7 +60,6 @@
                             <li><a class="nav-icons" href="/usuario/login">Mi cuenta</a></li>
                             <li><a class="nav-icons" href="/usuario/listado">Catalogo</a></li>
                             <li><a class="nav-icons" href="#Contactos">Contáctanos</a></li>
-                            <li><a class="nav-icons" href="/usuario/carritoDeCompras">Carrito de compras</a></li>
                             <li><a class="nav-icons" href="/admin/opcionesAdmin">Opciones Admin</a></li>
                             <li><a class="nav-icons" href='/usuario/perfil'> <i class="far fa-user"></i></a></li>
                         </ul>
@@ -93,7 +82,6 @@
                                 <li><a class="nav-icons" href="/usuario/login">Mi cuenta</a></li>
                                 <li><a class="nav-icons" href="/usuario/listado">Catalogo</a></li>
                                 <li><a class="nav-icons" href="#Contactos">Contáctanos</a></li>
-                                <li><a class="nav-icons" href="/usuario/carritoDeCompras">Carrito de compras</a></li>
                             </ul>
                         </div>
 
@@ -114,7 +102,6 @@
                                     <li><a class="nav-icons" href="/usuario/login">Mi cuenta</a></li>
                                     <li><a class="nav-icons" href="/usuario/listado">Catalogo</a></li>
                                     <li><a class="nav-icons" href="#Contactos">Contáctanos</a></li>
-                                    <li><a class="nav-icons" href="/usuario/carritoDeCompras">Carrito de compras</a>
                                     </li>
                                 </ul>
                             </div>

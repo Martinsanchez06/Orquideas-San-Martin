@@ -18,7 +18,6 @@
                     <li><a class="nav-icons" href="/usuario/login">Mi cuenta</a></li>
                     <li><a class="nav-icons" href="/usuario/listado">Catalogo</a></li>
                     <li><a class="nav-icons" href="#Contactos">Contáctanos</a></li>
-                    <li><a class="nav-icons" href="/usuario/carritoDeCompras">Carrito de compras</a></li>
                     <li><a class="nav-icons" href="/admin/opcionesAdmin">Opciones Admin</a></li>
                     <li><a class="nav-icons" href='/usuario/perfil'> <i class="far fa-user"></i></a></li>
                     <% } else if (locals.isLogged || usuarioYaLogueado) { %>
@@ -27,7 +26,6 @@
                         <li><a class="nav-icons" href="/usuario/login">Mi cuenta</a></li>
                         <li><a class="nav-icons" href="/usuario/listado">Catalogo</a></li>
                         <li><a class="nav-icons" href="#Contactos">Contáctanos</a></li>
-                        <li><a class="nav-icons" href="/usuario/carritoDeCompras">Carrito de compras</a></li>
                         <li><a class="nav-icons" href='/usuario/perfil'> <i class="far fa-user"></i></a></li>
                         <% } else { %>
                             <li><a class="nav-icons" href="/">Inicio</a></li>
@@ -36,89 +34,80 @@
                             <li><a class="nav-icons" href="/usuario/listado">Catalogo</a></li>
                             <li><a class="nav-icons" href="#Contactos">Contáctanos</a></li>
                             <% } %>
-                            <div class="nav2-link icono-shop">
-                                <i class="fas fa-shopping-cart " id="icono-shop"></i>
-                            </div>
+                                    <ul class="nav-tabss2" hidden>
+                                        <% if ((locals.isLogged && locals.usuarioAdmin) || (usuarioYaLogueado &&
+                                            usuarioAdmin)) { %>
 
-                            <div class="cont-shop active-hidden-2" id="shop">
-                                <ul>
-                                    <li><a class="nav-icons2" href="/">Inicio</a></li>
-                                    <li><a class="nav-icons2" href="/usuario/mapa">Donde estamos</a></li>
-                                    <li><a class="nav-icons2" href="/usuario/login">Mi cuenta</a></li>
-                                    <li><a class="nav-icons2" href="/usuario/listado">Catalogo</a></li>
-                                    <li><a class="nav-icons2" href="#Contactos">Contáctanos</a></li>
-                                    <li><a class="nav-icons2" href="/usuario/carritoDeCompras">Carrito de
-                                            compras</a></li>
-                                </ul>
-                            </div>
-        </ul>
-            <ul class="nav-tabss2" hidden>
-                <% if ((locals.isLogged && locals.usuarioAdmin) || (usuarioYaLogueado && usuarioAdmin)) { %>
+                                            <div class="nav2-link icono-menu">
+                                                <i class="fas fa-bars" id="icono-menu"></i>
+                                            </div>
 
-                    <div class="nav2-link icono-menu">
-                        <i class="fas fa-bars" id="icono-menu"></i>
-                    </div>
+                                            <div class="cont-menu active-hidden" id="menu">
+                                                <ul>
+                                                    <li><a class="nav-icons" href="/">Inicio</a></li>
+                                                    <li><a class="nav-icons" href="/usuario/mapa">Donde estamos</a></li>
+                                                    <li><a class="nav-icons" href="/usuario/login">Mi cuenta</a></li>
+                                                    <li><a class="nav-icons" href="/usuario/listado">Catalogo</a></li>
+                                                    <li><a class="nav-icons" href="#Contactos">Contáctanos</a></li>
+                                                    <li><a class="nav-icons" href="/admin/opcionesAdmin">Opciones
+                                                            Admin</a></li>
+                                                    <li><a class="nav-icons" href='/usuario/perfil'> <i
+                                                                class="far fa-user"></i></a></li>
+                                                </ul>
+                                            </div>
 
-                    <div class="cont-menu active-hidden" id="menu">
-                        <ul>
-                            <li><a class="nav-icons" href="/">Inicio</a></li>
-                            <li><a class="nav-icons" href="/usuario/mapa">Donde estamos</a></li>
-                            <li><a class="nav-icons" href="/usuario/login">Mi cuenta</a></li>
-                            <li><a class="nav-icons" href="/usuario/listado">Catalogo</a></li>
-                            <li><a class="nav-icons" href="#Contactos">Contáctanos</a></li>
-                            <li><a class="nav-icons" href="/usuario/carritoDeCompras">Carrito de compras</a></li>
-                            <li><a class="nav-icons" href="/admin/opcionesAdmin">Opciones Admin</a></li>
-                            <li><a class="nav-icons" href='/usuario/perfil'> <i class="far fa-user"></i></a></li>
-                        </ul>
-                    </div>
+                                            <li><a class="nav2-link" href="/usuario/carritoDeCompras"><i
+                                                        class="fas fa-shopping-cart"></i></a>
+                                            </li>
+                                            <li><a class="nav2-link" href="#"><i class="fas fa-search"></i></a></li>
+                                            <% } else if (locals.isLogged || usuarioYaLogueado) { %>
 
-                    <li><a class="nav2-link" href="/usuario/carritoDeCompras"><i class="fas fa-shopping-cart"></i></a></li>
-                    <li><a class="nav2-link" href="#"><i class="fas fa-search"></i></a></li>
-                    <% } else if (locals.isLogged || usuarioYaLogueado) { %>
+                                                <div class="nav2-link icono-menu">
+                                                    <i class="fas fa-bars" id="icono-menu"></i>
+                                                </div>
 
-                        <div class="nav2-link icono-menu">
-                            <i class="fas fa-bars" id="icono-menu"></i>
-                        </div>
-
-                        <div class="cont-menu active-hidden" id="menu">
-                            <ul>
-                                <li><a class="nav-icons" href="/">Inicio</a></li>
-                                <li><a class="nav-icons" href="/usuario/mapa">Donde estamos</a></li>
-                                <li><a class="nav-icons" href="/usuario/login">Mi cuenta</a></li>
-                                <li><a class="nav-icons" href="/usuario/listado">Catalogo</a></li>
-                                <li><a class="nav-icons" href="#Contactos">Contáctanos</a></li>
-                                <li><a class="nav-icons" href="/usuario/carritoDeCompras">Carrito de compras</a></li>
-                            </ul>
-                        </div>
+                                                <div class="cont-menu active-hidden" id="menu">
+                                                    <ul>
+                                                        <li><a class="nav-icons" href="/">Inicio</a></li>
+                                                        <li><a class="nav-icons" href="/usuario/mapa">Donde estamos</a>
+                                                        </li>
+                                                        <li><a class="nav-icons" href="/usuario/login">Mi cuenta</a>
+                                                        </li>
+                                                        <li><a class="nav-icons" href="/usuario/listado">Catalogo</a>
+                                                        </li>
+                                                        <li><a class="nav-icons" href="#Contactos">Contáctanos</a></li>
+                                                    </ul>
+                                                </div>
 
 
-                        <li><a class="nav2-link" href="/usuario/carritoDeCompras/usuario/carritoDeCompras"><i class="fas fa-shopping-cart"></i></a></li>
-                        <li><a class="nav2-link" href="#"><i class="fas fa-search"></i></a></li>
+                                                <li><a class="nav2-link"
+                                                        href="/usuario/carritoDeCompras/usuario/carritoDeCompras"><i
+                                                            class="fas fa-shopping-cart"></i></a></li>
+                                                <li><a class="nav2-link" href="#"><i class="fas fa-search"></i></a></li>
 
-                        <% } else { %>
-                            <div class="nav2-link icono-menu">
-                                <i class="fas fa-bars" id="icono-menu"></i>
-                            </div>
+                                                <% } else { %>
+                                                    <div class="nav2-link icono-menu">
+                                                        <i class="fas fa-bars" id="icono-menu"></i>
+                                                    </div>
 
-                            <div class="cont-menu active-hidden" id="menu">
-                                <ul>
-                                    <li><a class="nav-icons" href="/">Inicio</a></li>
-                                    <li><a class="nav-icons" href="/usuario/mapa">Donde estamos</a></li>
-                                    <li><a class="nav-icons" href="/usuario/login">Mi cuenta</a></li>
-                                    <li><a class="nav-icons" href="/usuario/listado">Catalogo</a></li>
-                                    <li><a class="nav-icons" href="#Contactos">Contáctanos</a></li>
-                                    <li><a class="nav-icons" href="/usuario/carritoDeCompras">Carrito de compras</a>
-                                    </li>
-                                </ul>
-                            </div>
+                                                    <div class="cont-menu active-hidden" id="menu">
+                                                        <ul>
+                                                            <li><a class="nav-icons" href="/">Inicio</a></li>
+                                                            <li><a class="nav-icons" href="/usuario/mapa">Donde
+                                                                    estamos</a></li>
+                                                            <li><a class="nav-icons" href="/usuario/login">Mi cuenta</a>
+                                                            </li>
+                                                            <li><a class="nav-icons"
+                                                                    href="/usuario/listado">Catalogo</a></li>
+                                                            <li><a class="nav-icons" href="#Contactos">Contáctanos</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
 
-                           
-
-
-                            <li><a class="nav2-link" href="/usuario/carritoDeCompras"></a></li>
-                            <li><a class="nav2-link" href="#"><i class="fas fa-search"></i></a></li>
-                            <% } %>
-            </ul>
-        </div>
+                                                    <li><a class="nav2-link" href="#"><i class="fas fa-search"></i></a>
+                                                    </li>
+                                                    <% } %>
+                                    </ul>
+                                </div>
     </nav>
 </div>
