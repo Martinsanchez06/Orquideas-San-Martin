@@ -44,30 +44,15 @@
 
                                 <div class="cont-shop active-hidden-2" id="shop">
                                     <div class="carritoMain">
-                                        <table class="table table-dark table-hover">
-                                            <thead>
-                                              <tr class="text-primary">
-                                                <th scope="col">#</th>
-                                                <th scope="col">Productos</th>
-                                                <th scope="col">Precio</th>
-                                                <th scope="col">Cantidad</th>
-                                              </tr>
-                                            </thead>
-                                            <tbody class="tbody">
-                                              
-                                            
-                                        
-                                            </tbody>
-                                          </table>
-                                          <br><br>
-                                          <div class="row mx-4">
-                                            <div class="col">
-                                              <h3 class="itemCartTotal text-white">Total: 0</h3>
-                                            </div>
-                                            <div class="col d-flex justify-content-end">
-                                              <button class="btn btn-success">COMPRAR</button>
-                                            </div>
-                                          </div>
+                                        <h3>Carrito de compras</h3>
+                                        <p><span>Tus compras</span></p>
+                                        <% orquideas.forEach(orquideas=> { %>
+                                            <% if (orquideas.secciondehome_id===1) { %>
+                                              <section class="Orquidea" id=<%=orquideas.id %> >
+                                                <%- include('../Client/orquideaHome.ejs', {orquideas}) %>
+                                              </section>
+                                              <% } %>
+                                                <% }) %>
                                     </div>
                                 </div>
             </ul>
