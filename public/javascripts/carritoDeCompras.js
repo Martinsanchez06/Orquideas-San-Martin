@@ -1,129 +1,115 @@
 const Clickbutton = document.querySelectorAll('.button')
-const tbody = document.querySelector('.tbody')
-let carrito = []
-
-Clickbutton.forEach(btn => {
-  btn.addEventListener('click', addToCarritoItem)
+Clickbutton.forEach(botonParaAñadirAlCarrito => {
+  botonParaAñadirAlCarrito.addEventListener('click', clickAñadirAlCarrito)
 })
 
+const vaciarBtn = document.querySelector('.vaciarBtn').addEventListener('click', vaciarCarrito)
 
-function addToCarritoItem(e){
-  const button = e.target
-  const item = button.closest('.card')
-  const itemTitle = item.querySelector('.card-title').textContent;
-  const itemPrice = item.querySelector('.precio').textContent;
-  const itemImg = item.querySelector('.card-img-top').src;
-  
-  const newItem = {
-    title: itemTitle,
-    precio: itemPrice,
-    img: itemImg,
-    cantidad: 1
-  }
+const carritoMain = document.querySelector('.carritoMain')
 
-  addItemCarrito(newItem)
+function clickAñadirAlCarrito(e) {
+  const btn = e.target
+  const planta = btn.closest('.Orquidea')
+  const plantaNombre = planta.querySelector('.h3-product').textContent.trim()
+  const plantaPrecio = planta.querySelector('.precio-p').textContent.trim()
+  const plantaImagen = planta.querySelector('.img-orquidea').src
+
+
+  añadirAlCarritoDeCompras(plantaNombre, plantaPrecio, plantaImagen)
 }
 
+function añadirAlCarritoDeCompras(plantaNombre, plantaPrecio, plantaImagen) {
 
-function addItemCarrito(newItem){
+  const titulosGenerales = carritoMain.getElementsByClassName('h3-product')
 
-  const alert = document.querySelector('.alert')
-
-  setTimeout( function(){
-    alert.classList.add('hide')
-  }, 2000)
-    alert.classList.remove('hide')
-
-  const InputElemnto = tbody.getElementsByClassName('input__elemento')
-  for(let i =0; i < carrito.length ; i++){
-    if(carrito[i].title.trim() === newItem.title.trim()){
-      carrito[i].cantidad ++;
-      const inputValue = InputElemnto[i]
-      inputValue.value++;
-      CarritoTotal()
-      return null;
+  for(let i = 0; i < titulosGenerales.length ; i++ ){
+     if(titulosGenerales[i].innerText === plantaNombre){
+      const cantidadDeElemento = titulosGenerales[i].parentElement.parentElement.querySelector('.cantidadInput')
+      cantidadDeElemento.value++
+      actualizarPrecioDeCompraTotal()
+      return;
     }
+     
   }
+
+  const elementoDivEnCarrito = document.createElement('div')
+  const p = elementoDivEnCarrito.classList.add('listaCarrito')
+  const elementoEnCarrito = `
   
-  carrito.push(newItem)
+  <section class="Orquidea-carrito">
+
+    <div class="card-img">
+        <a href="#">
+            <img c lass="img-orquidea" src=${plantaImagen} alt="">
+        </a>
+    </div>
+    <article class="card-article">
+
+        <h3 class="h3-product">
+            ${plantaNombre}
+        </h3>
+
+        <p class="precio-p"><span>
+               ${plantaPrecio}
+            </span></p>
+            <div class="cantidadContainer">
+            <p class="p-cantidad">Cantidad:</p>
+            <input class="cantidadInput" type="number" name="number" id="" value="1">
+        </div>
+        <button class="btnParaEliminar">X</button>
+    </article>
+
+</section>`
+
+  elementoDivEnCarrito.innerHTML = elementoEnCarrito
+  carritoMain.append(elementoDivEnCarrito)
+
+  elementoDivEnCarrito.querySelector('.cantidadInput').addEventListener('change', cambioDeCantidad)
+
+  elementoDivEnCarrito.querySelector('.btnParaEliminar').addEventListener('click', eliminarDelCarrito) 
+
+  actualizarPrecioDeCompraTotal()
+}
+
+function actualizarPrecioDeCompraTotal() {
+  let total = 0;
+  const totalDeCompra = document.querySelector('.totalDeCompra')
+  const elementosTotalDeCompra = document.querySelectorAll('.Orquidea-carrito')
+  elementosTotalDeCompra.forEach(elementoTotalDeCompra => {
+    const precioDeElemento = elementoTotalDeCompra.querySelector('.precio-p')
+    const precioDeElementoNumero = Number(precioDeElemento.textContent.replace('$', ''))
+    const cantidadDeElemento = elementoTotalDeCompra.querySelector('.cantidadInput')
+    const cantidadDeElementoNumero = Number(cantidadDeElemento.value)
+    total = total + precioDeElementoNumero  * cantidadDeElementoNumero
+  })
+
+  totalDeCompra.innerHTML = `$${Intl.NumberFormat('es-CO').format(total)}.000`
+
+}
+
+function eliminarDelCarrito(e) {
+  const btnClicked = e.target
+  btnClicked.closest('.Orquidea-carrito').remove()
+  actualizarPrecioDeCompraTotal()
+}
+
+function cambioDeCantidad(e) {
+  const input = e.target
+  if(input.value <= 0){
+    input.value = 1
+  }
+  actualizarPrecioDeCompraTotal()
+}
+
+function vaciarCarrito() {
+  carritoMain.innerHTML = `
   
-  renderCarrito()
-} 
-
-
-function renderCarrito(){
-  tbody.innerHTML = ''
-  carrito.map(item => {
-    const tr = document.createElement('tr')
-    tr.classList.add('ItemCarrito')
-    const Content = `
-    
-    
-    `
-    tr.innerHTML = Content;
-    tbody.append(tr)
-
-    tr.querySelector(".delete").addEventListener('click', removeItemCarrito)
-    tr.querySelector(".input__elemento").addEventListener('change', sumaCantidad)
-  })
-  CarritoTotal()
-}
-
-function CarritoTotal(){
-  let Total = 0;
-  const itemCartTotal = document.querySelector('.itemCartTotal')
-  carrito.forEach((item) => {
-    const precio = Number(item.precio.replace("$", ''))
-    Total = Total + precio*item.cantidad
-  })
-
-  itemCartTotal.innerHTML = `Total $${Total}`
-  addLocalStorage()
-}
-
-function removeItemCarrito(e){
-  const buttonDelete = e.target
-  const tr = buttonDelete.closest(".ItemCarrito")
-  const title = tr.querySelector('.title').textContent;
-  for(let i=0; i<carrito.length ; i++){
-
-    if(carrito[i].title.trim() === title.trim()){
-      carrito.splice(i, 1)
-    }
-  }
-
-  const alert = document.querySelector('.remove')
-
-  setTimeout( function(){
-    alert.classList.add('remove')
-  }, 2000)
-    alert.classList.remove('remove')
-
-  tr.remove()
-  CarritoTotal()
-}
-
-function sumaCantidad(e){
-  const sumaInput  = e.target
-  const tr = sumaInput.closest(".ItemCarrito")
-  const title = tr.querySelector('.title').textContent;
-  carrito.forEach(item => {
-    if(item.title.trim() === title){
-      sumaInput.value < 1 ?  (sumaInput.value = 1) : sumaInput.value;
-      item.cantidad = sumaInput.value;
-      CarritoTotal()
-    }
-  })
-}
-
-function addLocalStorage(){
-  localStorage.setItem('carrito', JSON.stringify(carrito))
-}
-
-window.onload = function(){
-  const storage = JSON.parse(localStorage.getItem('carrito'));
-  if(storage){
-    carrito = storage;
-    renderCarrito()
-  }
+  <h3 style="padding-bottom:20px ;">Carrito de compras</h3>
+  <h3>Total:</h3>
+  <p class="totalDeCompra">0$</p>
+  <button class="totalDeCompraBtn">Comprar</button>
+  <button class="vaciarBtn">Vaciar carrito de compras</button>
+  
+  `
+  actualizarPrecioDeCompraTotal()
 }

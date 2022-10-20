@@ -54,14 +54,6 @@ const ClientController = {
         console.log(req.cookies.userEmail)
         res.render('Client/registro')
     },
-    carrito: (req, res) => {
-        let orquideasEncontradas = db.Orquideas.findAll()
-        let climasEncontrados = db.climas.findAll()
-        Promise.all([orquideasEncontradas, climasEncontrados])
-            .then(function ([orquideas, climas]) {
-                res.render('Client/carritoDeCompras', { orquideas, climas })
-            })
-    },
     registro: (req, res) => {
         try {
             db.usuarios.create({   
