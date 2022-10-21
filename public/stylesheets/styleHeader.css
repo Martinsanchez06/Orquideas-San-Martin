@@ -94,19 +94,15 @@
   color: #ffffff;
   text-decoration: none;
 }
+
 /* ------ ANIMACION DE CARRITO ------ */
 .icono-shop {
-  z-index: 9;
+  z-index: 940;
   margin-right: 10%;
   margin-top: -10px;
   position: absolute;
   top: 0.5;
   right: 0;
-}
-
-
-.icono-shop {
-  z-index: 10
 }
 
 .fa-shopping-cart {
@@ -115,13 +111,12 @@
 
 .cont-shop {
   background-color: #fff;
+  z-index: 900;
   border-radius: 20px;
-  padding: 15px;
   transition: all 2s ease;
   position: absolute;
   top: 1;
   right: 0;
-  margin-right: 10%;
   margin-top: -10px;
 
 }
@@ -137,12 +132,111 @@
   transition: all 1s ease;
 }
 
-.active-hidden-2 {
-  transform: translate(-1999px);
+ .active-hidden-2 {
+transform: translate(0, -10599px);  
+}
+
+ .active-hidden-3 {
+display: none;
+}
+
+
+.listaCarrito {
+  justify-content: center;
+  display: grid;
+  width: 20vw;
 }
 
 .carritoMain {
   padding: 30px;
+  transition: 1s;
+}
+
+.carritoMain:hover {
+  padding: 40px;
+}
+
+.Orquidea-carrito {
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: center;
+  border-radius: 10px;
+  align-items: center;
+  flex-direction: column;
+  transition: 1.2s;
+  padding: 20px;
+}
+
+.Orquidea-carrito:hover {
+  color: #fff !important;
+  border-radius: 20px;
+  background-color: #037587;
+  transform: scale(1.08);
+}
+
+.cantidadContainer {
+  display: flex;
+  justify-content: space-around;
+  padding: 5px 0px 10px 0px;
+  
+}
+
+.cantidadInput {
+  width: 30px;
+  border-style: none;
+  text-align: center;
+}
+
+.btnParaEliminar {
+  padding: 5px 25px;
+  border-style: none;
+  background-color: red;
+  border-radius: 20px;
+  border: 2px solid #fff;
+  cursor: pointer;
+  color: #fff;
+}
+
+.btns-carrito,
+.vaciarBtn {
+  display: flex;
+  flex-direction: column;
+}
+
+.totalDeCompra {
+  color: #4e4e4e;
+}
+
+.h3-carrito {
+  margin-top: 20px;
+}
+
+.totalDeCompraBtn,
+.vaciarBtn {
+  color: rgb(0, 0, 0);
+  border-style: none;
+  font-size: 18px;
+  border-bottom: 1px solid #000;
+  background-color: #fff;
+  height: 5vh;
+  transition: 1s;
+  margin: 20px 0px;
+}
+
+.vaciarBtn {
+
+  display: flex;
+  align-items: center;
+}
+
+.totalDeCompraBtn:hover,
+.vaciarBtn:hover {
+  padding: 5px 10px;
+  border-radius: 10px;
+  color: #fff;
+  background-color: #025E96;
+  border-color: #025E96;
+  border-bottom: 5px solid #013758;
 }
 
 
@@ -322,10 +416,6 @@
     border-radius: 20px;
   }
 
-  .opacity {
-    transition: all 1s ease;
-  }
-
   .active-hidden {
     transform: translate(-1000px);
   }
@@ -366,7 +456,7 @@
     position: relative;
   }
 
-  .nav-icons{
+  .nav-icons {
     font-size: 20px;
     color: #ffffff;
   }
@@ -399,7 +489,7 @@
     margin: auto;
   }
 
-  .nav-icons   {
+  .nav-icons {
     font-size: 20px;
     font-weight: 100;
     color: #ffffff;

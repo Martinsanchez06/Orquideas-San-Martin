@@ -74,7 +74,6 @@ section.Orquidea:hover {
 .card-article {
     text-align: center;
     border-radius: 10px;
-    width: 61%;
 }
 
 .card-article h3,
@@ -84,21 +83,9 @@ section.Orquidea:hover {
 }
 
 .ver-detalle {
-    padding: 5px 20%;
-    border-radius: 8px;
-    transition: 1.5s;
-    opacity: 0;
-    color: #fff;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
-    margin-left: -100%;
-}
-
-
-section.Orquidea:hover .ver-detalle {
-    transition: 1.1s;
-    transform: scale(1.2) translate(20%) rotate(-360deg);
-    opacity: 1;
 }
 
 .ver-detalle-a {
@@ -149,12 +136,3 @@ section.Orquidea:hover .ver-detalle {
 
 
 /* ----------------------------------------------- */
-
-
-
-.listaCarrito {
-    margin: 0px 40px;
-    justify-content: center;
-    display: grid;
-    grid-template-columns: 50%;
-}

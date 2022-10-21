@@ -33,7 +33,7 @@ function añadirAlCarritoDeCompras(plantaNombre, plantaPrecio, plantaImagen) {
   }
 
   const elementoDivEnCarrito = document.createElement('div')
-  const p = elementoDivEnCarrito.classList.add('listaCarrito')
+  elementoDivEnCarrito.classList.add('listaCarrito')
   const elementoEnCarrito = `
   
   <section class="Orquidea-carrito">
@@ -104,11 +104,13 @@ function cambioDeCantidad(e) {
 function vaciarCarrito() {
   carritoMain.innerHTML = `
   
-  <h3 style="padding-bottom:20px ;">Carrito de compras</h3>
+  <h3 class="h3-carrito">Carrito de compras</h3>
   <h3>Total:</h3>
-  <p class="totalDeCompra">0$</p>
-  <button class="totalDeCompraBtn">Comprar</button>
-  <button class="vaciarBtn">Vaciar carrito de compras</button>
+  <p class="totalDeCompra">$0</p>
+  <p class="alert">No vas a poder vaciar de nuevo el carrito, para hacerlo recarga la pagina</p>
+  <div class="btns-carrito"> <button class="totalDeCompraBtn">Comprar</button>
+  <button class="vaciarBtn">Vaciar carrito de compras</button></div>
+  <div class="listaCarrito">
   
   `
   actualizarPrecioDeCompraTotal()

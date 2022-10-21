@@ -36,19 +36,22 @@
                             <% } %>
 
 
-                                <div class="nav2-link icono-shop">
-                                    <i class="fas fa-shopping-cart " id="icono-shop"></i>
-                                </div>
+                            <div class="nav2-link icono-shop">
+                                <i class="fas fa-shopping-cart " id="icono-shop"></i>
+                            </div>
 
-                                <div class="cont-shop active-hidden-2" id="shop">
-                                    <div class="carritoMain">
-                                        <h3 style="padding-bottom:20px ;">Carrito de compras</h3>
-                                        <h3>Total:</h3>
-                                        <p class="totalDeCompra">0$</p>
-                                        <button class="totalDeCompraBtn">Comprar</button>
-                                        <button class="vaciarBtn">Vaciar carrito de compras</button>
+                            <div class="cont-shop active-hidden-2" id="shop">
+                                <div class="carritoMain">
+                                    <h3 class="h3-carrito">Carrito de compras</h3>
+                                    <h3>Total:</h3>
+                                    <p class="totalDeCompra">$0</p>
+                                    <div class="btns-carrito"> <button class="totalDeCompraBtn">Comprar</button>
+                                    <button class="vaciarBtn">Vaciar carrito de compras</button></div>
+                                    <div class="listaCarrito">
+                                        
                                     </div>
                                 </div>
+                            </div>
             </ul>
             <ul class="nav-tabss2" hidden>
                 <% if ((locals.isLogged && locals.usuarioAdmin) || (usuarioYaLogueado && usuarioAdmin)) { %>
