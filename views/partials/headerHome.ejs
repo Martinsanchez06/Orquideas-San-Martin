@@ -1,3 +1,4 @@
+<div id="ocultar"></div>
 <div class="navbar-main-container-home">
     <div class="upper">
         <div class="upper-item"><a class="upper-icon" href="">correo@gmail.com</a> </div>
@@ -34,24 +35,6 @@
                             <li><a class="nav-icons" href="/usuario/listado">Catalogo</a></li>
                             <li><a class="nav-icons" href="#Contactos">Contáctanos</a></li>
                             <% } %>
-
-
-                            <div class="nav2-link icono-shop">
-                                <i class="fas fa-shopping-cart " id="icono-shop"></i>
-                            </div>
-
-                            <div class="cont-shop active-hidden-2" id="shop">
-                                <div class="carritoMain">
-                                    <h3 class="h3-carrito">Carrito de compras</h3>
-                                    <h3>Total:</h3>
-                                    <p class="totalDeCompra">$0</p>
-                                    <div class="btns-carrito"> <button class="totalDeCompraBtn">Comprar</button>
-                                    <button class="vaciarBtn">Vaciar carrito de compras</button></div>
-                                    <div class="listaCarrito">
-                                        
-                                    </div>
-                                </div>
-                            </div>
             </ul>
             <ul class="nav-tabss2" hidden>
                 <% if ((locals.isLogged && locals.usuarioAdmin) || (usuarioYaLogueado && usuarioAdmin)) { %>
@@ -73,8 +56,7 @@
                     </div>
 
 
-                    <li><a class="nav2-link" href="/usuario/carritoDeCompras"><i class="fas fa-shopping-cart"></i></a>
-                    </li>
+                    
                     <li><a class="nav2-link" href="#"><i class="fas fa-search"></i></a></li>
                     <% } else if (locals.isLogged || usuarioYaLogueado) { %>
 
@@ -91,10 +73,6 @@
                                 <li><a class="nav-icons" href="#Contactos">Contáctanos</a></li>
                             </ul>
                         </div>
-
-
-                        <li><a class="nav2-link" href="/usuario/carritoDeCompras"><i
-                                    class="fas fa-shopping-cart"></i></a></li>
                         <li><a class="nav2-link" href="#"><i class="fas fa-search"></i></a></li>
 
                         <% } else { %>
@@ -114,7 +92,8 @@
                             </div>
                             <li><a class="nav2-link" href="#buscar"><i class="fas fa-search"></i></a></li>
                             <% } %>
-            </ul>
+                        </ul>
+                        <%- include('./carritoPartial.ejs') %> 
         </div>
     </nav>
     <div class="slider-home">

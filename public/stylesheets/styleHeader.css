@@ -94,12 +94,11 @@
   color: #ffffff;
   text-decoration: none;
 }
-
 /* ------ ANIMACION DE CARRITO ------ */
 .icono-shop {
   z-index: 940;
-  margin-right: 10%;
-  margin-top: -10px;
+  margin-right: 80%;
+  margin-top: -50px;
   position: absolute;
   top: 0.5;
   right: 0;
@@ -116,8 +115,7 @@
   transition: all 2s ease;
   position: absolute;
   top: 1;
-  right: 0;
-  margin-top: -10px;
+  margin-top: -50px;
 
 }
 
@@ -369,6 +367,12 @@ display: none;
 
 @media only screen and (min-width: 0px) and (max-width: 768px) {
 
+  .cont-shop {
+    top: 1;
+    left: 0;
+    margin-left: 2%;
+  }
+
   .nav-tabss2 {
     display: flex;
     list-style: none;
@@ -443,28 +447,41 @@ display: none;
 /* ------LAPTOPS, LARGER TABLETS IN LANDSCAPE, AND SMALL DESKTOPS  */
 @media only screen and (min-width: 769px) and (max-width: 1279px) {
 
+  .icono-shop {
+    margin-right: 5%;
+  }
+
+  .cont-shop {
+    right: 0;
+    margin-right: 10px;
+  }
+  
+
   .img-header {
     position: relative;
     z-index: 100;
   }
 
   /* ------NAV PRINCIPAL------ */
+
+
   .nav-tabss {
     display: flex;
     padding: 20px 0px;
     margin: auto;
     position: relative;
   }
-
+  
   .nav-icons {
     font-size: 20px;
     color: #ffffff;
   }
+  
+  
 
   /* ------NAV DE ICONOS ------ */
 
   .nav2-link .fa-bars,
-  .nav2-link .fa-shopping-cart,
   .nav2-link .fa-search,
   .nav2-link .fa-user {
     display: hidden;
@@ -481,6 +498,17 @@ display: none;
 
 /* ------LARGER DESKTOPS AND MONITORS */
 @media only screen and (min-width: 1280px) {
+
+  .icono-shop {
+    margin-right: 5%;
+  }
+
+  .cont-shop {
+    right: 0;
+    margin-right: 2%;
+  }
+
+  
 
   /* ------NAV PRINCIPAL------ */
   .nav-tabss {

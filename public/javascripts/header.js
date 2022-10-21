@@ -17,8 +17,8 @@ const ocultar = document.querySelector('#ocultar')
 
 
 iconoShop.addEventListener('click', (e) => {
-   shop.classList.remove('active-hidden-2');
-   ocultar.classList.add('ocultar')
+   shop.classList.toggle('active-hidden-2');
+   ocultar.classList.toggle('ocultar')
 })
 
 ocultar.addEventListener('click', (e) => {

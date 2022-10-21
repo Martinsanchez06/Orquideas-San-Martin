@@ -72,15 +72,19 @@ function añadirAlCarritoDeCompras(plantaNombre, plantaPrecio, plantaImagen) {
 }
 
 function actualizarPrecioDeCompraTotal() {
-  let total = 0;
+  total = 0;
   const totalDeCompra = document.querySelector('.totalDeCompra')
   const elementosTotalDeCompra = document.querySelectorAll('.Orquidea-carrito')
   elementosTotalDeCompra.forEach(elementoTotalDeCompra => {
     const precioDeElemento = elementoTotalDeCompra.querySelector('.precio-p')
-    const precioDeElementoNumero = Number(precioDeElemento.textContent.replace('$', ''))
+    console.log(precioDeElemento);
+    const precioDeElementoNumero = Number(precioDeElemento.textContent.replace('$', '')).toFixed(3)
+    console.log(precioDeElementoNumero);
     const cantidadDeElemento = elementoTotalDeCompra.querySelector('.cantidadInput')
     const cantidadDeElementoNumero = Number(cantidadDeElemento.value)
     total = total + precioDeElementoNumero  * cantidadDeElementoNumero
+    const p = Intl.NumberFormat('es-CO').format(total);
+
   })
 
   totalDeCompra.innerHTML = `$${Intl.NumberFormat('es-CO').format(total)}.000`
@@ -106,12 +110,10 @@ function vaciarCarrito() {
   
   <h3 class="h3-carrito">Carrito de compras</h3>
   <h3>Total:</h3>
-  <p class="totalDeCompra">$0</p>
+  <p class="totalDeCompra">$${total}</p>
   <p class="alert">No vas a poder vaciar de nuevo el carrito, para hacerlo recarga la pagina</p>
   <div class="btns-carrito"> <button class="totalDeCompraBtn">Comprar</button>
   <button class="vaciarBtn">Vaciar carrito de compras</button></div>
-  <div class="listaCarrito">
-  
   `
   actualizarPrecioDeCompraTotal()
 }

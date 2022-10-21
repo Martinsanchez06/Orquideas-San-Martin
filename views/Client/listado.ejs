@@ -6,7 +6,9 @@
                 <h1 class="h1-listado">Nuestras Orquideas</h1>
                 <div class="productos-listado">
                     <% orquideas.forEach(orquideas=> { %>
-                        <%- include("orquidea.ejs", {orquideas : orquideas}) %>
+                        <section class="Orquidea" id=<%=orquideas.id %> >
+                            <%- include("orquidea.ejs", {orquideas : orquideas}) %>
+                          </section>
                             <% }) %>
                 </div>
             </div>
