@@ -51,7 +51,7 @@ const ClientController = {
     // ------USUARIOS------
 
     registroForm: (req, res) => {
-        console.log(req.cookies.userEmail)
+        console.log(req.localStorage)
         res.render('Client/registro')
     },
     registro: (req, res) => {

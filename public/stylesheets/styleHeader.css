@@ -365,7 +365,7 @@ display: none;
 
 /* ------ TEXTO PRINCIPAL EN SLIDER ------ */
 
-@media only screen and (min-width: 0px) and (max-width: 768px) {
+@media only screen and (min-width: 0px) and (max-width: 900px) {
 
   .cont-shop {
     top: 1;
@@ -445,7 +445,7 @@ display: none;
 }
 
 /* ------LAPTOPS, LARGER TABLETS IN LANDSCAPE, AND SMALL DESKTOPS  */
-@media only screen and (min-width: 769px) and (max-width: 1279px) {
+@media only screen and (min-width: 900px) and (max-width: 1279px) {
 
   .icono-shop {
     margin-right: 5%;
