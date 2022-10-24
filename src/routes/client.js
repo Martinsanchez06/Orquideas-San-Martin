@@ -7,7 +7,7 @@ const authMiddleware = require('../middlewares/authMiddleware');
 // ------ OBTIENE VISTAS ------ 
 router.get('/listado', ClientController.lista); 
 
-router.get('/carritoDeCompras', ClientController.carrito); 
+router.get('/carritoDeCompras', authMiddleware, ClientController.carrito); 
 
 router.get('/detalle/:id', ClientController.detalle)
 
