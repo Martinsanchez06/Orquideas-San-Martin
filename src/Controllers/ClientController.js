@@ -17,6 +17,14 @@ const ClientController = {
                 res.render('Client/listado', { orquideas, climas })
             })
     },
+    carrito: (req, res) => {
+        let orquideasEncontradas = db.Orquideas.findAll()
+        let climasEncontrados = db.climas.findAll()
+        Promise.all([orquideasEncontradas, climasEncontrados])
+            .then(function ([orquideas, climas]) {
+                res.render('Client/carritoDeCompras', { orquideas, climas })
+            })
+    },
     detalle: (req, res) => {
         db.Orquideas.findByPk(req.params.id, {
             include: [{ association: 'climas' }]
