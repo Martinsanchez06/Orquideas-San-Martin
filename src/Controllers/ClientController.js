@@ -136,6 +136,9 @@ const ClientController = {
         res.clearCookie("userEmail");
         req.session.destroy();
         return res.redirect("/")
+    }, 
+    nosotros: (req, res) => {
+        res.render('Client/nosotros')
     }
 }
 

@@ -15,6 +15,8 @@ router.get("/registro", guestMiddleware, ClientController.registroForm)
 
 router.get("/login",  guestMiddleware, ClientController.loginForm)
 
+router.get("/nosotros",  guestMiddleware, ClientController.nosotros)
+
 router.get("/perfil",authMiddleware , ClientController.perfil)
 
 router.get("/logout",authMiddleware , ClientController.logout)
