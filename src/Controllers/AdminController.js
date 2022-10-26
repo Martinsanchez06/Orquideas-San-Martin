@@ -52,9 +52,12 @@ const OrquideasController = {
             }
         )
         let climasEncontrados = db.climas.findAll()
-        Promise.all([orquideasEncontradas,climasEncontrados])
-            .then(function ([orquideas, climas]){
-                res.render('admin/edit', {orquideas, climas})
+        let categoriasEncontradas = db.categorias.findAll()
+        let tamaniosEncontrados = db.tamanios.findAll()
+        let seccionesEncontradas = db.secciones.findAll()
+        Promise.all([orquideasEncontradas,climasEncontrados, categoriasEncontradas, tamaniosEncontrados, seccionesEncontradas])
+            .then(function ([orquideas, climas, categorias, tamanios, secciones ]){
+                res.render('Admin/edit', {orquideas, climas, categorias, tamanios, secciones})
             })
     },
     update: (req, res) => {
@@ -76,6 +79,7 @@ const OrquideasController = {
                     id: req.params.id
                 }
             })
+            
             let orquideasEncontradas = db.Orquideas.findAll()
             let climasEncontrados = db.climas.findAll()
             Promise.all([orquideasEncontradas, climasEncontrados])

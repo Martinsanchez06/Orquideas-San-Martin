@@ -1,61 +1,117 @@
-<%- include('../partials/head.ejs') %> 
-<body>
-    <%- include('../partials/header.ejs') %> 
+<%- include('../partials/head.ejs') %>
 
-    <main>
-        <form class="form-editarAdmin" action="/admin/editar/<%= orquideas.id %> " method="POST" enctype="multipart/form-data">
-                <label for="" class="form-label">Nombre</label>
-                <input value="<%= orquideas.nombre %> " name="nombre" type="text" class="form-input">
-                <label for="" class="form-label">Clima</label>
-                <select name="clima" id="category" class="select-edit">
-                    <% for (let i = 0; i < climas.length; i++) { %>
-                        <% if (climas[i].id == orquideas.climas_id) {%>
+    <body>
+        <%- include('../partials/header.ejs') %>
 
-                            <option value="<%=climas[i].id%>" selected>
-                                <%=climas[i].tipoDeClima%>
-                            </option>
+            <main>
+                <form class="form-editarAdmin" action="/admin/editar/<%= orquideas.id %> " method="POST"
+                    enctype="multipart/form-data">
+                    <label for="" class="form-label">Nombre</label>
+                    <input value="<%= orquideas.nombre %> " name="nombre" type="text" class="form-input">
+                    <label for="" class="form-label">Clima</label>
+                    <select name="clima" id="category" class="select-edit">
+                        <% for (let i=0; i < climas.length; i++) { %>
+                            <% if (climas[i].id==orquideas.climas_id) {%>
 
-                        <% } else { %>
+                                <option value="<%=climas[i].id%>" selected>
+                                    <%=climas[i].tipoDeClima%>
+                                </option>
 
-                            <option value="<%=climas[i].id%>">
-                                <%=climas[i].tipoDeClima%>
-                            </option>
+                                <% } else { %>
 
-                        <% } %>
+                                    <option value="<%=climas[i].id%>">
+                                        <%=climas[i].tipoDeClima%>
+                                    </option>
 
-                    <% } %>
-                </select>
-                <label for="" class="form-label">Precio</label>
-                <input value="<%= orquideas.precio %> " name="precio" type="text" class="form-input">
-                <label for="" class="form-label">Descripcion</label>
-                <input value="<%= orquideas.descripcion %> " name="descripcion" type="text" class="form-input">
-                <label for="" class="form-label">Categoria</label>
-                <input value="<%= orquideas.categoria_id %> " name="categoria" type="text" class="form-input">
-                <label for="" class="form-label">tamaño</label>
-                <input value="<%= orquideas.tamanio_id %> " name="tamanio" type="text" class="form-input">
-                <label for="" class="form-label">disponibilidad</label>
-                <input value="<%= orquideas.disponibilidad %> " name="disponibilidad" type="text" class="form-input">
-                <label for="" class="form-label">flor</label>
-                <input value="<%= orquideas.flor %> " name="flor" type="text" class="form-input">
-                <label for="" class="form-label">imagen 1</label>
-                <input name="imagen" type="file">
-                <input type="hidden"  name="oldImagen1"  value="<%= orquideas.imagen1%>">
-                <label for="" class="form-label">imagen 2</label>
-                <input name="imagen" type="file">
-                <input type="hidden"  name="oldImagen2"  value="<%= orquideas.imagen2%>">
-            
-                <label for="" class="form-label">imagen 3</label>
-                <input name="imagen" type="file">
-                <input type="hidden"  name="oldImagen3"  value="<%= orquideas.imagen3%>">
+                                    <% } %>
 
-            <input class="submit-edit" type="submit" value="Enviar">
-        </form>
+                                        <% } %>
+                    </select>
+                    <label for="" class="form-label">Precio</label>
+                    <input value="<%= orquideas.precio %> " name="precio" type="text" class="form-input">
+                    <label for="" class="form-label">Descripcion</label>
+                    <input value="<%= orquideas.descripcion %> " name="descripcion" type="text" class="form-input">
+                    <label for="" class="form-label">Categoria</label>
+                    <select name="categoria" id="category" class="select-edit">
+                        <% for (let i=0; i < categorias.length; i++) { %>
+                            <% if (categorias[i].id===orquideas.categoria_id) {%>
 
-        <form action="/admin/eliminar/<%= orquideas.id %> " method="post">
-            <input class="submit-edit" type="submit" value="Eliminar planta">   
-        </form>
-    </main>
-    
-    <%- include("../partials/footer.ejs") %>
+                                <option value="<%=categorias[i].id%>" selected>
+                                    <%=categorias[i].categoria%>
+                                </option>
 
-</html>
+                                <% } else { %>
+
+                                    <option value="<%=categorias[i].id%>">
+                                        <%=categorias[i].categoria%>
+                                    </option>
+
+                                    <% } %>
+
+                                        <% } %>
+                    </select>
+                    <label for="" class="form-label">tamaño</label>
+                    <select name="tamanio" id="category" class="select-edit">
+                        <% for (let i=0; i < tamanios.length; i++) { %>
+                            <% if (tamanios[i].id===orquideas.tamanio_id) {%>
+
+                                <option value="<%=tamanios[i].id%>" selected>
+                                    <%=tamanios[i].tamanio%>
+                                </option>
+
+                                <% } else { %>
+
+                                    <option value="<%=tamanios[i].id%>">
+                                        <%=tamanios[i].tamanio%>
+                                    </option>
+
+                                    <% } %>
+
+                                        <% } %>
+                    </select>
+                    <label for="" class="form-label">disponibilidad</label>
+                    <input value="<%= orquideas.disponibilidad %> " name="disponibilidad" type="text"
+                        class="form-input">
+                    <label for="" class="form-label">flor</label>
+                    <input value="<%= orquideas.flor %> " name="flor" type="text" class="form-input">
+                    <label for="" class="form-label">Seccion de home</label>
+                    <select name="seccion" id="category" class="select-edit">
+                        <% for (let i=0; i < secciones.length; i++) { %>
+                            <% if (secciones[i].id===orquideas.secciondehome_id) {%>
+
+                                <option value="<%=secciones[i].id%>" selected>
+                                    <%=secciones[i].seccion%>
+                                </option>
+
+                                <% } else { %>
+
+                                    <option value="<%=secciones[i].id%>">
+                                        <%=secciones[i].seccion%>
+                                    </option>
+
+                                    <% } %>
+
+                                        <% } %>
+                    </select>
+                    <label for="" class="form-label">imagen 1</label>
+                    <input name="imagen" type="file">
+                    <input type="hidden" name="oldImagen1" value="<%= orquideas.imagen1%>">
+                    <label for="" class="form-label">imagen 2</label>
+                    <input name="imagen" type="file">
+                    <input type="hidden" name="oldImagen2" value="<%= orquideas.imagen2%>">
+
+                    <label for="" class="form-label">imagen 3</label>
+                    <input name="imagen" type="file">
+                    <input type="hidden" name="oldImagen3" value="<%= orquideas.imagen3%>">
+
+                    <input class="submit-edit" type="submit" value="Enviar">
+                </form>
+
+                <form action="/admin/eliminar/<%= orquideas.id %> " method="post">
+                    <input class="submit-edit" type="submit" value="Eliminar planta">
+                </form>
+            </main>
+
+            <%- include("../partials/footer.ejs") %>
+
+                </html>

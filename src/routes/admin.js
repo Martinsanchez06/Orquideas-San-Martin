@@ -2,11 +2,13 @@ var express = require('express');
 var router = express.Router();
 const AdminController = require('../Controllers/AdminController')
 const multer = require("multer");
+const path = require('path');
 // const { body } = require("express-validator")
 // const path = require("path")
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-        cb(null, './public/images/orquideasImages')
+        const filePath = path.resolve(__dirname, '../../public/images/orquideasImages')
+        cb(null, filePath)
     },
     filename: (req, file, cb) => {
         let filename = file.originalname 
