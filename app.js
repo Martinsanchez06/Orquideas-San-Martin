@@ -1,9 +1,8 @@
 const createError = require('http-errors');
-const session = require('express-session');
+const session = require('cookie-session');
 const express = require('express');
 const path = require('path');
 const cookies = require('cookie-parser');
-const Sequelize = require ('sequelize')
 const logger = require('morgan');
 const userLogguedMiddleware = require('./src/middlewares/userLogguedMiddleware');
 const homeRouter = require('./src/routes/home');
