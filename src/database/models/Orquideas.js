@@ -46,7 +46,7 @@ module.exports= (sequelize, DataTypes) => {
         imagen1: {
             type: DataTypes.STRING,
             notNull: true
-        },
+        }, 
         imagen2: {
             type: DataTypes.STRING,
             notNull: true
@@ -79,10 +79,6 @@ module.exports= (sequelize, DataTypes) => {
         Orquideas.belongsTo(models.secciones, {
             as: 'secciones',
             foreignKey: 'categoria_id'
-        }),
-        Orquideas.belongsTo(models.usuarios, {
-            as: 'usuarios',
-            foreignKey: 'usuarios_id'
         })
     }
 

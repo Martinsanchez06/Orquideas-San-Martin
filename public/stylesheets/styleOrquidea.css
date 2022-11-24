@@ -55,14 +55,14 @@ section.Orquidea:hover {
 .card-img img {
     width: 100%;
     border-radius: 5px;
-    height: 100%;
+    height: 40vh;
     object-fit: cover;
 }
 
 .card-img-home img {
     width: 100%;
     border-radius: 5px;
-    height: 100%;
+    height: 40vh;
     object-fit: cover;
 }
 
@@ -160,6 +160,20 @@ section.Orquidea:hover .btn-compra-detail {
         width: 100%;
         height: 100%;
         margin-bottom: 10px;
+    }
+
+    .card-img img {
+        width: 100%;
+        border-radius: 5px;
+        height: 30vh;
+        object-fit: cover;
+    }
+    
+    .card-img-home img {
+        width: 100%;
+        border-radius: 5px;
+        height: 40vh;
+        object-fit: cover;
     }
 }
 
