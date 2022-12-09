@@ -6,19 +6,15 @@
 
                 <div class="imagen-detalle">
                     <div class="imagen-detalle-img">
-                        <img src="/images/orquideasImages/<%= orquideas.imagen1 %>" alt="">
+                        <img id="mainImg" src="/images/orquideasImages/<%= orquideas.imagen1 %>" >
                     </div>
                     <div class="imagenes-buttom">
-                        <div class="img-item">
-                            <a href="#" data-id="1">
-                                <img src="/images/orquideasImages/<%= orquideas.imagen2 %>" alt="">
-                            </a>
-                        </div>
-                        <div class="img-item">
-                            <a href="#" data-id="2">
-                                <img src="/images/orquideasImages/<%= orquideas.imagen3 %>" alt="">
-                            </a>
-                        </div>
+                            <img src="/images/orquideasImages/<%= orquideas.imagen1 %>" 
+                                onclick="cambioimagen(this)">
+                            <img src="/images/orquideasImages/<%= orquideas.imagen2 %>" 
+                                onclick="cambioimagen(this)">
+                            <img src="/images/orquideasImages/<%= orquideas.imagen3 %>" 
+                                onclick="cambioimagen(this)">
                     </div>
                 </div>
                 <article class="info-detail">
@@ -58,5 +54,12 @@
                     </form>
                 </article>
             </div>
-    
-    <%- include('../partials/footer.ejs') %>
+
+            <script type="text/javascript">
+                function cambioimagen(smallImg) {
+                    var fullImg = document.getElementById('mainImg');
+                    fullImg.src = smallImg.src;
+                }
+            </script>
+
+            <%- include('../partials/footer.ejs') %>
