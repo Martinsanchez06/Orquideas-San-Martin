@@ -1,23 +1,23 @@
 module.exports = {
   "development": {
-    "username": "5bPvv5pu0J",
-    "password": "0G4pdlFY1B",
-    "database": "5bPvv5pu0J",
-    "host": "remotemysql.com",
+    "username": "root",
+    "password": "passwordRoot",
+    "database": "orquideassanmartin_db",
+    "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
-    "username": "5bPvv5pu0J",
-    "password": "0G4pdlFY1B",
-    "database": "5bPvv5pu0J",
-    "host": "remotemysql.com",
+    "username": "root",
+    "password": "passwordRoot",
+    "database": "orquideassanmartin_db",
+    "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
-    "username": "5bPvv5pu0J",
-    "password": "0G4pdlFY1B",
-    "database": "5bPvv5pu0J",
-    "host": "remotemysql.com",
+    "username": "root",
+    "password": "passwordRoot",
+    "database": "orquideassanmartin_db",
+    "host": "127.0.0.1",
     "dialect": "mysql"
   },
 }

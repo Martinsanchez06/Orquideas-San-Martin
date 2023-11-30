@@ -23,7 +23,7 @@
             <section class="los-mas-vendidos">
               <div class="container-productos">
                 <% orquideas.forEach(orquideas=> { %>
-                  <% if (orquideas.secciondehome_id===1) { %>
+                  <% if (orquideas.secciondehome_id===5) { %>
                     <section class="Orquidea" id=<%=orquideas.id %> >
                       <%- include('../Client/orquideaHome.ejs', {orquideas}) %>
                     </section>
@@ -54,7 +54,7 @@
               <h3 id="florecidas" class="header-orquideas-florecidas">Orquideas florecidas</h3>
               <div class="container-productos-2">
                 <% orquideas.forEach(orquideas=> { %>
-                  <% if (orquideas.secciondehome_id===2) { %>
+                  <% if (orquideas.secciondehome_id===6) { %>
                     <section class="Orquidea" id=<%=orquideas.id %> >
                       <%- include('../Client/orquideaHome.ejs', {orquideas}) %>
                     </section>
@@ -86,7 +86,7 @@
               <h3 id="descuento" class="header-descuento">En descuento</h3>
               <div class="enDescuento">
                 <% orquideas.forEach(orquideas=> { %>
-                  <% if (orquideas.secciondehome_id===3){ %>
+                  <% if (orquideas.secciondehome_id===7){ %>
                     <section class="Orquidea" id=<%=orquideas.id %> >
                       <%- include('../Client/orquideaHome.ejs', {orquideas}) %>
                     </section>
@@ -97,7 +97,7 @@
             <section id="otras" class="mas-plantas">
               <div class="container-productos-4">
                 <% orquideas.forEach(orquideas=> { %>
-                  <% if (orquideas.secciondehome_id===4) { %>
+                  <% if (orquideas.secciondehome_id===5) { %>
                     <section class="Orquidea" id=<%=orquideas.id %> >
                       <%- include('../Client/orquideaHome.ejs', {orquideas}) %>
                     </section>

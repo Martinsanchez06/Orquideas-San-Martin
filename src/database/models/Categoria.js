@@ -1,6 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    let alias = 'categorias'
-    let cols = {
+    const Categorias = sequelize.define('Categorias', {
         id: {
             type: DataTypes.INTEGER,
             primaryKey: true,
@@ -8,25 +7,20 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false
         },
         categoria: {
-            type: DataTypes.STRING,
+            type: DataTypes.STRING(100),
             allowNull: false
         }
-    }
-    let config = {
-        tablename: 'categoria',
-        timestamps: false,
-        underscore: true
-    }
+    }, {
+        tableName: 'categorias',
+        timestamps: false
+    });
 
-    const categoria = sequelize.define(alias, cols, config)
-
-    categoria.associate = function (models) {
-        categoria.hasMany(models.Orquideas, {
+    Categorias.associate = function (models) {
+        Categorias.hasMany(models.Orquideas, {
             as: 'orquideas',
-            foreignKey: 'categoria_id'
-        })
-    }
+            foreignKey: 'categorias_id'
+        });
+    };
 
-
-    return categoria
-}
+    return Categorias;
+};

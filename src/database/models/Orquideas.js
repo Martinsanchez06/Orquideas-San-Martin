@@ -1,88 +1,83 @@
-module.exports= (sequelize, DataTypes) => {
-    let alias = 'Orquideas'
-    let cols = {
-        id : {
+module.exports = (sequelize, DataTypes) => {
+    const Orquideas = sequelize.define('Orquideas', {
+        id: {
             type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true,
-            allowNull : false
-        },
-        nombre : {
-            type: DataTypes.STRING,
-            allowNull: false
-        }, 
-        clima_id : {
-            type: DataTypes.INTEGER,
             allowNull: false
         },
-        precio : {
-            type: DataTypes.STRING,
+        nombre: {
+            type: DataTypes.STRING(100),
             allowNull: false
         },
-        descripcion : {
-            type: DataTypes.STRING,
+        precio: {
+            type: DataTypes.STRING(100),
             allowNull: false
         },
-        categoria_id : {
-            type: DataTypes.STRING,
+        descripcion: {
+            type: DataTypes.STRING(100),
             allowNull: false
         },
-        tamanio_id : {
-            type: DataTypes.STRING,
+        disponibilidad: {
+            type: DataTypes.STRING(100),
             allowNull: false
         },
-        disponibilidad : {
-            type: DataTypes.STRING,
-            allowNull: false
-        },
-        flor : {
-            type: DataTypes.STRING,
-            allowNull: false
-        },
-        secciondehome_id : {
-            type: DataTypes.STRING,
+        flor: {
+            type: DataTypes.STRING(100),
             allowNull: false
         },
         imagen1: {
-            type: DataTypes.STRING,
-            notNull: true
-        }, 
+            type: DataTypes.STRING(500),
+            allowNull: false
+        },
         imagen2: {
-            type: DataTypes.STRING,
-            notNull: true
+            type: DataTypes.STRING(500),
+            allowNull: false
         },
         imagen3: {
-            type: DataTypes.STRING,
-            notNull: true
+            type: DataTypes.STRING(500),
+            allowNull: false
         },
-    }
-    let config ={
+        categorias_id: {
+            type: DataTypes.INTEGER,
+            allowNull: false
+        },
+        climas_id: {
+            type: DataTypes.INTEGER,
+            allowNull: false
+        },
+        secciondehome_id: {
+            type: DataTypes.INTEGER,
+            allowNull: false
+        },
+        tamanios_id: {
+            type: DataTypes.INTEGER,
+            allowNull: false
+        }
+    }, {
         tableName: 'orquideas',
         timestamps: false,
-        underscore: true
-    }
-    const Orquideas= sequelize.define(alias, cols, config)
+        underscored: true
+    });
 
-    Orquideas.associate = function(models){
-        Orquideas.belongsTo(models.climas, {
-            as: 'climas', 
-            foreignKey: 'clima_id'
-        }),
-        Orquideas.belongsTo(models.tamanios, {
-            as: 'tamanios',
-            foreignKey: 'tamanio_id'
-        }),
-        Orquideas.belongsTo(models.categorias, {
-            as: 'categorias',
-            foreignKey: 'categoria_id'
-        }),
-        Orquideas.belongsTo(models.secciones, {
-            as: 'secciones',
-            foreignKey: 'categoria_id'
-        })
-    }
+    Orquideas.associate = function (models) {
+        Orquideas.belongsTo(models.Categorias, {
+            as: 'categoria',
+            foreignKey: 'categorias_id'
+        });
+        Orquideas.belongsTo(models.Climas, {
+            as: 'clima',
+            foreignKey: 'climas_id'
+        });
+        Orquideas.belongsTo(models.SeccionDeHome, {
+            as: 'secciondehome',
+            foreignKey: 'secciondehome_id'
+        });
+        Orquideas.belongsTo(models.Tamanios, {
+            as: 'tamanio',
+            foreignKey: 'tamanios_id'
+        });
+    };
 
-    return Orquideas
-}
-
-
+    return Orquideas;
+};

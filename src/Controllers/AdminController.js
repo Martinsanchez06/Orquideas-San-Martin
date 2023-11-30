@@ -12,11 +12,11 @@ const OrquideasController = {
         let categoriasEncontradas = db.categorias.findAll()
         let tamaniosEncontrados = db.tamanios.findAll()
         let seccionesEncontradas = db.secciones.findAll()
-        Promise.all([orquideasEncontradas,climasEncontrados, categoriasEncontradas, tamaniosEncontrados, seccionesEncontradas])
-            .then(function ([orquideas, climas, categorias, tamanios, secciones ]){
-                res.render('Admin/create', {orquideas, climas, categorias, tamanios, secciones})
+        Promise.all([orquideasEncontradas, climasEncontrados, categoriasEncontradas, tamaniosEncontrados, seccionesEncontradas])
+            .then(function ([orquideas, climas, categorias, tamanios, secciones]) {
+                res.render('Admin/create', { orquideas, climas, categorias, tamanios, secciones })
             })
-        },
+    },
     create: function (req, res) {
         try {
             db.Orquideas.create({
@@ -43,11 +43,11 @@ const OrquideasController = {
             })
     },
     formUpdate: function (req, res) {
-        let orquideasEncontradas = db.Orquideas.findByPk(req.params.id ,
+        let orquideasEncontradas = db.Orquideas.findByPk(req.params.id,
             {
-                include : { 
+                include: {
                     all: true,
-                    nested: true 
+                    nested: true
                 }
             }
         )
@@ -55,9 +55,9 @@ const OrquideasController = {
         let categoriasEncontradas = db.categorias.findAll()
         let tamaniosEncontrados = db.tamanios.findAll()
         let seccionesEncontradas = db.secciones.findAll()
-        Promise.all([orquideasEncontradas,climasEncontrados, categoriasEncontradas, tamaniosEncontrados, seccionesEncontradas])
-            .then(function ([orquideas, climas, categorias, tamanios, secciones ]){
-                res.render('Admin/edit', {orquideas, climas, categorias, tamanios, secciones})
+        Promise.all([orquideasEncontradas, climasEncontrados, categoriasEncontradas, tamaniosEncontrados, seccionesEncontradas])
+            .then(function ([orquideas, climas, categorias, tamanios, secciones]) {
+                res.render('Admin/edit', { orquideas, climas, categorias, tamanios, secciones })
             })
     },
     update: (req, res) => {
@@ -79,7 +79,7 @@ const OrquideasController = {
                     id: req.params.id
                 }
             })
-            
+
             let orquideasEncontradas = db.Orquideas.findAll()
             let climasEncontrados = db.climas.findAll()
             Promise.all([orquideasEncontradas, climasEncontrados])

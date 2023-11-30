@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: false
         },
-        tipoDeDocumento:{
+        tipoDeDocumento: {
             type: DataTypes.STRING,
             allowNull: false
         },
@@ -55,12 +55,12 @@ module.exports = (sequelize, DataTypes) => {
 
     const usuarios = sequelize.define(alias, cols, config)
 
-    usuarios.associate = function (models) {
-        usuarios.hasMany(models.Orquideas, {
-            as: 'orquideas',
-            foreignKey: 'usuarios_id'
-        })
-    }
+    // usuarios.associate = function (models) {
+    //     usuarios.hasMany(models.Orquideas, {
+    //         as: 'orquideas',
+    //         foreignKey: 'usuarios_id'
+    //     })
+    // }
 
 
     return usuarios

@@ -1,24 +1,23 @@
-const fs = require('fs')
-const path = require('path')
-const db = require('../database/models')
-
+const fs = require('fs');
+const path = require('path');
+const db = require('../database/models');
 
 const HomeController = {
-    home: (req, res) => {
-        let orquideasEncontradas = db.Orquideas.findAll({
-            include: {
-                all: true,
-                nested: true
-            }
-        })
-        let seccionesEncontradas = db.secciones.findAll()
-        let climasEncontradas = db.climas.findAll()
-        let categoriasEncontradas = db.categorias.findAll()
-        Promise.all([orquideasEncontradas, seccionesEncontradas, climasEncontradas, categoriasEncontradas])
-            .then(function ([orquideas, secciones, climas, categorias]) {
-                res.render('Home/home', { orquideas, secciones, climas, categorias})
-            })
-    }
-}
+    home: async (req, res) => {
+        try {
+            const [orquideas, secciones, climas, categorias] = await Promise.all([
+                db.Orquideas.findAll(),
+                db.SeccionDeHome.findAll(),
+                db.Climas.findAll(),
+                db.Categorias.findAll()
+            ]);
 
-module.exports = HomeController
+            res.render('Home/home', { orquideas, secciones, climas, categorias });
+        } catch (error) {
+            console.error("Error:", error);
+            res.status(500).send("Error interno del servidor");
+        }
+    }
+};
+
+module.exports = HomeController;

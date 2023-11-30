@@ -1,6 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    let alias = 'tamanios'
-    let cols = {
+    const Tamanios = sequelize.define('Tamanios', {
         id: {
             type: DataTypes.INTEGER,
             primaryKey: true,
@@ -8,25 +7,20 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false
         },
         tamanio: {
-            type: DataTypes.STRING,
+            type: DataTypes.STRING(100),
             allowNull: false
         }
-    }
-    let config = {
-        tablename: 'tamanio',
-        timestamps: false,
-        underscore: true
-    }
+    }, {
+        tableName: 'tamanios',
+        timestamps: false
+    });
 
-    const Tamanio = sequelize.define(alias, cols, config)
-
-    Tamanio.associate = function (models) {
-        Tamanio.hasMany(models.Orquideas, {
+    Tamanios.associate = function (models) {
+        Tamanios.hasMany(models.Orquideas, {
             as: 'orquideas',
-            foreignKey: 'tamanio_id'
-        })
-    }
+            foreignKey: 'tamanios_id'
+        });
+    };
 
-
-    return Tamanio
-}
+    return Tamanios;
+};

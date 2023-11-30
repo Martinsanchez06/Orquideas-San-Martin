@@ -1,6 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    let alias = 'secciones'
-    let cols = {
+    const SeccionDeHome = sequelize.define('SeccionDeHome', {
         id: {
             type: DataTypes.INTEGER,
             primaryKey: true,
@@ -8,24 +7,20 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false
         },
         seccion: {
-            type: DataTypes.STRING,
+            type: DataTypes.STRING(100),
             allowNull: false
         }
-    }
-    let config = {
-        tablename: 'secciondehome',
-        timestamps: false,
-        underscore: true
-    }
+    }, {
+        tableName: 'secciondehome',
+        timestamps: false
+    });
 
-    const Seccion = sequelize.define(alias, cols, config)
-
-    Seccion.associate = function (models) {
-        Seccion.hasMany(models.Orquideas, {
+    SeccionDeHome.associate = function (models) {
+        SeccionDeHome.hasMany(models.Orquideas, {
             as: 'orquideas',
-            foreignKey: 'tamanio_id'
-        })
-    }
+            foreignKey: 'secciondehome_id'
+        });
+    };
 
-    return Seccion
-}
+    return SeccionDeHome;
+};

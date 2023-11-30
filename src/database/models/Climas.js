@@ -1,32 +1,26 @@
 module.exports = (sequelize, DataTypes) => {
-    let alias = 'climas'
-    let cols = {
-        id : {
+    const Climas = sequelize.define('Climas', {
+        id: {
             type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true,
-            allowNull : false
+            allowNull: false
         },
-        tipoDeClima : {
-            type : DataTypes.STRING,
-            allowNull: false 
+        tipoDeClima: {
+            type: DataTypes.STRING(100),
+            allowNull: false
         }
-    }
-    let config = {
-        tablename: 'climas',
-        timestamps: false,
-        underscore: true
-    }
+    }, {
+        tableName: 'climas',
+        timestamps: false
+    });
 
-    const Climas = sequelize.define(alias, cols, config)
-
-    Climas.associate = function(models){
+    Climas.associate = function (models) {
         Climas.hasMany(models.Orquideas, {
-            as: 'orquideas', 
-            foreignKey: 'clima_id'
-        })
-    }
+            as: 'orquideas',
+            foreignKey: 'climas_id'
+        });
+    };
 
-
-    return Climas 
-}
+    return Climas;
+};
